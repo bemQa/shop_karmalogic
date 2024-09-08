@@ -432,6 +432,8 @@ h5,
 .content {
     display: flex;
     flex-direction: column;
+    gap: 16rem 0;
+    margin-bottom: 16rem;
     flex: 1 0 auto;
     overflow: hidden;
 }
@@ -1229,7 +1231,6 @@ textarea.input-text {
 
 .section {
     position: relative;
-    padding: 16rem 0;
 }
 
 .header + .section {
