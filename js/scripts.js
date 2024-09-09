@@ -101,4 +101,10 @@ $(document).ready(function () {
             dropdownParent: $('.select')
         });
     }
+
+    // sliders
+    const courses_cards = new Swiper('.courses-cards', {
+        slidesPerView: 'auto',
+        freeMode: true
+    });
 });

@@ -1367,6 +1367,36 @@ textarea.input-text {
     border-radius: 8rem;
 }
 
+.block-bg {
+    max-width: 1536rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 48rem;
+    background: var(--background-transparent);
+    border-radius: 8rem;
+}
+
+.courses-cards {
+    margin-top: 48rem;
+}
+
+.courses-cards .swiper-wrapper {
+    gap: 0 16rem;
+}
+
+.courses-cards .swiper-slide {
+    max-width: 458rem;
+}
+
+.courses-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+    padding: 8rem;
+    background: rgba(183, 203, 234, 0.07);
+    border-radius: 8rem;
+}
+
 /*end main styles*/
 
 /*adaptive styles*/
@@ -1680,3 +1710,45 @@ textarea.input-text {
     }
 }
 /*end mobile styles*/
+
+/* indentation */
+.p0 {
+    padding: 0;
+}
+
+.pt0 {
+    padding-top: 0;
+}
+
+.pr0 {
+    padding-right: 0;
+}
+
+.pb0 {
+    padding-bottom: 0;
+}
+
+.pl0 {
+    padding-left: 0;
+}
+
+.m0 {
+    margin: 0;
+}
+
+.mt0 {
+    margin-top: 0;
+}
+
+.mr0 {
+    margin-right: 0;
+}
+
+.mb0 {
+    margin-bottom: 0;
+}
+
+.ml0 {
+    margin-left: 0;
+}
+/* end indentation */
