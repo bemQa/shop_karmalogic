@@ -106,6 +106,12 @@ $(document).ready(function () {
     const courses_cards = new Swiper('.courses-cards', {
         slidesPerView: 'auto',
         loop: true,
-        freeMode: true
+        freeMode: true,
+        mousewheel: true,
+        // breakpoints: {
+        //     480: {
+        //         slidesPerView: 1,
+        //     },
+        // },
     });
 });
