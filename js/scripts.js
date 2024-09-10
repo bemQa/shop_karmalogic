@@ -105,6 +105,7 @@ $(document).ready(function () {
     // sliders
     const courses_cards = new Swiper('.courses-cards', {
         slidesPerView: 'auto',
+        loop: true,
         freeMode: true
     });
 });
