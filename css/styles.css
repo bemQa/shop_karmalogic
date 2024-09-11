@@ -1443,6 +1443,7 @@ textarea.input-text {
     position: absolute;
     top: 16rem;
     left: 16rem;
+    display: inline-block;
     padding: 4rem 10rem;
     background: var(--accent-color);
     border-radius: 50rem;
@@ -1499,6 +1500,293 @@ textarea.input-text {
     font-size: 16rem;
     line-height: 1.5;
     color: rgba(232, 238, 247, 0.65);
+}
+
+.banner-training {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 500rem;
+    border-radius: 8rem;
+    overflow: hidden;
+}
+
+.banner-training-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.banner-training-info {
+    display: flex;
+    flex-direction: column;
+    gap: 24rem 0;
+    max-width: 650rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: 48rem;
+}
+
+.banner-training-dates {
+    display: flex;
+    align-items: center;
+    gap: 0 8rem;
+    font-weight: 300;
+    font-size: 18rem;
+    line-height: 1.5;
+    color: rgba(232, 238, 247, 0.65);
+}
+
+.banner-training-label {
+    display: inline-block;
+    padding: 6rem 12rem;
+    background: var(--accent-color);
+    border-radius: 50rem;
+    font-weight: 400;
+    font-size: 14rem;
+    line-height: 1;
+    color: var(--btn-text-color);
+}
+
+.banner-training-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: normal;
+    font-size: 40rem;
+    line-height: 1.15;
+}
+
+.banner-training-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 510rem;
+    width: 100%;
+    font-weight: 300;
+    font-size: 18rem;
+    line-height: 1.5;
+    color: rgba(232, 238, 247, 0.65);
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, 
+.swiper-pagination-bullets.swiper-pagination-horizontal, 
+.swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 16rem;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, 
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 4rem;
+}
+
+.swiper-pagination-bullet {
+    width: 8rem;
+    height: 8rem;
+    background: var(--text-color);
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--text-color);
+}
+
+.title-with-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 24rem;
+}
+
+.block-bg.pr0 .title-with-button {
+    padding-right: 48rem;
+}
+
+.title-with-button .btn {
+    font-family: var(--main-font);
+}
+
+.shop-slider {
+    margin-top: 48rem;
+}
+
+.shop-slider .swiper-wrapper {
+    gap: 0 16rem;
+}
+
+.shop-slider .swiper-slide {
+    max-width: 340rem;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+    max-width: 340rem;
+    width: 100%;
+    border-radius: 8rem;
+}
+
+.product-card-img {
+    position: relative;
+    width: 100%;
+    height: 340rem;
+    border-radius: 8rem;
+    overflow: hidden;
+}
+
+.product-card-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .3s ease;
+}
+
+.product-card-img:hover img {
+    transform: scale(1.05);
+}
+
+.product-card-label {
+    position: absolute;
+    top: 8rem;
+    left: 8rem;
+    display: inline-block;
+    padding: 6rem 8rem;
+    background: var(--accent-color);
+    border-radius: 50rem;
+    font-size: 14rem;
+    line-height: 1;
+    color: var(--btn-text-color)
+}
+
+.product-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12rem 0;
+    margin-top: 12rem;
+}
+
+.product-card-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 300;
+    font-size: 16rem;
+    line-height: 1.3;
+}
+
+.product-card-price {
+    display: flex;
+    align-items: center;
+    gap: 0 8rem;
+    font-size: 24rem;
+    line-height: 1;
+}
+
+.product-card-oldprice {
+    display: inline-block;
+    font-size: 18rem;
+    line-height: 1;
+    color: rgba(232, 238, 247, 0.5);
+    text-decoration: line-through;
+}
+
+.product-card-price-discount {
+    display: inline-block;
+    padding: 2rem 4rem;
+    background: #994F3E;
+    border-radius: 50rem;
+    font-size: 12rem;
+    line-height: 1;
+    color: var(--text-color);
+}
+
+.btn-add-cart {
+    gap: 0 10rem;
+    width: 100%;
+    padding: 20rem;
+    background-color: rgba(183, 203, 234, 0.07);
+    border-radius: 8rem;
+    color: var(--text-color);
+}
+
+.btn-add-cart::before {
+    content: '';
+    position: static;
+    width: 16rem;
+    height: 16rem;
+    background: url(../img/icons/shop.svg) center/contain no-repeat;
+    transition: all .3s ease;
+}
+
+.btn-add-cart:hover {
+    background-color: var(--accent-color);
+    color: var(--btn-text-color);
+    opacity: 1;
+}
+
+.btn-add-cart:hover::before {
+    content: '';
+    position: static;
+    width: 16rem;
+    height: 16rem;
+    background: url(../img/icons/shop-dark.svg) center/contain no-repeat;
+}
+
+.banner-experts {
+    position: relative;
+    height: 900rem;
+    background: #0D101A;
+    border-radius: 8rem;
+    overflow: hidden;
+}
+
+.banner-experts-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.banner-experts-info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24rem 0;
+    max-width: 610rem;
+    width: 100%;
+    margin: 80rem auto 0;
+    text-align: center;
+    z-index: 1;
+}
+
+.banner-experts-text {
+    font-size: 18rem;
+    line-height: 1.5;
 }
 
 /*end main styles*/
@@ -1864,6 +2152,118 @@ textarea.input-text {
     .courses-card-learning-dates {
         font-size: 12rem;
     }
+
+    .banner-training {
+        align-items: flex-end;
+        height: 580rem;
+    }
+
+    .banner-training-info {
+        gap: 12rem 0;
+        margin: 0;
+        padding: 16rem 16rem 40rem;
+    }
+
+    .banner-training-dates {
+        font-size: 12rem;
+    }
+
+    .banner-training-label {
+        position: absolute;
+        top: 24rem;
+        left: 16rem;
+        padding: 4rem 6rem;
+        font-size: 12rem;
+    }
+
+    .banner-training-title {
+        font-size: 20rem;
+    }
+
+    .banner-training-text {
+        font-size: 14rem;
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets, 
+    .swiper-pagination-bullets.swiper-pagination-horizontal, 
+    .swiper-pagination-custom, .swiper-pagination-fraction {
+        bottom: 8rem;
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, 
+    .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0 2rem;
+    }
+
+    .swiper-pagination-bullet {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .block-bg.pr0 .title-with-button {
+        padding-right: 16rem;
+    }
+
+    .title-with-button .btn {
+        width: 44rem;
+        height: 44rem;
+        padding: 10rem;
+        background: url(../img/icons/send.svg) center / 8rem no-repeat rgba(183, 203, 234, 0.07);
+        border-radius: 6rem;
+        font-size: 0;
+    }
+
+    .shop-slider {
+        margin-top: 24rem;
+    }
+
+    .shop-slider .swiper-wrapper {
+        gap: 0 8rem;
+    }
+
+    .shop-slider .swiper-slide {
+        max-width: 300rem;
+    }
+
+    .product-card {
+        max-width: 300rem;
+    }
+
+    .product-card-img {
+        height: 300rem;
+    }
+
+    .product-card-label {
+        padding: 4rem 6rem;
+        font-size: 12rem;
+    }
+
+    .product-card-title {
+        font-size: 14rem;
+    }
+
+    .product-card-oldprice {
+        font-size: 16rem;
+    }
+
+    .product-card-price-discount {
+        padding: 2rem;
+        font-size: 10rem;
+    }
+
+    .banner-experts {
+        height: 578rem;
+    }
+
+    .banner-experts-info {
+        gap: 16rem 0;
+        max-width: calc(100% - 32rem);
+        margin-top: 32rem;
+    }
+
+    .banner-experts-text {
+        font-size: 14rem;
+    }
 }
 
 @media (max-width: 390px) {
@@ -1873,7 +2273,8 @@ textarea.input-text {
 
 
 
-    .banner-main {
+    .banner-main,
+    .banner-training {
         height: 468rem;
     }
 }

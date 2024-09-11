@@ -107,11 +107,25 @@ $(document).ready(function () {
         slidesPerView: 'auto',
         loop: true,
         freeMode: true,
-        mousewheel: true,
+        // mousewheel: true,
         // breakpoints: {
         //     480: {
         //         slidesPerView: 1,
         //     },
         // },
+    });
+
+    const trainings_slider = new Swiper('.trainings-slider', {
+        slidesPerView: 1,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+
+    const shop_slider = new Swiper('.shop-slider', {
+        slidesPerView: 'auto',
+        loop: true,
+        freeMode: true,
     });
 });
