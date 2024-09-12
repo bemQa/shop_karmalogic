@@ -128,4 +128,10 @@ $(document).ready(function () {
         loop: true,
         freeMode: true,
     });
+
+    const travel_slider = new Swiper('.travel-slider', {
+        slidesPerView: 'auto',
+        loop: true,
+        freeMode: true,
+    });
 });
