@@ -35,13 +35,13 @@ $(document).ready(function () {
 
     // аккордеон
     function openAccordion() {
-        var wrap = $('.accordion-wrap');
-        var accordion = wrap.find('.accordion-title');
+        let wrap = $('.accordion-wrap');
+        let accordion = wrap.find('.accordion-title');
 
         accordion.on('click', function () {
-            var $this = $(this);
-            var $parent = $(this).parent();
-            var content = $this.next();
+            let $this = $(this);
+            let $parent = $(this).parent();
+            let content = $this.next();
 
             if (content.is(':visible')) {
                 $this.removeClass('active');
@@ -134,4 +134,24 @@ $(document).ready(function () {
         loop: true,
         freeMode: true,
     });
+
+    let init = false;
+    let swiper;
+    function travel_page_slider() {
+        if (window.innerWidth <= 480) {
+            if (!init) {
+                init = true;
+                swiper = new Swiper(".travel-page-slider", {
+                    slidesPerView: 'auto',
+                    loop: true,
+                    freeMode: true,
+                });
+            }
+        } else if (init) {
+            swiper.destroy();
+            init = false;
+        }
+    }
+    travel_page_slider();
+    window.addEventListener("resize", travel_page_slider);
 });

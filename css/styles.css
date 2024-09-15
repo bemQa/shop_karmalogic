@@ -1798,15 +1798,23 @@ textarea.input-text {
     line-height: 1.5;
 }
 
-.travel-slider {
+.travel-slider,
+.travel-page-slider {
     margin-top: 48rem;
 }
 
-.travel-slider .swiper-wrapper {
+.travel-slider .swiper-wrapper,
+.travel-page-slider .swiper-wrapper {
     gap: 0 16rem;
 }
 
-.travel-slider .swiper-slide {
+.travel-page-slider:not(.swiper-initialized) .swiper-wrapper {
+    flex-wrap: wrap;
+    gap: 16rem;
+}
+
+.travel-slider .swiper-slide,
+.travel-page-slider .swiper-slide {
     max-width: 696rem;
 }
 
@@ -1983,6 +1991,24 @@ textarea.input-text {
     color: rgba(232, 238, 247, 0.65);
 }
 
+.banner-page-dates {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8rem;
+    font-size: 16rem;
+    line-height: 1.5;
+    color: rgba(232, 238, 247, 0.65);
+}
+
+.banner-page-badge {
+    position: absolute;
+    bottom: 48rem;
+    right: 48rem;
+    width: 128rem;
+    height: 128rem;
+}
+
 .products-list {
     display: flex;
     flex-wrap: wrap;
@@ -2031,6 +2057,13 @@ textarea.input-text {
 .page-filter-link:hover,
 .page-filter-link.active {
     background: var(--background-transparent);
+}
+
+.travels-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16rem;
+    margin-top: 32rem;
 }
 
 /*end main styles*/
@@ -2514,15 +2547,18 @@ textarea.input-text {
         font-size: 14rem;
     }
 
-    .travel-slider {
+    .travel-slider,
+    .travel-page-slider {
         margin-top: 24rem;
     }
 
-    .travel-slider .swiper-wrapper {
+    .travel-slider .swiper-wrapper,
+    .travel-page-slider .swiper-wrapper {
         gap: 0 8rem;
     }
 
-    .travel-slider .swiper-slide {
+    .travel-slider .swiper-slide,
+    .travel-page-slider .swiper-slide {
         max-width: 300rem;
     }
 
@@ -2592,6 +2628,19 @@ textarea.input-text {
 
     .banner-page-text {
         font-size: 14rem;
+    }
+
+    .banner-page-dates {
+        gap: 6rem;
+        font-weight: 300;
+        font-size: 12rem;
+    }
+
+    .banner-page-badge {
+        top: 16rem;
+        right: 16rem;
+        width: 96rem;
+        height: 96rem;
     }
 
     .banner-page-info .btn {
