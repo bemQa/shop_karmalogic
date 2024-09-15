@@ -135,11 +135,12 @@ $(document).ready(function () {
         freeMode: true,
     });
 
+    // only mobile sliders
     let init = false;
     let swiper;
     function travel_page_slider() {
         if (window.innerWidth <= 480) {
-            if (!init) {
+            if (!init && $('.travel-page-slider').length) {
                 init = true;
                 swiper = new Swiper(".travel-page-slider", {
                     slidesPerView: 'auto',
@@ -147,11 +148,29 @@ $(document).ready(function () {
                     freeMode: true,
                 });
             }
-        } else if (init) {
+        } else if (init && $('.travel-page-slider').length) {
             swiper.destroy();
             init = false;
         }
     }
     travel_page_slider();
     window.addEventListener("resize", travel_page_slider);
+    
+    function courses_page_cards() {
+        if (window.innerWidth <= 480) {
+            if (!init && $('.courses-page-cards').length) {
+                init = true;
+                swiper = new Swiper(".courses-page-cards", {
+                    slidesPerView: 'auto',
+                    loop: true,
+                    freeMode: true,
+                });
+            }
+        } else if (init && $('.courses-page-cards').length) {
+            swiper.destroy();
+            init = false;
+        }
+    }
+    courses_page_cards();
+    window.addEventListener("resize", courses_page_cards);
 });

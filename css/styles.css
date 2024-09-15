@@ -1386,15 +1386,23 @@ textarea.input-text {
     border-radius: 8rem;
 }
 
-.courses-cards {
+.courses-cards,
+.courses-page-cards {
     margin-top: 48rem;
 }
 
-.courses-cards .swiper-wrapper {
+.courses-cards .swiper-wrapper,
+.courses-page-cards .swiper-wrapper {
     gap: 0 16rem;
 }
 
-.courses-cards .swiper-slide {
+.courses-page-cards:not(.swiper-initialized) .swiper-wrapper {
+    flex-wrap: wrap;
+    gap: 16rem;
+}
+
+.courses-cards .swiper-slide,
+.courses-page-cards .swiper-slide {
     max-width: 458rem;
 }
 
@@ -2379,15 +2387,18 @@ textarea.input-text {
         padding: 24rem 16rem;
     }
 
-    .courses-cards {
+    .courses-cards,
+    .courses-page-cards {
         margin-top: 12rem;
     }
 
-    .courses-cards .swiper-wrapper {
+    .courses-cards .swiper-wrapper,
+    .courses-page-cards .swiper-wrapper {
         gap: 0 8rem;
     }
 
-    .courses-cards .swiper-slide {
+    .courses-cards .swiper-slide,
+    .courses-page-cards .swiper-slide {
         max-width: 300rem;
     }
 
