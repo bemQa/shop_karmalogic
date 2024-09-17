@@ -2710,6 +2710,10 @@ textarea.input-text {
         height: 580rem;
     }
 
+    .banner-page-small {
+        height: 464rem;
+    }
+
     .banner-page-info {
         gap: 12rem 0;
         margin: 0;
@@ -2859,6 +2863,10 @@ textarea.input-text {
     .banner-training,
     .banner-page {
         height: 468rem;
+    }
+
+    .banner-page-small {
+        height: 374rem;
     }
 }
 /*end mobile styles*/
