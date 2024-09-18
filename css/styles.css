@@ -235,6 +235,7 @@ input {
 	text-decoration: underline;
 }
 
+/* installation vars */
 :root {
     --background-color: #202945;
     --main-color: #1A4288;
@@ -243,11 +244,14 @@ input {
     --accent-color: #CC9F53;
     
     --btn-text-color: #2F3955;
-    --background-transparent:rgba(183, 203, 234, 0.1);
+    --background-transparent007: rgba(183, 203, 234, 0.07);
+    --background-transparent01: rgba(183, 203, 234, 0.1);
+    --text-color-transparent: rgba(232, 238, 247, 0.65);
 
     --main-font: 'Roboto';
     --title-font: 'TT Livret Trial Roman Variable';
 }
+/* end installation vars */
 
 /*styles config 
 for example:
@@ -508,7 +512,7 @@ h5,
 }
 
 .btn-transparent {
-    background-color: rgba(183, 203, 234, 0.07);
+    background-color: var(--background-transparent007);
     color: var(--text-color);
 }
 
@@ -521,7 +525,7 @@ h5,
     width: 60rem;
     height: 60rem;
     padding: 10rem;
-    background: url(../img/icons/send-white.svg) center/15rem no-repeat rgba(183, 203, 234, 0.07);
+    background: url(../img/icons/send-white.svg) center/15rem no-repeat var(--background-transparent007);
     font-size: 0;
 }
 
@@ -531,7 +535,7 @@ h5,
 }
 
 .btn-load-more {
-    background: rgba(183, 203, 234, 0.07);
+    background: var(--background-transparent007);
     color: var(--text-color);
 }
 
@@ -565,7 +569,7 @@ h5,
 
 .menu-links-desktop .menu-links,
 .menu-links-mobile .menu-links {
-    background: var(--background-transparent);
+    background: var(--background-transparent01);
     border-radius: 50rem;
 }
 
@@ -623,7 +627,7 @@ h5,
     justify-content: center;
     width: 44rem;
     height: 44rem;
-    background: var(--background-transparent);
+    background: var(--background-transparent01);
     border-radius: 50rem;
 }
 
@@ -787,7 +791,7 @@ h5,
 .footer-wrapper {
     width: 100%;
     padding: 48rem 48rem 24rem;
-    background: var(--background-transparent);
+    background: var(--background-transparent01);
     border-top-left-radius: 8rem;
     border-top-right-radius: 8rem;
 }
@@ -842,24 +846,24 @@ h5,
     position: relative;
     width: 48rem;
     height: 48rem;
-    background-color: rgba(183, 203, 234, 0.07);
+    background-color: var(--background-transparent007);
     border-radius: 50rem;
 }
 
 .soc.wa {
-    background: url(../img/socs/whatsapp.svg) center/17rem no-repeat rgba(183, 203, 234, 0.07);
+    background: url(../img/socs/whatsapp.svg) center/17rem no-repeat var(--background-transparent007);
 }
 
 .soc.tg {
-    background: url(../img/socs/tg.svg) center/20rem no-repeat rgba(183, 203, 234, 0.07);
+    background: url(../img/socs/tg.svg) center/20rem no-repeat var(--background-transparent007);
 }
 
 .soc.vk {
-    background: url(../img/socs/vk.svg) center/22rem no-repeat rgba(183, 203, 234, 0.07);
+    background: url(../img/socs/vk.svg) center/22rem no-repeat var(--background-transparent007);
 }
 
 .soc:hover {
-    background-color: var(--background-transparent);
+    background-color: var(--background-transparent01);
 }
 
 .footer-copyrights {
@@ -867,7 +871,7 @@ h5,
     font-weight: 300;
     font-size: 14rem;
     line-height: normal;
-    color: rgba(232, 238, 247, 0.65);
+    color: var(--text-color-transparent);
 }
 
 .footer-copyright,
@@ -897,7 +901,15 @@ h5,
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    gap: 20rem;
+    gap: 16rem;
+}
+
+.ip-cell-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16rem;
+    width: 100%;
 }
 
 .ip-cell {
@@ -905,34 +917,37 @@ h5,
     width: 100%;
 }
 
+.ip-cell.w50 {
+    width: calc(50% - 8rem);
+}
+
 .input-text {
     font-weight: 400;
-    font-size: 20rem;
+    font-size: 18rem;
     line-height: 1;
     width: 100%;
-    height: 70rem;
+    height: 54rem;
     padding: 20rem;
-    background: #fff;
-    border-radius: 5rem;
+    background: rgba(232, 238, 247, 0.75);
+    border-radius: 8rem;
     transition: all 0.3s ease;
 }
 
 .has-error .input-text,
 .input-text.error {
-    background-color: rgba(153, 79, 62, 0.2);
+    background: rgba(153, 79, 62, 0.2);
 }
 
 textarea.input-text {
-    height: 120rem;
-    padding-top: 25rem;
+    height: 124rem;
 }
 
 .input-text:hover {
-    
+    background: rgba(232, 238, 247, 1);
 }
 
 .input-text:focus {
-    
+    background: rgba(232, 238, 247, 1);
 }
 
 .ip-cell span.error {
@@ -957,7 +972,7 @@ textarea.input-text {
     font-size: 14rem;
     line-height: normal;
     text-align: center;
-    color: rgba(232, 238, 247, 0.65);
+    color: var(--text-color-transparent);
 }
 
 .ch,
@@ -971,9 +986,9 @@ textarea.input-text {
     display: inline-block;
     padding-left: 30rem;
     cursor: pointer;
-    font-size: 20rem;
-    line-height: 1;
-    color: #605E5D;
+    font-size: 18rem;
+    line-height: 1.3;
+    color: var(--text-color-transparent);
     transition: all 0.3s ease;
 }
 
@@ -984,11 +999,10 @@ textarea.input-text {
     left: 0;
     bottom: 0;
     margin: auto;
-    width: 20rem;
-    height: 20rem;
-    border: 1rem solid #605E5D;
-    border-radius: 2rem;
-    background-color: #fff;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 6rem;
+    background: rgba(232, 238, 247, 0.75);
     transition: all 0.3s ease;
 }
 
@@ -996,13 +1010,13 @@ textarea.input-text {
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
+    left: 2rem;
     bottom: 0;
     margin: auto;
-    width: 20rem;
-    height: 20rem;
-    background: #D24A43;
-    border-radius: 2rem;
+    width: 14rem;
+    height: 14rem;
+    background: var(--accent-color);
+    border-radius: 4rem;
     transform: scale(0);
     transition: all 0.2s linear;
 }
@@ -1014,11 +1028,10 @@ textarea.input-text {
     left: 0;
     bottom: 0;
     margin: auto;
-    width: 20rem;
-    height: 20rem;
-    border: 1rem solid #605E5D;
-    border-radius: 20rem;
-    background-color: transparent;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 18rem;
+    background: rgba(232, 238, 247, 0.75);
     transition: all 0.3s ease;
 }
 
@@ -1026,21 +1039,21 @@ textarea.input-text {
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
+    left: 2rem;
     bottom: 0;
     margin: auto;
-    width: 20rem;
-    height: 20rem;
-    background: #D24A43;
-    border-radius: 20rem;
+    width: 14rem;
+    height: 14rem;
+    background: var(--accent-color);
+    border-radius: 16rem;
     transform: scale(0);
     transition: all 0.2s linear;
 }
 
-.ch:checked + label::before,
+/* .ch:checked + label::before,
 .rd:checked + label::before {
     border-color: #D24A43;
-}
+} */
 
 .ch:checked + label::after,
 .rd:checked + label::after {
@@ -1049,7 +1062,6 @@ textarea.input-text {
 
 .ch + label a,
 .rd + label a {
-    color: #D24A43;
     text-decoration: underline;
 }
 
@@ -1362,7 +1374,7 @@ textarea.input-text {
     max-width: 981rem;
     width: 100%;
     padding: 48rem;
-    background: var(--background-transparent);
+    background: var(--background-transparent01);
     border-radius: 8rem;
 }
 
@@ -1390,7 +1402,7 @@ textarea.input-text {
     max-width: 507rem;
     width: 100%;
     padding: 32rem;
-    background: var(--background-transparent);
+    background: var(--background-transparent01);
     border-radius: 8rem;
 }
 
@@ -1399,7 +1411,7 @@ textarea.input-text {
     width: 100%;
     margin: 0 auto;
     padding: 48rem;
-    background: var(--background-transparent);
+    background: var(--background-transparent01);
     border-radius: 8rem;
 }
 
@@ -1428,7 +1440,7 @@ textarea.input-text {
     flex-direction: column;
     gap: 8rem;
     padding: 8rem;
-    background: rgba(183, 203, 234, 0.07);
+    background: var(--background-transparent007);
     border-radius: 8rem;
 }
 
@@ -1508,7 +1520,7 @@ textarea.input-text {
     font-weight: 300;
     font-size: 16rem;
     line-height: 1.5;
-    color: rgba(232, 238, 247, 0.65);
+    color: var(--text-color-transparent);
 }
 
 .courses-card-learning-dates {
@@ -1516,7 +1528,7 @@ textarea.input-text {
     font-weight: 300;
     font-size: 16rem;
     line-height: 1.5;
-    color: rgba(232, 238, 247, 0.65);
+    color: var(--text-color-transparent);
 }
 
 .banner-training {
@@ -1559,7 +1571,7 @@ textarea.input-text {
     font-weight: 300;
     font-size: 18rem;
     line-height: 1.5;
-    color: rgba(232, 238, 247, 0.65);
+    color: var(--text-color-transparent);
 }
 
 .banner-training-label {
@@ -1595,7 +1607,7 @@ textarea.input-text {
     font-weight: 300;
     font-size: 18rem;
     line-height: 1.5;
-    color: rgba(232, 238, 247, 0.65);
+    color: var(--text-color-transparent);
 }
 
 .swiper-horizontal>.swiper-pagination-bullets, 
@@ -1757,7 +1769,7 @@ textarea.input-text {
     gap: 0 10rem;
     width: 100%;
     padding: 20rem;
-    background-color: rgba(183, 203, 234, 0.07);
+    background-color: var(--background-transparent007);
     border-radius: 8rem;
     color: var(--text-color);
 }
@@ -1927,7 +1939,7 @@ textarea.input-text {
     font-weight: 300;
     font-size: 16rem;
     line-height: 1.5;
-    color: rgba(232, 238, 247, 0.65);
+    color: var(--text-color-transparent);
 }
 
 .travel-card-price-sold-out {
@@ -2013,7 +2025,7 @@ textarea.input-text {
     font-weight: 300;
     font-size: 18rem;
     line-height: 1.5;
-    color: rgba(232, 238, 247, 0.65);
+    color: var(--text-color-transparent);
 }
 
 .banner-page-dates {
@@ -2023,7 +2035,7 @@ textarea.input-text {
     gap: 8rem;
     font-size: 16rem;
     line-height: 1.5;
-    color: rgba(232, 238, 247, 0.65);
+    color: var(--text-color-transparent);
 }
 
 .banner-page-badge {
@@ -2081,7 +2093,7 @@ textarea.input-text {
 
 .page-filter-link:hover,
 .page-filter-link.active {
-    background: var(--background-transparent);
+    background: var(--background-transparent01);
 }
 
 .travels-list {
@@ -2163,7 +2175,7 @@ textarea.input-text {
     font-weight: 300;
     font-size: 16rem;
     line-height: 1.5;
-    color: rgba(232, 238, 247, 0.65);
+    color: var(--text-color-transparent);
 }
 
 .news-card-dates {
@@ -2171,7 +2183,7 @@ textarea.input-text {
     font-weight: 300;
     font-size: 16rem;
     line-height: 1.5;
-    color: rgba(232, 238, 247, 0.65);
+    color: var(--text-color-transparent);
 }
 
 .services-list {
@@ -2190,7 +2202,7 @@ textarea.input-text {
     width: 100%;
     min-height: 384rem;
     padding: 40rem;
-    background: rgba(183, 203, 234, 0.07);
+    background: var(--background-transparent007);
     border-radius: 8rem;
 }
 
@@ -2229,14 +2241,14 @@ textarea.input-text {
     font-weight: 300;
     font-size: 16rem;
     line-height: 1.5;
-    color: rgba(232, 238, 247, 0.65);
+    color: var(--text-color-transparent);
 }
 
 .service-card-dates {
     font-weight: 300;
     font-size: 16rem;
     line-height: 1.5;
-    color: rgba(232, 238, 247, 0.65);
+    color: var(--text-color-transparent);
 }
 
 .service-card-authors {
@@ -2290,11 +2302,150 @@ textarea.input-text {
 .service-card-author-text {
     font-size: 14rem;
     line-height: 1;
-    color: rgba(232, 238, 247, 0.65);
+    color: var(--text-color-transparent);
 }
 
 .services-list + .buttons {
     margin-top: 40rem;
+}
+
+.two-column-block {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0 16rem;
+}
+
+.left-column-block,
+.right-column-block {
+    max-width: calc(50% - 8rem);
+    width: 100%;
+}
+
+.image-square {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 744rem;
+    padding: 48rem;
+    border-radius: 8rem;
+    overflow: hidden;
+}
+
+.image-square img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.contacts-page-title {
+    font-weight: normal;
+    font-size: 64rem;
+    line-height: 1.3;
+}
+
+.right-column-block {
+    display: flex;
+    flex-direction: column;
+    gap: 16rem 0;
+}
+
+.column-block {
+    display: flex;
+    flex-direction: column;
+    gap: 32rem 0;
+    width: 100%;
+    padding: 48rem;
+    background: var(--background-transparent01);
+    border-radius: 8rem;
+}
+
+.contacts-info-block {
+    display: flex;
+    flex-direction: column;
+    gap: 12rem 0;
+}
+
+.contacts-info-block:not(:first-child) {
+    padding-top: 32rem;
+    border-top: 1rem solid var(--background-color);
+}
+
+.contacts-block-title {
+    font-weight: normal;
+    font-size: 32rem;
+    line-height: 1.3;
+}
+
+.contacts-block-text {
+    font-weight: 300;
+    font-size: 16rem;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+.contacts-info-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16rem;
+}
+
+.contacts-info-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36rem;
+    padding: 10rem 16rem 10rem 44rem;
+    background: var(--background-transparent007);
+    border-radius: 50rem;
+    font-weight: 300;
+    font-size: 16rem;
+    line-height: 1;
+    color: var(--text-color);
+}
+
+.contacts-info-link:hover {
+    background: var(--background-transparent01);
+}
+
+.contacts-info-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 16rem;
+    bottom: 0;
+    margin: auto;
+    width: 20rem;
+    height: 20rem;
+}
+
+.contacts-info-link.phone::before {
+    background: url(../img/socs/whatsapp.svg) center/contain no-repeat;
+}
+
+.contacts-info-link.email::before {
+    background: url(../img/icons/mail.svg) center/contain no-repeat;
+}
+
+.form-contacts {
+    gap: 12rem 0;
+}
+
+.form-contacts .form {
+    margin-top: 28rem;
+}
+
+.form-contacts .ch + label, 
+.form-contacts .rd + label {
+    font-size: 14rem;
 }
 
 /*end main styles*/
@@ -2429,7 +2580,7 @@ textarea.input-text {
 
     .btn-lk {
         padding: 17rem 14rem 17rem 34rem;
-        background: var(--background-transparent);
+        background: var(--background-transparent01);
         font-size: 14rem;
         color: var(--text-color);
     }
@@ -2535,6 +2686,43 @@ textarea.input-text {
         align-items: flex-start;
         gap: 16rem 0;
     }
+
+    /* forms */
+    .ip-cell-wrapper {
+        flex-direction: column;
+    }
+
+    .input-text {
+        font-size: 14rem;
+        height: 38rem;
+        padding: 14rem;
+    }
+
+    .ch + label, 
+    .rd + label {
+        padding-left: 20rem;
+    }
+
+    .ch + label::before,
+    .rd + label::before {
+        width: 14rem;
+        height: 14rem;
+    }
+
+    .ch + label::before {
+        border-radius: 4rem;
+    }
+
+    .ch + label::after,
+    .rd + label::after {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .ch + label::after {
+        border-radius: 2rem;
+    }
+    /* end forms */
 
     .header + .section {
         margin-top: 60rem;
@@ -2724,7 +2912,7 @@ textarea.input-text {
         width: 44rem;
         height: 44rem;
         padding: 10rem;
-        background: url(../img/icons/send.svg) center / 8rem no-repeat rgba(183, 203, 234, 0.07);
+        background: url(../img/icons/send.svg) center / 8rem no-repeat var(--background-transparent007);
         border-radius: 6rem;
         font-size: 0;
     }
@@ -3041,6 +3229,86 @@ textarea.input-text {
     .services-list + .buttons {
         margin-top: 20rem;
     }
+
+    .two-column-block {
+        flex-direction: column;
+        gap: 8rem;
+    }
+
+    .left-column-block,
+    .right-column-block {
+        max-width: 100%;
+    }
+
+    .image-square {
+        height: 464rem;
+        padding: 24rem 16rem;
+    }
+
+    .contacts-page-title {
+        margin-top: auto;
+        font-size: 32rem;
+    }
+
+    .right-column-block {
+        gap: 8rem 0;
+    }
+
+    .column-block {
+        gap: 24rem 0;
+        padding: 24rem 16rem;
+    }
+
+    .contacts-info-block:not(:first-child) {
+        padding-top: 24rem;
+    }
+
+    .contacts-block-title {
+        font-size: 24rem;
+        line-height: 1.15;
+    }
+
+    .contacts-block-text {
+        font-size: 14rem;
+    }
+
+    .contacts-info-links {
+        flex-direction: column;
+        gap: 8rem;
+    }
+
+    .contacts-info-link {
+        justify-content: flex-start;
+        height: auto;
+        padding: 0 0 0 25rem;
+        background: none;
+        font-size: 14rem;
+    }
+
+    .contacts-info-link:hover {
+        background: none;
+    }
+
+    .contacts-info-link::before {
+        left: 4rem;
+        width: 14rem;
+        height: 14rem;
+    }
+
+    .form-contacts .form {
+        margin-top: 12rem;
+    }
+
+    .form-contacts .ch + label, 
+    .form-contacts .rd + label {
+        font-size: 12rem;
+    }
+
+    .form-contacts .btn {
+        width: 100%;
+        border-radius: 8rem;
+        font-size: 16rem;
+    }
 }
 
 @media (max-width: 390px) {
@@ -3048,15 +3316,14 @@ textarea.input-text {
         font-size: calc(100vw / 390);
     }
 
-
-
     .banner-main,
     .banner-training,
     .banner-page {
         height: 468rem;
     }
 
-    .banner-page-small {
+    .banner-page-small,
+    .image-square {
         height: 374rem;
     }
 }
