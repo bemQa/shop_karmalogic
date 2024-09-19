@@ -135,6 +135,22 @@ $(document).ready(function () {
         freeMode: true,
     });
 
+    const news_slider = new Swiper('.news-slider', {
+        slidesPerView: 3,
+        loop: false,
+        freeMode: true,
+        mousewheel: true,
+        scrollbar: {
+            el: ".swiper-scrollbar",
+            hide: false,
+        },
+        breakpoints: {
+            480: {
+                slidesPerView: 'auto',
+            },
+        },
+    });
+
     // only mobile sliders
     let init = false;
     let swiper;

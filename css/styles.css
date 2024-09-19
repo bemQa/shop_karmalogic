@@ -1805,6 +1805,10 @@ textarea.input-text {
     overflow: hidden;
 }
 
+.banner-experts-page {
+    height: 500rem;
+}
+
 .banner-experts-img {
     position: absolute;
     top: 0;
@@ -1828,6 +1832,21 @@ textarea.input-text {
     margin: 80rem auto 0;
     text-align: center;
     z-index: 1;
+}
+
+.banner-experts-page .banner-experts-info {
+    max-width: 720rem;
+}
+
+.banner-experts-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: normal;
+    font-size: 40rem;
+    line-height: 1.15;
 }
 
 .banner-experts-text {
@@ -2001,6 +2020,11 @@ textarea.input-text {
     width: 100%;
     margin-left: auto;
     margin-right: 48rem;
+}
+
+.banner-video .banner-page-info {
+    align-items: center;
+    margin: 0 auto;
 }
 
 .banner-page-title {
@@ -2446,6 +2470,33 @@ textarea.input-text {
 .form-contacts .ch + label, 
 .form-contacts .rd + label {
     font-size: 14rem;
+}
+
+.swiper-with-scrollbar {
+    padding-bottom: 60rem;
+}
+
+.swiper-scrollbar {
+    height: 4rem;
+    background: var(--second-color);
+}
+
+.swiper-scrollbar-drag {
+    top: -2rem;
+    height: calc(100% + 4rem);
+    background: var(--accent-color);
+}
+
+.news-slider {
+    margin-top: 32rem;
+}
+
+.news-slider .swiper-wrapper {
+    gap: 0 16rem;
+}
+
+.news-slider .swiper-slide {
+    max-width: 458rem;
 }
 
 /*end main styles*/
@@ -2965,6 +3016,17 @@ textarea.input-text {
         margin-top: 32rem;
     }
 
+    .banner-experts-page .banner-experts-info {
+        align-items: flex-start;
+        margin: 0 auto;
+        padding: 32rem 16rem;
+        text-align: left;
+    }
+
+    .banner-experts-title {
+        font-size: 24rem;
+    }
+
     .banner-experts-text {
         font-size: 14rem;
     }
@@ -3038,8 +3100,17 @@ textarea.input-text {
         height: 580rem;
     }
 
-    .banner-page-small {
+    .banner-page-small,
+    .banner-video {
         height: 464rem;
+    }
+
+    .banner-video {
+        align-items: center;
+    }
+
+    .banner-video .banner-page-info {
+        text-align: center;
     }
 
     .banner-page-info {
@@ -3071,6 +3142,10 @@ textarea.input-text {
 
     .banner-page-info .btn {
         display: none;
+    }
+
+    .banner-video .btn {
+        display: flex;
     }
 
     .products-list {
@@ -3309,6 +3384,18 @@ textarea.input-text {
         border-radius: 8rem;
         font-size: 16rem;
     }
+
+    .swiper-with-scrollbar {
+        padding-bottom: 20rem;
+    }
+
+    .news-slider.swiper-with-scrollbar {
+        padding-bottom: 0;
+    }
+
+    .news-slider .swiper-scrollbar {
+        display: none;
+    }
 }
 
 @media (max-width: 390px) {
@@ -3323,7 +3410,8 @@ textarea.input-text {
     }
 
     .banner-page-small,
-    .image-square {
+    .image-square,
+    .banner-video {
         height: 374rem;
     }
 }
