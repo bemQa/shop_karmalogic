@@ -148,6 +148,9 @@ $(document).ready(function () {
             480: {
                 slidesPerView: 'auto',
             },
+            481: {
+                slidesPerView: 3,
+            }
         },
     });
 
