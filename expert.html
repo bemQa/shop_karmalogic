@@ -9,7 +9,6 @@
 	<link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css"/>
 	<link rel="stylesheet" href="libs/fancybox/fancybox.css"/>
 	<link rel="stylesheet" href="libs/simplebar/simplebar.css"/>
-    <link rel="stylesheet" href="libs/select2/select2.min.css"/>
 	<link rel="stylesheet" href="fonts/stylesheet.css"/>
 	<link rel="stylesheet" href="css/styles.css"/>
 
@@ -78,155 +77,138 @@
 		</header>
         <section class="section">
             <div class="container">
-                <div class="banner-experts banner-experts-page">
-                    <!-- сделать параллакс на движение мыши -->
-                    <img src="img/banner-experts-page.png" class="banner-experts-img desktop-visible" alt="Karmalogic®">
-                    <img src="img/banner-experts-mob.png" class="banner-experts-img mobile-visible" alt="Karmalogic®">
-                    <div class="banner-experts-info">
-                        <h1 class="title banner-experts-title">Мастера Karmalogic® используют знания о законах судьбы на практике и меняют жизни</h1>
-                        <a href="" class="btn btn-transparent">Кто такой Мастер Karmalogic® &nbsp;<img src="img/icons/send-white.svg" alt=""></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section">
-            <div class="container">
-                <div class="block-bg">
-                    <div class="title-wrapper">
-                        <div class="title h1">Сообщество Karmalogic®</div>
-                        <div class="page-filters">
-                            <div class="page-filters-list">
-                                <a href="" class="page-filter-link active">Все</a>
-                                <a href="" class="page-filter-link">Команда проекта</a>
-                                <a href="" class="page-filter-link">Кураторы</a>
-                                <a href="" class="page-filter-link">Мастера</a>
+                <div class="two-column-block">
+                    <div class="left-column-block">
+                        <div class="images-square">
+                            <div class="image-square">
+                                <img src="img/expert.png" alt="Анастасия Захарова">
                             </div>
-                            <div class="page-filters-list-wrapper">
-                                <div class="page-filters-list page-filters-list-select">
-                                    <div class="select">
-                                        <select name="city" data-placeholder="Город">
-                                            <option value=""></option>
-                                            <option value="1">Москва</option>
-                                            <option value="2">Санкт-Петербург</option>
-                                            <option value="3">Новосибирск</option>
-                                        </select>
+                        </div>
+                    </div>
+                    <div class="right-column-block">
+                        <div class="column-block">
+                            <h1 class="title expert-page-name">Анастасия Захарова</h1>
+                            <div class="expert-page-status">Мастер Karmalogic®</div>
+                            <div class="column-block-text">Работаю через разные инструменты, основа — авторский метод «Астрологотерапия» (восточная астрология джйотиш + психология смысла). Образование: банковское дело, психология.</div>
+                            <div class="socs">
+                                <a href="" class="soc web" target="_blank" rel="nofollow"></a>
+                                <a href="" class="soc wa" target="_blank" rel="nofollow"></a>
+                                <a href="" class="soc tg" target="_blank" rel="nofollow"></a>
+                                <a href="" class="soc vk" target="_blank" rel="nofollow"></a>
+                            </div>
+                        </div>
+                        <div class="column-block">
+                            <div class="title expert-page-title">О себе</div>
+                            <div class="column-block-text">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lacinia augue quis nisl semper lobortis. Phasellus mattis mauris nulla, sit amet feugiat diam laoreet sed. Aliquam ornare vehicula odio, convallis mollis quam posuere sed. Vivamus vestibulum massa in ligula tincidunt, ultrices maximus sapien maximus. Suspendisse suscipit molestie tincidunt. Aliquam varius dui at tellus semper, non sodales felis imperdiet. Pellentesque sed turpis convallis, faucibus turpis sed, feugiat tellus. Sed dolor dui, euismod id libero congue.
+                                </p>
+                                <p>
+                                    Sed eu sapien id enim pretium fermentum. Mauris lacinia, urna eu molestie auctor, est nulla molestie leo, a sollicitudin purus massa non ipsum. Nam ut lorem pharetra, cursus mi non, semper erat. Donec bibendum tincidunt sapien in sagittis. Sed eget mattis mauris. Nam sit amet odio felis. Cras ut lorem non est convallis viverra. Integer non libero eget purus accumsan blandit.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="column-block">
+                            <div class="title expert-page-title">Знакомство с проектом</div>
+                            <div class="column-block-text">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lacinia augue quis nisl semper lobortis. Phasellus mattis mauris nulla, sit amet feugiat diam laoreet sed. Aliquam ornare vehicula odio, convallis mollis quam posuere sed. Vivamus vestibulum massa in ligula tincidunt, ultrices maximus sapien maximus. Suspendisse suscipit molestie tincidunt. Aliquam varius dui at tellus semper, non sodales felis imperdiet. Pellentesque sed turpis convallis, faucibus turpis sed, feugiat tellus. Sed dolor dui, euismod id libero congue.
+                                </p>
+                                <p>
+                                    Sed eu sapien id enim pretium fermentum. Mauris lacinia, urna eu molestie auctor, est nulla molestie leo, a sollicitudin purus massa non ipsum. Nam ut lorem pharetra, cursus mi non, semper erat. Donec bibendum tincidunt sapien in sagittis. Sed eget mattis mauris. Nam sit amet odio felis. Cras ut lorem non est convallis viverra. Integer non libero eget purus accumsan blandit.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="column-block pr0-mobile">
+                            <div class="title expert-page-title">Услуги</div>
+                            <div class="services-list swiper services-list-slider-mobile">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="" class="service-card">
+                                            <div class="service-card-dates">Москва &nbsp;•&nbsp; от 30 000 ₽</div>
+                                            <div class="service-card-title title">Командный коучинг для компаний</div>
+                                            <div class="service-card-text">Командный коучинг чаще всего проводится для сотрудников организации. Эта возможность особенно ценна для бизнеса в случаях внедрения новых рабочих процессов, реорганизации фирмы, приема в штат новых...</div>
+                                            <div class="service-card-authors">
+                                                <div class="service-card-author">
+                                                    <div class="service-card-author-img">
+                                                        <img src="img/expert.png" alt="Елена Мамедова">
+                                                    </div>
+                                                    <div class="service-card-author-info">
+                                                        <div class="service-card-author-name">Елена Мамедова</div>
+                                                        <div class="service-card-author-text">Тренер-куратор</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <span class="btn btn-round btn-white"></span>
+                                        </a>
                                     </div>
-                                </div>
-                                <div class="page-filters-list page-filters-list-select">
-                                    <div class="select">
-                                        <select name="dir" data-placeholder="Направление" multiple>
-                                            <option value=""></option>
-                                            <option value="1">Название направления, возможно, в две строки</option>
-                                            <option value="2">Название в одну строку</option>
-                                            <option value="3">Название направления, возможно, в две строки</option>
-                                        </select>
+                                    <div class="swiper-slide">
+                                        <a href="" class="service-card">
+                                            <div class="service-card-dates">Москва &nbsp;•&nbsp; от 30 000 ₽</div>
+                                            <div class="service-card-title title">Командный коучинг для компаний</div>
+                                            <div class="service-card-text">Командный коучинг чаще всего проводится для сотрудников организации. Эта возможность особенно ценна для бизнеса в случаях внедрения новых рабочих процессов, реорганизации фирмы, приема в штат новых...</div>
+                                            <div class="service-card-authors">
+                                                <div class="service-card-author">
+                                                    <div class="service-card-author-img">
+                                                        <img src="img/expert.png" alt="Елена Мамедова">
+                                                    </div>
+                                                    <div class="service-card-author-info">
+                                                        <div class="service-card-author-name">Елена Мамедова</div>
+                                                        <div class="service-card-author-text">Тренер-куратор</div>
+                                                    </div>
+                                                </div>
+                                                <div class="service-card-author">
+                                                    <div class="service-card-author-img">
+                                                        <img src="img/expert.png" alt="Елена Мамедова">
+                                                    </div>
+                                                    <div class="service-card-author-info">
+                                                        <div class="service-card-author-name">Елена Мамедова</div>
+                                                        <div class="service-card-author-text">Тренер-куратор</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <span class="btn btn-round btn-white"></span>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="" class="service-card">
+                                            <div class="service-card-dates">Москва &nbsp;•&nbsp; от 30 000 ₽</div>
+                                            <div class="service-card-title title">Командный коучинг для компаний</div>
+                                            <div class="service-card-text">Командный коучинг чаще всего проводится для сотрудников организации. Эта возможность особенно ценна для бизнеса в случаях внедрения новых рабочих процессов, реорганизации фирмы, приема в штат новых...</div>
+                                            <div class="service-card-authors">
+                                                <div class="service-card-author">
+                                                    <div class="service-card-author-img">
+                                                        <img src="img/expert.png" alt="Елена Мамедова">
+                                                    </div>
+                                                    <div class="service-card-author-info">
+                                                        <div class="service-card-author-name">Елена Мамедова</div>
+                                                        <div class="service-card-author-text">Тренер-куратор</div>
+                                                    </div>
+                                                </div>
+                                                <div class="service-card-author">
+                                                    <div class="service-card-author-img">
+                                                        <img src="img/expert.png" alt="Елена Мамедова">
+                                                    </div>
+                                                    <div class="service-card-author-info">
+                                                        <div class="service-card-author-name">Елена Мамедова</div>
+                                                        <div class="service-card-author-text">Тренер-куратор</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <span class="btn btn-round btn-white"></span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="experts-list">
-                        <a href="" class="expert-card">
-                            <div class="expert-card-img">
-                                <img src="img/expert.png" alt="">
-                                <span class="btn btn-round btn-white"></span>
-                            </div>
-                            <div class="expert-card-info">
-                                <div class="title expert-card-name">Анастасия Захарова</div>
-                                <div class="expert-card-text">Мастер Karmalogic®</div>
-                            </div>
-                        </a>
-                        <a href="" class="expert-card">
-                            <div class="expert-card-img">
-                                <img src="img/expert.png" alt="">
-                                <span class="btn btn-round btn-white"></span>
-                            </div>
-                            <div class="expert-card-info">
-                                <div class="title expert-card-name">Анастасия Захарова</div>
-                                <div class="expert-card-text">Мастер Karmalogic®</div>
-                            </div>
-                        </a>
-                        <a href="" class="expert-card">
-                            <div class="expert-card-img">
-                                <img src="img/expert.png" alt="">
-                                <span class="btn btn-round btn-white"></span>
-                            </div>
-                            <div class="expert-card-info">
-                                <div class="title expert-card-name">Анастасия Захарова</div>
-                                <div class="expert-card-text">Мастер Karmalogic®</div>
-                            </div>
-                        </a>
-                        <a href="" class="expert-card">
-                            <div class="expert-card-img">
-                                <img src="img/expert.png" alt="">
-                                <span class="btn btn-round btn-white"></span>
-                            </div>
-                            <div class="expert-card-info">
-                                <div class="title expert-card-name">Анастасия Захарова</div>
-                                <div class="expert-card-text">Мастер Karmalogic®</div>
-                            </div>
-                        </a>
-                        <a href="" class="expert-card">
-                            <div class="expert-card-img">
-                                <img src="img/expert.png" alt="">
-                                <span class="btn btn-round btn-white"></span>
-                            </div>
-                            <div class="expert-card-info">
-                                <div class="title expert-card-name">Анастасия Захарова</div>
-                                <div class="expert-card-text">Мастер Karmalogic®</div>
-                            </div>
-                        </a>
-                        <a href="" class="expert-card">
-                            <div class="expert-card-img">
-                                <img src="img/expert.png" alt="">
-                                <span class="btn btn-round btn-white"></span>
-                            </div>
-                            <div class="expert-card-info">
-                                <div class="title expert-card-name">Анастасия Захарова</div>
-                                <div class="expert-card-text">Мастер Karmalogic®</div>
-                            </div>
-                        </a>
-                        <a href="" class="expert-card">
-                            <div class="expert-card-img">
-                                <img src="img/expert.png" alt="">
-                                <span class="btn btn-round btn-white"></span>
-                            </div>
-                            <div class="expert-card-info">
-                                <div class="title expert-card-name">Анастасия Захарова</div>
-                                <div class="expert-card-text">Мастер Karmalogic®</div>
-                            </div>
-                        </a>
-                        <a href="" class="expert-card">
-                            <div class="expert-card-img">
-                                <img src="img/expert.png" alt="">
-                                <span class="btn btn-round btn-white"></span>
-                            </div>
-                            <div class="expert-card-info">
-                                <div class="title expert-card-name">Анастасия Захарова</div>
-                                <div class="expert-card-text">Мастер Karmalogic®</div>
-                            </div>
-                        </a>
-                    </div>
                 </div>
             </div>
         </section>
         <section class="section">
             <div class="container">
-				<a href="" class="banner-page banner-video">
-                    <img src="img/banner-video.png" class="banner-page-img desktop-visible" alt="Karmalogic®">
-                    <img src="img/banner-video-mob.png" class="banner-page-img mobile-visible" alt="Karmalogic®">
-                    <div class="banner-page-info">
-                        <div class="title banner-page-title">Станьте частью сообщества</div>
-                        <div class="banner-page-text">Мы всегда рады новым участникам и друзьям проекта</div>
-                        <span class="btn btn-transparent">Как стать Мастером Karmalogic® &nbsp;<img src="img/icons/send-white.svg" alt=""></span>
-                    </div>
-                </a>
-            </div>
-        </section>
-        <section class="section">
-            <div class="container">
                 <div class="block-bg pr0-mobile">
-                    <div class="title h1">Новости</div>
+                    <div class="title h1">Другие Мастера Karmalogic®</div>
                     <div class="news-slider swiper swiper-with-scrollbar">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
@@ -389,7 +371,6 @@
 <script src="libs/simplebar/simplebar.min.js"></script>
 <script src="libs/jquery.inputmask.min.js"></script>
 <script src="libs/jquery.validate.min.js"></script>
-<script src="libs/select2/select2.min.js"></script>
 <script src="js/scripts.js"></script>
 
 <!-- <div class="swiper">

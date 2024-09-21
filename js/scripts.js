@@ -136,9 +136,9 @@ $(document).ready(function () {
     });
 
     const news_slider = new Swiper('.news-slider', {
-        slidesPerView: 3,
-        loop: false,
-        freeMode: true,
+        slidesPerView: 'auto',
+        loop: true,
+        freeMode: false,
         mousewheel: true,
         scrollbar: {
             el: ".swiper-scrollbar",
@@ -147,9 +147,13 @@ $(document).ready(function () {
         breakpoints: {
             480: {
                 slidesPerView: 'auto',
+                loop: true,
+                freeMode: false,
             },
             481: {
                 slidesPerView: 3,
+                loop: false,
+                freeMode: true,
             }
         },
     });
@@ -192,4 +196,22 @@ $(document).ready(function () {
     }
     courses_page_cards();
     window.addEventListener("resize", courses_page_cards);
+
+    function services_list_slider() {
+        if (window.innerWidth <= 480) {
+            if (!init && $('.services-list-slider-mobile').length) {
+                init = true;
+                swiper = new Swiper(".services-list-slider-mobile", {
+                    slidesPerView: 'auto',
+                    loop: true,
+                    freeMode: false,
+                });
+            }
+        } else if (init && $('.services-list-slider-mobile').length) {
+            swiper.destroy();
+            init = false;
+        }
+    }
+    services_list_slider();
+    window.addEventListener("resize", services_list_slider);
 });
