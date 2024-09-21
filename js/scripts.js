@@ -158,6 +158,29 @@ $(document).ready(function () {
         },
     });
 
+    const experts_slider = new Swiper('.experts-slider', {
+        slidesPerView: 'auto',
+        loop: true,
+        freeMode: false,
+        mousewheel: true,
+        scrollbar: {
+            el: ".swiper-scrollbar",
+            hide: false,
+        },
+        breakpoints: {
+            480: {
+                slidesPerView: 'auto',
+                loop: true,
+                freeMode: false,
+            },
+            481: {
+                slidesPerView: 4,
+                loop: false,
+                freeMode: true,
+            }
+        },
+    });
+
     // only mobile sliders
     let init = false;
     let swiper;

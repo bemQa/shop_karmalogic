@@ -2847,6 +2847,18 @@ textarea.input-text {
     margin-top: 32rem;
 }
 
+.experts-slider {
+    margin-top: 32rem;
+}
+
+.experts-slider .swiper-wrapper {
+    gap: 0 16rem;
+}
+
+.experts-slider .swiper-slide {
+    max-width: 340rem;
+}
+
 .expert-card {
     display: flex;
     flex-direction: column;
@@ -3926,7 +3938,8 @@ textarea.input-text {
         padding-bottom: 0;
     }
 
-    .news-slider .swiper-scrollbar {
+    .news-slider .swiper-scrollbar,
+    .experts-slider .swiper-scrollbar {
         display: none;
     }
 
@@ -3938,13 +3951,33 @@ textarea.input-text {
         margin-top: 24rem;
     }
 
+    .experts-slider {
+        margin-top: 24rem;
+    }
+
+    .experts-slider .swiper-wrapper {
+        gap: 0 8rem;
+    }
+
+    .experts-slider .swiper-slide {
+        max-width: 300rem;
+    }
+
     .expert-card {
         gap: 12rem 0;
         max-width: calc(50% - 8rem);
     }
 
+    .experts-slider .expert-card {
+        max-width: 300rem;
+    }
+
     .expert-card-img {
         height: 208rem;
+    }
+
+    .experts-slider .expert-card-img {
+        height: 300rem;
     }
 
     .expert-card-img .btn {
@@ -3957,12 +3990,24 @@ textarea.input-text {
         padding: 0;
     }
 
+    .experts-slider .expert-card-info {
+        text-align: left;
+    }
+
     .expert-card-name {
         font-size: 14rem;
     }
 
+    .experts-slider .expert-card-name {
+        font-size: 20rem;
+    }
+
     .expert-card-text {
         font-size: 12rem;
+    }
+
+    .experts-slider .expert-card-text {
+        font-size: 14rem;
     }
 
     .news-slider {
@@ -3999,10 +4044,6 @@ textarea.input-text {
 
     .expert-page-title {
         font-size: 24rem;
-    }
-    
-    .services-list-slider-mobile {
-
     }
 
     .services-list-slider-mobile .swiper-wrapper {
