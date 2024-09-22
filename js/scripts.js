@@ -107,6 +107,25 @@ $(document).ready(function () {
         // Your custom options
     });
 
+    // навигационное меню на текстовых страницах
+    $(window).on('scroll load', function () {
+        let top = $(window).scrollTop();
+        $('.anchor-block').each(function() {
+            let destination = $(this).offset().top - 250;
+            if(top >= destination) {
+                let id = $(this).attr('id');
+                $('.text-block-nav-link.anchor[href^="#"]').removeClass('active');
+                $('.text-block-nav-link.anchor[href^="#'+ id +'"]').addClass('active');
+            }
+        });
+    }).trigger('scroll');
+    if ((window.location.hash !== '' && window.location.hash !== '#!') && $('.text-block-nav-menu').length) {
+        setTimeout(function() {
+            let goto = $(window.location.hash).offset().top;
+            $('html, body').animate({ scrollTop: goto }, 600, 'swing');
+        }, 100);
+    }
+
     // sliders
     const courses_cards = new Swiper('.courses-cards', {
         slidesPerView: 'auto',
@@ -251,6 +270,19 @@ $(document).ready(function () {
             480: {
                 slidesPerView: 'auto',
             },
+        },
+    });
+
+    const text_page_slider = new Swiper('.text-page-slider', {
+        slidesPerView: 1,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
         },
     });
 
