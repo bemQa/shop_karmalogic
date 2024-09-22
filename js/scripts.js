@@ -134,6 +134,29 @@ $(document).ready(function () {
         freeMode: true,
     });
 
+    const shop_inner_slider = new Swiper('.shop-inner-slider', {
+        slidesPerView: 'auto',
+        loop: true,
+        freeMode: false,
+        mousewheel: true,
+        scrollbar: {
+            el: ".swiper-scrollbar",
+            hide: false,
+        },
+        breakpoints: {
+            480: {
+                slidesPerView: 'auto',
+                loop: true,
+                freeMode: false,
+            },
+            481: {
+                slidesPerView: 5,
+                loop: false,
+                freeMode: true,
+            }
+        },
+    });
+
     const travel_slider = new Swiper('.travel-slider', {
         slidesPerView: 'auto',
         loop: true,
@@ -206,6 +229,28 @@ $(document).ready(function () {
                 loop: false,
                 freeMode: true,
             }
+        },
+    });
+
+    const product_slider_navs = new Swiper(".product-slider-navs", {
+        slidesPerView: 4,
+        loop: true,
+        freeMode: true,
+        watchSlidesProgress: true,
+        direction: "vertical",
+        grabCursor: true,
+    });
+    const product_slider = new Swiper(".product-slider", {
+        // slidesPerView: 1,
+        loop: true,
+        // direction: "vertical",
+        thumbs: {
+            swiper: product_slider_navs,
+        },
+        breakpoints: {
+            480: {
+                slidesPerView: 'auto',
+            },
         },
     });
 
