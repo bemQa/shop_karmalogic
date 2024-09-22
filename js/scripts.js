@@ -102,6 +102,11 @@ $(document).ready(function () {
         });
     }
 
+    // fancybox
+    Fancybox.bind("[data-fancybox]", {
+        // Your custom options
+    });
+
     // sliders
     const courses_cards = new Swiper('.courses-cards', {
         slidesPerView: 'auto',
@@ -181,6 +186,29 @@ $(document).ready(function () {
         },
     });
 
+    const services_slider = new Swiper('.services-slider', {
+        slidesPerView: 'auto',
+        loop: true,
+        freeMode: false,
+        mousewheel: true,
+        scrollbar: {
+            el: ".swiper-scrollbar",
+            hide: false,
+        },
+        breakpoints: {
+            480: {
+                slidesPerView: 'auto',
+                loop: true,
+                freeMode: false,
+            },
+            481: {
+                slidesPerView: 2,
+                loop: false,
+                freeMode: true,
+            }
+        },
+    });
+
     // only mobile sliders
     let init = false;
     let swiper;
@@ -237,4 +265,22 @@ $(document).ready(function () {
     }
     services_list_slider();
     window.addEventListener("resize", services_list_slider);
+
+    function photo_gallery_slider() {
+        if (window.innerWidth <= 480) {
+            if (!init && $('.photo-gallery-slider').length) {
+                init = true;
+                swiper = new Swiper(".photo-gallery-slider", {
+                    slidesPerView: 'auto',
+                    loop: true,
+                    freeMode: false,
+                });
+            }
+        } else if (init && $('.photo-gallery-slider').length) {
+            swiper.destroy();
+            init = false;
+        }
+    }
+    photo_gallery_slider();
+    window.addEventListener("resize", photo_gallery_slider);
 });

@@ -2719,6 +2719,7 @@ textarea.input-text {
 }
 
 .column-block {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 24rem 0;
@@ -2979,6 +2980,276 @@ textarea.input-text {
 .services-list-slider-mobile .swiper-slide {
     max-width: 696rem;
     height: auto;
+}
+
+.service-page-dates {
+    font-weight: 300;
+    font-size: 16rem;
+    line-height: 1.5;
+    color: var(--text-color-transparent);
+}
+
+.column-block-maintitle {
+    font-weight: normal;
+    font-size: 40rem;
+    line-height: 1.15;
+}
+
+.expert-verified-status {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8rem 0;
+    width: fit-content;
+    padding: 12rem 24rem 12rem 72rem;
+    background: var(--background-transparent007);
+    border-radius: 50rem;
+    transition: all .3s ease;
+}
+
+a.expert-verified-status {
+    background: var(--background-transparent01);
+}
+
+.expert-verified-status::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 16rem;
+    bottom: 0;
+    margin: auto;
+    width: 40rem;
+    height: 40rem;
+    background: url(../img/icons/verified.svg) center/contain no-repeat;
+}
+
+.column-block-title {
+    font-weight: normal;
+    font-size: 36rem;
+    line-height: 1.15;
+}
+
+.expert-verified-name {
+    font-size: 20rem;
+    line-height: 1.15;
+    color: var(--text-color);
+}
+
+.expert-verified-text {
+    font-size: 14rem;
+    line-height: 1;
+    color: var(--text-color-transparent);
+}
+
+.service-price-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 24rem;
+    margin-top: 24rem;
+}
+
+.service-price {
+    font-size: 32rem;
+    line-height: 1;
+}
+
+.column-block-notice {
+    position: relative;
+    padding: 24rem 24rem 24rem 72rem;
+    background: var(--second-color);
+    border-radius: 8rem;
+    font-size: 18rem;
+    line-height: 1.5;
+    color: rgba(47, 57, 86, 0.9);
+}
+
+.column-block-notice::before {
+    content: '';
+    position: absolute;
+    top: 24rem;
+    left: 24rem;
+    width: 24rem;
+    height: 25rem;
+    background: url(../img/icons/i.svg) center/contain no-repeat;
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16rem;
+}
+
+.photo-gallery-element {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column-end: span 1;
+    width: 150rem;
+    height: 150rem;
+    border-radius: 8rem;
+    overflow: hidden;
+    transition: all .3s ease;
+}
+
+.photo-gallery-element img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .3s ease;
+}
+
+.photo-gallery-element:hover img {
+    transform: scale(1.03);
+}
+
+.photo-gallery-element:first-child {
+    grid-column-end: span 2;
+    grid-row-end: span 2;
+    width: 316rem;
+    height: 316rem;
+}
+
+.photo-gallery-element-more::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    background: var(--background-transparent007);
+    backdrop-filter: blur(6rem);
+    -webkit-backdrop-filter: blur(6rem);
+    transition: all .3s ease;
+}
+
+.photo-gallery-more {
+    position: relative;
+    font-weight: 300;
+    font-size: 16rem;
+    line-height: 1.5;
+    text-align: center;
+    z-index: 1;
+}
+
+.faq-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16rem 0;
+}
+
+.faq-item {
+    padding: 16rem 24rem;
+    background: var(--background-transparent007);
+    border: 1rem solid rgba(232, 238, 247, 0.05);
+    border-radius: 8rem;
+}
+
+.faq-title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-right: 40rem;
+    font-size: 20rem;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.faq-title::after {
+    content: '';
+    position: absolute;
+    top: 12rem;
+    right: 0;
+    width: 13rem;
+    height: 8rem;
+    background: url(../img/icons/chevron-down-white.svg) center/contain no-repeat;
+    transition: all .3s ease;
+}
+
+.faq-title.active::after {
+    transform: rotate(-180deg);
+}
+
+.faq-text {
+    display: none;
+    padding-top: 24rem;
+    font-weight: 300;
+    font-size: 18rem;
+    line-height: 1.5;
+    color: var(--text-color-transparent);
+}
+
+.tarif-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16rem 0;
+}
+
+.tarif {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 0 32rem;
+    padding: 24rem 32rem;
+    background: var(--background-transparent007);
+    border-radius: 8rem;
+}
+
+.tarif-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16rem 0;
+    max-width: 400rem;
+    width: 100%;
+}
+
+.tarif-name {
+    font-size: 24rem;
+    line-height: 1.15;
+}
+
+.tarif-text {
+    font-weight: 300;
+    font-size: 16rem;
+    line-height: 1.5;
+    color: var(--text-color-transparent);
+}
+
+.tarif-text li {
+    margin-bottom: 0;
+}
+
+.tarif-price-info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 16rem 0;
+}
+
+.tarif-price {
+    font-size: 24rem;
+    line-height: 1.15;
+}
+
+.services-slider {
+    margin-top: 32rem;
+}
+
+.services-slider .swiper-wrapper {
+    gap: 0 16rem;
+}
+
+.services-slider .swiper-slide {
+    max-width: 696rem;
 }
 /*end main styles*/
 
@@ -3842,6 +4113,11 @@ textarea.input-text {
         font-size: 12rem;
     }
 
+    .service-card .btn {
+        bottom: 24rem;
+        right: 24rem;
+    }
+
     .services-list + .buttons {
         margin-top: 20rem;
     }
@@ -3939,7 +4215,8 @@ textarea.input-text {
     }
 
     .news-slider .swiper-scrollbar,
-    .experts-slider .swiper-scrollbar {
+    .experts-slider .swiper-scrollbar,
+    .services-slider .swiper-scrollbar {
         display: none;
     }
 
@@ -4055,6 +4332,161 @@ textarea.input-text {
     }
 
     .services-list-slider-mobile .swiper-slide .service-card {
+        height: 100%;
+    }
+
+    .service-page-dates {
+        font-size: 14rem;
+    }
+
+    .column-block-maintitle {
+        font-size: 24rem;
+    }
+
+    .service-price {
+        position: absolute;
+        top: 28rem;
+        right: 16rem;
+        font-size: 24rem;
+    }
+
+    .expert-verified-status {
+        gap: 6rem 0;
+        padding: 0 0 0 28rem;
+        background: none;
+    }
+
+    .expert-verified-status::before {
+        left: 0;
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .expert-verified-name {
+        font-size: 14rem;
+    }
+
+    .expert-verified-text {
+        font-size: 12rem;
+    }
+
+    .service-price-wrapper {
+        margin-top: 0;
+    }
+
+    .column-block-title {
+        font-size: 24rem;
+    }
+
+    .column-block-notice {
+        padding: 16rem 16rem 16rem 52rem;
+        font-size: 14rem;
+    }
+
+    .column-block-notice::before {
+        top: 16rem;
+        left: 16rem;
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .photo-gallery {
+        gap: 8rem;
+    }
+
+    .photo-gallery-element:first-child {
+        grid-column-end: span 4;
+        width: 100%;
+        height: 308rem;
+    }
+
+    .photo-gallery-element {
+        grid-column-end: span 2;
+        width: 100%;
+    }
+
+    .photo-gallery-slider .swiper-wrapper {
+        gap: 0 8rem;
+    }
+    
+    .photo-gallery-slider .swiper-slide {
+        max-width: 300rem;
+    }
+
+    .faq-wrapper {
+        gap: 8rem 0;
+    }
+
+    .faq-item {
+        padding: 12rem 16rem;
+    }
+
+    .faq-title,
+    .faq-text {
+        font-size: 14rem;
+    }
+
+    .faq-title::after {
+        top: 7rem;
+        width: 10rem;
+        height: 7rem;
+    }
+
+    .faq-text {
+        padding-top: 12rem;
+    }
+
+    .tarif {
+        flex-direction: column;
+        gap: 24rem 0;
+        padding: 16rem 24rem;
+    }
+
+    .tarif-info {
+        gap: 12rem 0;
+    }
+
+    .tarif-name {
+        padding-right: 100rem;
+        font-size: 18rem;
+    }
+
+    .tarif-text {
+        font-size: 14rem;
+    }
+
+    .tarif-price-info {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0 16rem;
+    }
+
+    .tarif-price {
+        position: absolute;
+        top: 16rem;
+        right: 24rem;
+        font-size: 18rem;
+        order: 1;
+    }
+
+    .services-slider {
+        margin-top: 24rem;
+    }
+
+    .services-slider.swiper-with-scrollbar {
+        padding-bottom: 0;
+    }
+
+    .services-slider .swiper-wrapper {
+        gap: 0 8rem;
+    }
+
+    .services-slider .swiper-slide {
+        max-width: 300rem;
+        height: auto;
+    }
+
+    .services-slider .swiper-slide .service-card {
         height: 100%;
     }
 }
