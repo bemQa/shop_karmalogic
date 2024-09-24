@@ -3631,6 +3631,106 @@ span.breadcrumb {
 .text-block h1 {
     margin-bottom: 32rem;
 }
+
+.banner-page-special {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-page-special .banner-page-info {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.banner-page-special .banner-page-title {
+    font-size: 64rem;
+}
+
+.banner-page-special-info-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32rem;
+    padding: 20rem 0;
+    border-radius: 50rem;
+    background: var(--background-transparent007);
+    -webkit-backdrop-filter: blur(6rem);
+    backdrop-filter: blur(6rem);
+}
+
+.banner-page-special-info-element {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem 0;
+    padding: 0 32rem;
+}
+
+.banner-page-special-info-element:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1rem;
+    height: 100%;
+    background: rgba(232, 248, 237, .15);
+}
+
+.banner-page-special-info-element-title {
+    font-weight: 300;
+    font-size: 16rem;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--text-color-transparent)
+}
+
+.banner-page-special-info-element-text {
+    font-size: 20rem;
+    line-height: 1.15;
+}
+
+.special-page-wrapper {
+    display: flex;
+    gap: 0 16rem;
+}
+
+.special-page-aside {
+    width: 340rem;
+}
+
+.special-page-aside-menu-block {
+    position: sticky;
+    top: 96rem;
+    display: flex;
+    flex-direction: column;
+    gap: 32rem 0;
+    width: 100%;
+    padding: 24rem;
+    background: var(--background-transparent01);
+    border-radius: 8rem;
+}
+
+.special-page-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16rem 0;
+    max-width: calc(100% - 356rem);
+    width: 100%;
+}
+
+.special-page-content-block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 24rem 0;
+    width: 100%;
+    padding: 48rem;
+    background: var(--background-transparent01);
+    border-radius: 8rem;
+}
 /*end main styles*/
 
 /*adaptive styles*/
