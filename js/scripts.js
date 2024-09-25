@@ -126,6 +126,18 @@ $(document).ready(function () {
         }, 100);
     }
 
+    // попап отзывов
+    $('body').on('click', '.review-open', function(e) {
+        let img = $(this).find('.review-person-img img').attr('src');
+        let name = $(this).find('.review-person-name').html();
+        let status = $(this).find('.review-person-status').html();
+        let text = $(this).find('.review-text').html();
+        $('#modal_review_img img').attr('src', img);
+        $('#modal_review_name').html(name);
+        $('#modal_review_status').html(status);
+        $('#modal_review_text').html(text);
+    });
+
     // sliders
     const courses_cards = new Swiper('.courses-cards', {
         slidesPerView: 'auto',
@@ -283,6 +295,29 @@ $(document).ready(function () {
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
+        },
+    });
+
+    const review_slider = new Swiper('.reviews-slider', {
+        slidesPerView: 'auto',
+        loop: true,
+        freeMode: false,
+        mousewheel: true,
+        scrollbar: {
+            el: ".swiper-scrollbar",
+            hide: false,
+        },
+        breakpoints: {
+            480: {
+                slidesPerView: 'auto',
+                loop: true,
+                freeMode: false,
+            },
+            481: {
+                slidesPerView: 3,
+                loop: false,
+                freeMode: true,
+            }
         },
     });
 
