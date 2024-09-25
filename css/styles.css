@@ -3302,8 +3302,8 @@ a.expert-verified-status {
     height: 48rem;
     background: url(../img/icons/play.svg) center/13rem no-repeat;
     border-radius: 50rem;
-    -webkit-backdrop-filter: blur(3rem);
-    backdrop-filter: blur(3rem);
+    -webkit-backdrop-filter: blur(6rem);
+    backdrop-filter: blur(6rem);
 }
 
 .product-slider-navs-more {
@@ -3366,8 +3366,8 @@ a.expert-verified-status {
     height: 64rem;
     background: url(../img/icons/play.svg) center/20rem no-repeat;
     border-radius: 50rem;
-    -webkit-backdrop-filter: blur(3rem);
-    backdrop-filter: blur(3rem);
+    -webkit-backdrop-filter: blur(6rem);
+    backdrop-filter: blur(6rem);
 }
 
 .product-page-badge {
@@ -3713,6 +3713,96 @@ span.breadcrumb {
     border-radius: 8rem;
 }
 
+.special-page-aside-menu-block-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16rem 0;
+    padding-bottom: 32rem;
+    border-bottom: 1rem solid var(--background-color);
+}
+
+.special-page-aside-menu-title {
+    font-size: 24rem;
+    line-height: 1.5;
+}
+
+.special-page-aside-menu-block-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16rem 0;
+}
+
+.special-page-aside-menu-block-info-element {
+    position: relative;
+    padding-left: 25rem;
+    font-weight: 300;
+    font-size: 18rem;
+    line-height: 1.5;
+    color: var(--text-color-transparent);
+}
+
+.special-page-aside-menu-block-info-element img {
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    width: 13rem;
+}
+
+.special-page-aside-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 24rem 0;
+    padding-bottom: 32rem;
+    border-bottom: 1rem solid var(--background-color);
+}
+
+.special-page-aside-menu-link {
+    font-weight: 300;
+    font-size: 18rem;
+    line-height: 1.15;
+}
+
+.special-page-aside-menu-button-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24rem 0;
+}
+
+.special-page-aside-menu-button-block .btn {
+    width: 100%;
+}
+
+.whatsapp-link {
+    position: relative;
+    padding-left: 27rem;
+    font-weight: 300;
+    font-size: 18rem;
+    line-height: 1.5;
+    color: var(--text-color-transparent);
+}
+
+.whatsapp-link::before {
+    content: '';
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    width: 17rem;
+    height: 17rem;
+    background: url(../img/socs/whatsapp.svg) center/contain no-repeat;
+    opacity: 0.65;
+    transition: all .3s ease;
+}
+
+.whatsapp-link:hover {
+    color: var(--text-color);
+}
+
+.whatsapp-link:hover::before {
+    opacity: 1;
+}
+
 .special-page-content {
     display: flex;
     flex-direction: column;
@@ -3730,6 +3820,217 @@ span.breadcrumb {
     padding: 48rem;
     background: var(--background-transparent01);
     border-radius: 8rem;
+}
+
+.special-page-first-block-wrapper {
+    display: flex;
+    gap: 0 16rem;
+}
+
+.special-page-first-block-info {
+    display: flex;
+    flex-direction: column;
+    gap: 48rem 0;
+    max-width: calc(100% - 356rem);
+    width: 100%;
+}
+
+.special-page-first-block-welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 24rem 0;
+    width: 340rem;
+}
+
+.special-page-first-block-welcome-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 240rem;
+    height: 240rem;
+    border-radius: 240rem;
+    overflow: hidden;
+}
+
+.special-page-first-block-welcome-link img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .2s linear;
+}
+
+.special-page-first-block-welcome-link:hover img {
+    transform: scale(1.03);
+}
+
+.welcome-link-video::after {
+    content: '';
+    position: absolute;;
+    left: 0;
+    right: 0;
+    bottom: 24rem;
+    margin: auto;
+    width: 56rem;
+    height: 56rem;
+    background: url(../img/icons/play.svg) center / 17rem no-repeat;
+    border-radius: 50rem;
+    -webkit-backdrop-filter: blur(6rem);
+    backdrop-filter: blur(6rem);
+}
+
+.special-page-first-block-welcome-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem 0;
+}
+
+.special-page-first-block-welcome-text-name {
+    font-size: 24rem;
+    line-height: 1.5;
+}
+
+.special-page-first-block-welcome-text-text {
+    font-weight: 300;
+    font-size: 16rem;
+    line-height: 1.5;
+    color: var(--text-color-transparent)
+}
+
+.special-page-block-title {
+    font-weight: normal;
+    font-size: 40rem;
+    line-height: 1.15;
+}
+
+.travel-program-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.travel-program-element {
+    display: flex;
+    align-items: flex-start;
+    gap: 0 40rem;
+    padding-bottom: 72rem;
+    border-bottom: 1rem solid var(--background-color);
+}
+
+.travel-program-element:not(:first-child) {
+    padding-top: 48rem;
+}
+
+.travel-program-element:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.travel-program-element .text-page-slider {
+    max-width: 506rem;
+    margin: 0;
+}
+
+.travel-program-element-info {
+    display: flex;
+    flex-direction: column;
+    gap: 24rem 0;
+    max-width: 506rem;
+    width: 100%;
+}
+
+.travel-program-element-dates {
+    font-weight: 300;
+    font-size: 16rem;
+    line-height: 1.5;
+    color: var(--text-color-transparent);
+}
+
+.travel-program-element-title {
+    font-size: 32rem;
+    line-height: 1.15;
+}
+
+.travel-program-element-text {
+    font-weight: 300;
+    font-size: 18rem;
+    line-height: 1.5;
+}
+
+.travel-program-element-text p,
+.travel-program-element-text ul,
+.travel-program-element-text ol {
+    margin: 10rem 0;
+}
+
+.special-page-content-block .photo-gallery-element {
+    width: 251rem;
+    height: 251rem;
+}
+
+.special-page-content-block .photo-gallery-element:first-child {
+    width: 518rem;
+    height: 518rem;
+}
+
+.travel-price-info-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0 16rem;
+}
+
+.travel-price-info {
+    display: flex;
+    flex-direction: column;
+    max-width: 648rem;
+    width: 100%;
+}
+
+.travel-price-info-title {
+    font-size: 20rem;
+    line-height: 1.5;
+}
+
+.travel-price-info-text {
+    font-weight: 300;
+    font-size: 18rem;
+    line-height: 1.5;
+}
+
+.travel-price-info-text:not(:last-child) {
+    margin-bottom: 16rem;
+}
+
+.travel-price-info-text p,
+.travel-price-info-text ul,
+.travel-price-info-text ol {
+    margin: 10rem 0;
+}
+
+.travel-price-info-labels {
+    display: flex;
+    flex-direction: column;
+    gap: 16rem 0;
+    width: 340rem;
+}
+
+.travel-price-info-label {
+    display: flex;
+    align-items: center;
+    gap: 0 16rem;
+    padding: 32rem;
+    background: var(--accent-color);
+    border-radius: 50rem;
 }
 /*end main styles*/
 
