@@ -2190,12 +2190,14 @@ textarea.input-text {
 }
 
 .travel-slider,
-.travel-page-slider {
+.travel-page-slider,
+.travel-inner-slider {
     margin-top: 32rem;
 }
 
 .travel-slider .swiper-wrapper,
-.travel-page-slider .swiper-wrapper {
+.travel-page-slider .swiper-wrapper,
+.travel-inner-slider .swiper-wrapper {
     gap: 0 16rem;
 }
 
@@ -2205,7 +2207,8 @@ textarea.input-text {
 }
 
 .travel-slider .swiper-slide,
-.travel-page-slider .swiper-slide {
+.travel-page-slider .swiper-slide,
+.travel-inner-slider .swiper-slide {
     max-width: 696rem;
 }
 
@@ -4048,6 +4051,7 @@ span.breadcrumb {
 .travel-price-info-label {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0 16rem;
     padding: 24rem 32rem;
     background: var(--accent-color);
@@ -4522,6 +4526,11 @@ span.breadcrumb {
     }
     /* end forms */
 
+    .select2-container .select2-selection--single {
+        height: 38rem;
+        padding: 13rem 30rem 13rem 14rem;
+    }
+
     .page-filters-list .select2-container .select2-selection--single {
         height: 30rem;
         padding: 10rem 30rem 10rem 10rem;
@@ -4530,6 +4539,12 @@ span.breadcrumb {
     .page-filters-list .select2-container--default .select2-selection--multiple {
         height: 30rem;
         padding: 6rem 30rem 6rem 10rem;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__rendered, 
+    .select2-container--default .select2-selection--multiple .select2-selection__rendered,
+    .select2-container--default .select2-selection--single .select2-selection__placeholder {
+        font-size: 14rem;
     }
 
     .page-filters-list .select2-container--default .select2-selection--single .select2-selection__rendered,
@@ -4821,17 +4836,20 @@ span.breadcrumb {
     }
 
     .travel-slider,
-    .travel-page-slider {
+    .travel-page-slider,
+    .travel-inner-slider {
         margin-top: 24rem;
     }
 
     .travel-slider .swiper-wrapper,
-    .travel-page-slider .swiper-wrapper {
+    .travel-page-slider .swiper-wrapper,
+    .travel-inner-slider .swiper-wrapper {
         gap: 0 8rem;
     }
 
     .travel-slider .swiper-slide,
-    .travel-page-slider .swiper-slide {
+    .travel-page-slider .swiper-slide,
+    .travel-inner-slider .swiper-slide {
         max-width: 300rem;
     }
 
@@ -5210,7 +5228,9 @@ span.breadcrumb {
     .news-slider .swiper-scrollbar,
     .experts-slider .swiper-scrollbar,
     .services-slider .swiper-scrollbar,
-    .shop-inner-slider .swiper-scrollbar {
+    .shop-inner-slider .swiper-scrollbar,
+    .reviews-slider .swiper-scrollbar,
+    .travel-inner-slider .swiper-scrollbar {
         display: none;
     }
 
@@ -5388,7 +5408,8 @@ span.breadcrumb {
         gap: 8rem;
     }
 
-    .photo-gallery-element:first-child {
+    .photo-gallery-element:first-child,
+    .special-page-content-block .photo-gallery-element:first-child {
         grid-column-end: span 4;
         width: 100%;
         height: 308rem;
@@ -5557,7 +5578,7 @@ span.breadcrumb {
     }
 
     .shop-inner-slider.swiper-with-scrollbar {
-        padding: 0;
+        padding-bottom: 0;
     }
 
     .text-block-nav-menu {
@@ -5577,11 +5598,11 @@ span.breadcrumb {
     }
 
     .banner-page-special {
-        height: 542rem;
+        height: 616rem;
     }
 
     .banner-page-special .banner-page-img {
-        max-height: 468rem;
+        max-height: 542rem;
     }
 
     .banner-page-special .banner-page-title {
@@ -5598,17 +5619,44 @@ span.breadcrumb {
     }
 
     .banner-page-special-info-list {
+        justify-content: flex-start;
+        gap: 0 8rem;
+        width: 100%;
         height: 68rem;
         margin-top: auto;
+        padding: 0;
+        background: none;
         border-radius: 8rem;
         overflow-x: scroll;
         -ms-overflow-style: none;
         scrollbar-width: none;
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
     }
 
     .banner-page-special-info-list::-webkit-scrollbar {
         width: 0;
         height: 0;
+    }
+
+    .banner-page-special-info-element {
+        width: fit-content;
+        padding: 12rem 16rem;
+        background: var(--background-transparent01);
+        border-radius: 8rem;
+        white-space: nowrap;
+    }
+
+    .banner-page-special-info-element:not(:last-child)::after {
+        display: none;
+    }
+
+    .banner-page-special-info-element-title {
+        font-size: 12rem;
+    }
+
+    .banner-page-special-info-element-text {
+        font-size: 14rem;
     }
 
     .special-page-aside {
@@ -5625,12 +5673,41 @@ span.breadcrumb {
         padding: 24rem 16rem;
     }
 
+    .special-page-content-block.pr0-mobile .title,
+    .special-page-content-block.pr0-mobile .column-block-text {
+        padding-right: 16rem;
+    }
+
     .special-page-first-block-wrapper {
         flex-direction: column;
+        gap: 32rem 0;
     }
 
     .special-page-first-block-info {
+        gap: 24rem 0;
         max-width: 100%;
+    }
+
+    .special-page-first-block-welcome {
+        gap: 16rem 0;
+        width: 100%;
+    }
+
+    .special-page-first-block-welcome-link {
+        width: 214rem;
+        height: 214rem;
+    }
+
+    .special-page-first-block-welcome-text {
+        gap: 4rem 0;
+    }
+
+    .special-page-first-block-welcome-text-name {
+        font-size: 18rem;
+    }
+
+    .special-page-first-block-welcome-text-text {
+        font-size: 12rem;
     }
 
     .special-page-block-title {
@@ -5639,26 +5716,124 @@ span.breadcrumb {
 
     .travel-program-element {
         flex-direction: column;
+        gap: 24rem 0;
+        padding-bottom: 24rem;
     }
 
+    .travel-program-element:not(:first-child) {
+        padding-top: 24rem;
+    }
 
+    .travel-program-element-info {
+        gap: 12rem 0;
+    }
+
+    .travel-program-element-dates {
+        font-size: 12rem;
+    }
+
+    .travel-program-element-title {
+        font-size: 20rem;
+    }
+
+    .travel-program-element-text {
+        font-size: 14rem;
+    }
+
+    .travel-program-element-text p,
+    .travel-program-element-text ul,
+    .travel-program-element-text ol {
+        margin: 8rem 0;
+    }
+
+    .reviews-slider.swiper-with-scrollbar {
+        padding-bottom: 0;
+    }
+
+    .reviews-slider .swiper-wrapper {
+        gap: 0 8rem;
+    }
+
+    .reviews-slider .swiper-slide {
+        max-width: 300rem;
+    }
+
+    .review-card {
+        max-width: 300rem;
+        height: 300rem;
+    }
+
+    .review-card-wrapper {
+        padding: 8rem;
+    }
+
+    .review-text {
+        -webkit-line-clamp: 8;
+        font-size: 14rem;
+    }
+
+    .review-link {
+        font-size: 14rem;
+    }
+
+    .review-person-img {
+        width: 48rem;
+        height: 48rem;
+    }
+
+    .review-person-name {
+        font-size: 14rem;
+    }
+
+    .review-person-status {
+        font-size: 12rem;
+    }
 
     .travel-price-info-wrapper {
         flex-direction: column;
+        gap: 24rem 0;
     }
 
     .travel-price-info-labels {
+        gap: 8rem 0;
+        width: 100%;
         order: -1;
     }
 
+    .travel-price-info-label {
+        padding: 12rem 24rem;
+    }
 
+    .travel-price-info-label-price {
+        font-size: 24rem;
+    }
+
+    .travel-price-info-label-text {
+        max-width: 130rem;
+        font-size: 12rem;
+    }
+
+    .travel-price-info-title {
+        font-size: 18rem;
+    }
+
+    .travel-price-info-text {
+        font-size: 14rem;
+    }
 
     .special-page-form-wrapper {
         flex-direction: column;
+        gap: 16rem 0;
     }
 
     .special-page-form-info {
+        max-width: 100%;
+        font-size: 14rem;
         order: -1;
+    }
+
+    .travel-inner-slider.swiper-with-scrollbar {
+        padding-bottom: 0;
     }
 }
 
@@ -5677,6 +5852,14 @@ span.breadcrumb {
     .image-square,
     .banner-video {
         height: 374rem;
+    }
+
+    .banner-page-special {
+        height: 542rem;
+    }
+
+    .banner-page-special .banner-page-img {
+        max-height: 468rem;
     }
 
     .expert-card-img {

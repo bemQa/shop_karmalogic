@@ -194,6 +194,29 @@ $(document).ready(function () {
         freeMode: true,
     });
 
+    const travel_inner_slider = new Swiper('.travel-inner-slider', {
+        slidesPerView: 'auto',
+        loop: true,
+        freeMode: false,
+        mousewheel: true,
+        scrollbar: {
+            el: ".swiper-scrollbar",
+            hide: false,
+        },
+        breakpoints: {
+            480: {
+                slidesPerView: 'auto',
+                loop: true,
+                freeMode: false,
+            },
+            481: {
+                slidesPerView: 2,
+                loop: false,
+                freeMode: true,
+            }
+        },
+    });
+
     const news_slider = new Swiper('.news-slider', {
         slidesPerView: 'auto',
         loop: true,
