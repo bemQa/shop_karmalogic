@@ -4273,6 +4273,47 @@ span.breadcrumb {
     font-size: 18rem;
     line-height: 1.5;
 }
+
+.how-going-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.how-going-element {
+    display: flex;
+    align-items: flex-start;
+    gap: 0 48rem;
+    padding-bottom: 72rem;
+    border-bottom: 1rem solid var(--background-color);
+}
+
+.how-going-element:not(:first-child) {
+    padding-top: 48rem;
+}
+
+.how-going-element:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.how-going-element .how-going-element-img,
+.how-going-element .text-page-slider {
+    max-width: 696rem;
+    width: 100%;
+    margin: 0;
+}
+
+.how-going-element .how-going-element-img {
+    border-radius: 8rem;
+}
+
+.how-going-element-info {
+    display: flex;
+    flex-direction: column;
+    gap: 24rem 0;
+    max-width: 308rem;
+    width: 100%;
+}
 /*end main styles*/
 
 /*adaptive styles*/
