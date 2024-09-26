@@ -4241,6 +4241,38 @@ span.breadcrumb {
     font-size: 18rem;
     line-height: 1.5;
 }
+
+.expect-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16rem;
+}
+
+.expect-element {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16rem 0;
+    width: 340rem;
+    padding: 24rem;
+    background: var(--background-transparent01);
+    border-radius: 8rem;
+}
+
+.expect-element-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40rem;
+    height: 40rem;
+}
+
+.expect-element-text {
+    font-weight: 300;
+    font-size: 18rem;
+    line-height: 1.5;
+}
 /*end main styles*/
 
 /*adaptive styles*/
@@ -5834,6 +5866,26 @@ span.breadcrumb {
 
     .travel-inner-slider.swiper-with-scrollbar {
         padding-bottom: 0;
+    }
+
+    .expect-list {
+        flex-direction: column;
+        gap: 8rem 0;
+    }
+
+    .expect-element {
+        gap: 8rem 0;
+        width: 100%;
+        padding: 16rem;
+    }
+
+    .expect-element-icon {
+        width: 24rem;
+        height: 24rem;
+    }
+
+    .expect-element-text {
+        font-size: 14rem;
     }
 }
 
