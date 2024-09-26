@@ -3228,9 +3228,23 @@ a.expert-verified-status {
     width: 100%;
 }
 
+.tarif-big .tarif-info {
+    max-width: 700rem;
+}
+
 .tarif-name {
     font-size: 24rem;
     line-height: 1.15;
+}
+
+.tarif-big .tarif-name {
+    font-size: 32rem;
+}
+
+.tarif-title {
+    font-weight: 300;
+    font-size: 18rem;
+    line-height: 1.5;
 }
 
 .tarif-text {
@@ -3240,20 +3254,44 @@ a.expert-verified-status {
     color: var(--text-color-transparent);
 }
 
+.tarif-big .tarif-text {
+    font-size: 18rem;
+}
+
 .tarif-text li {
     margin-bottom: 0;
 }
 
+.tarif .column-block-notice {
+    font-weight: 300;
+    font-size: 16rem;
+}
+
 .tarif-price-info {
+    position: relative;
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 16rem 0;
 }
 
+.tarif-big .tarif-price-info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -40rem;
+    width: 1rem;
+    height: 100%;
+    background: var(--background-color);
+}
+
 .tarif-price {
     font-size: 24rem;
     line-height: 1.15;
+}
+
+.tarif-big .tarif-price {
+    font-size: 32rem;
 }
 
 .services-slider {
@@ -3729,18 +3767,27 @@ span.breadcrumb {
     top: 96rem;
     display: flex;
     flex-direction: column;
-    gap: 32rem 0;
+    gap: 24rem 0;
     width: 100%;
+    max-height: calc(100vh - 96rem);
     padding: 24rem;
     background: var(--background-transparent01);
     border-radius: 8rem;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.special-page-aside-menu-block::-webkit-scrollbar {
+    width: 0;
+    height: 0;
 }
 
 .special-page-aside-menu-block-info {
     display: flex;
     flex-direction: column;
     gap: 16rem 0;
-    padding-bottom: 32rem;
+    padding-bottom: 24rem;
     border-bottom: 1rem solid var(--background-color);
 }
 
@@ -3752,7 +3799,7 @@ span.breadcrumb {
 .special-page-aside-menu-block-info-list {
     display: flex;
     flex-direction: column;
-    gap: 16rem 0;
+    gap: 8rem 0;
 }
 
 .special-page-aside-menu-block-info-element {
@@ -3775,7 +3822,7 @@ span.breadcrumb {
     display: flex;
     flex-direction: column;
     gap: 24rem 0;
-    padding-bottom: 32rem;
+    padding-bottom: 24rem;
     border-bottom: 1rem solid var(--background-color);
 }
 
@@ -3927,6 +3974,7 @@ span.breadcrumb {
     font-weight: 300;
     font-size: 16rem;
     line-height: 1.5;
+    text-align: center;
     color: var(--text-color-transparent)
 }
 
@@ -4314,15 +4362,42 @@ span.breadcrumb {
 .how-going-element-info {
     display: flex;
     flex-direction: column;
-    gap: 24rem 0;
+    gap: 16rem 0;
     max-width: 308rem;
     width: 100%;
+}
+
+.how-going-element-title {
+    font-size: 24rem;
+    line-height: 1.5;
 }
 
 .how-going-element-text {
     font-weight: 300;
     font-size: 18rem;
     line-height: 1.5;
+}
+
+.how-going-element-notice {
+    position: relative;
+    padding: 56rem 16rem 16rem;
+    background: var(--background-transparent007);
+    border: 1rem solid rgba(232, 238, 247, 0.05);
+    border-radius: 8rem;
+    font-weight: 300;
+    font-size: 16rem;
+    line-height: 1.5;
+    color: var(--text-color-transparent);
+}
+
+.how-going-element-notice::before {
+    content: '';
+    position: absolute;
+    top: 16rem;
+    left: 16rem;
+    width: 24rem;
+    height: 25rem;
+    background: url(../img/icons/i-light.svg) center/contain no-repeat;
 }
 
 .training-program-list {
@@ -4547,6 +4622,134 @@ span.breadcrumb {
 
 a.ticket-element-link:hover {
     color: var(--text-color);
+}
+
+.special-page-block-two-column {
+    display: flex;
+    gap: 0 16rem;
+}
+
+.special-page-block-two-column-img {
+    width: 50%;
+}
+
+.special-page-block-two-column-info {
+    display: flex;
+    flex-direction: column;
+    gap: 24rem 0;
+    width: 50%;
+}
+
+.numbered-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24rem 0;
+}
+
+.numbered-element {
+    position: relative;
+    padding-left: 48rem;
+}
+
+.numbered-element-num {
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    padding: 5rem 8rem;
+    background: var(--second-color);
+    border-radius: 50rem;
+    font-size: 14rem;
+    line-height: 1;
+    color: var(--background-color);
+}
+
+.numbered-element-text {
+    font-weight: 300;
+    font-size: 18rem;
+    line-height: 1.5;
+    color: var(--text-color-transparent);
+}
+
+.special-page-block-two-column-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12rem 0;
+}
+
+.special-page-block-two-column-title {
+    font-size: 24rem;
+    line-height: 1.5;
+}
+
+.special-page-block-two-column-text {
+    font-weight: 300;
+    font-size: 18rem;
+    line-height: 1.5;
+}
+
+.team-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.team-element {
+    display: flex;
+    align-items: flex-start;
+    gap: 0 48rem;
+    padding-bottom: 32rem;
+    border-bottom: 1rem solid var(--background-color);
+}
+
+.team-element:not(:first-child) {
+    padding-top: 32rem;
+}
+
+.team-element:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.team-element-img {
+    position: relative;
+    width: 338rem;
+    height: 338rem;
+    border-radius: 8rem;
+    overflow: hidden;
+}
+
+.team-element-img img {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-element-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16rem 0;
+    width: calc(100% - 386rem);
+}
+
+.team-element-name {
+    font-size: 32rem;
+    line-height: 1.15;
+}
+
+.team-element-status {
+    font-weight: 300;
+    font-size: 18rem;
+    line-height: 1;
+    color: var(--text-color-transparent);
+}
+
+.team-element-text {
+    margin-top: 8rem;
+    font-weight: 300;
+    font-size: 18rem;
+    line-height: 1.5;
 }
 /*end main styles*/
 
@@ -6176,6 +6379,10 @@ a.ticket-element-link:hover {
     .how-going-element-info {
         max-width: 100%;
         gap: 12rem 0;
+    }
+
+    .how-going-element-title {
+        font-size: 18rem;
     }
 
     .how-going-element-text {
