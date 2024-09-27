@@ -5976,7 +5976,16 @@ a.ticket-element-link:hover {
         font-size: 18rem;
     }
 
-    .tarif-text {
+    .tarif-big .tarif-name {
+        font-size: 18rem;
+    }
+
+    .tarif-title {
+        font-size: 14rem;
+    }
+
+    .tarif-text,
+    .tarif-big .tarif-text {
         font-size: 14rem;
     }
 
@@ -5992,6 +6001,17 @@ a.ticket-element-link:hover {
         right: 24rem;
         font-size: 18rem;
         order: 1;
+    }
+
+    .tarif-big .tarif-price {
+        position: relative;
+        top: auto;
+        right: auto;
+        font-size: 18rem;
+    }
+
+    .tarif .column-block-notice {
+        font-size: 12rem;
     }
 
     .services-slider {
@@ -6389,6 +6409,18 @@ a.ticket-element-link:hover {
         font-size: 14rem;
     }
 
+    .how-going-element-notice {
+        padding: 36rem 8rem 8rem;
+        font-size: 12rem;
+    }
+
+    .how-going-element-notice::before {
+        top: 8rem;
+        left: 8rem;
+        width: 18rem;
+        height: 19rem;
+    }
+
     .training-program-element {
         flex-direction: column;
         gap: 8rem 0;
@@ -6515,6 +6547,81 @@ a.ticket-element-link:hover {
 
     .ticket-element-link {
         font-size: 12rem;
+    }
+
+    .special-page-block-two-column {
+        flex-direction: column;
+        gap: 16rem 0;
+    }
+
+    .special-page-block-two-column-img,
+    .special-page-block-two-column-info {
+        width: 100%;
+    }
+
+    .special-page-block-two-column-info {
+        gap: 16rem 0;
+    }
+
+    .numbered-list {
+        gap: 16rem 0;
+    }
+
+    .numbered-element {
+        padding-left: 40rem;
+    }
+
+    .numbered-element-num {
+        padding: 4rem 7rem;
+        font-size: 12rem;
+    }
+
+    .numbered-element-text {
+        font-size: 14rem;
+    }
+
+    .special-page-block-two-column-info-wrapper {
+        gap: 8rem 0;
+    }
+
+    .special-page-block-two-column-title {
+        font-size: 18rem;
+    }
+
+    .special-page-block-two-column-text {
+        font-size: 14rem;
+    }
+
+    .team-element {
+        flex-direction: column;
+        gap: 24rem 0;
+        padding-bottom: 24rem;
+    }
+
+    .team-element:not(:first-child) {
+        padding-top: 24rem;
+    }
+
+    .team-element-img {
+        width: 100%;
+        height: 342rem;
+    }
+
+    .team-element-info {
+        width: 100%;
+    }
+
+    .team-element-name {
+        font-size: 20rem;
+    }
+
+    .team-element-status {
+        font-size: 14rem;
+    }
+
+    .team-element-text {
+        margin-top: 4rem;
+        font-size: 14rem;
     }
 }
 
