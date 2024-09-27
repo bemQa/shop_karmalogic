@@ -6898,6 +6898,32 @@ a.ticket-element-link:hover {
         width: 100%;
         order: -1;
     }
+
+    .profile-page-aside-menu-block {
+        gap: 0;
+        padding: 16rem;
+    }
+
+    .profile-page-aside-menu {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .profile-page-aside-menu-link {
+        padding: 0 24rem;
+        border-right: 1rem solid var(--background-color);
+        border-bottom: 0;
+        font-size: 14rem;
+    }
+
+    .profile-page-aside-menu-link:first-child {
+        padding-left: 0;
+    }
+
+    .profile-page-aside-menu-link:last-child {
+        padding-right: 0;
+        border-right: 0;
+    }
 }
 
 @media (max-width: 390px) {
