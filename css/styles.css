@@ -949,6 +949,10 @@ h5,
     width: calc(50% - 8rem);
 }
 
+.ip-cell.w33 {
+    width: calc(33% - 10rem);
+}
+
 .input-text {
     font-weight: 400;
     font-size: 18rem;
@@ -4842,6 +4846,95 @@ a.ticket-element-link:hover {
 .history-element .text-page-slider {
     margin: 0;
 }
+
+.section-profile-page {
+    padding: 80rem 0;
+}
+
+.profile-page-title {
+    padding: 0 0 32rem;
+    text-align: center;
+}
+
+.profile-page-wrapper {
+    display: flex;
+    gap: 0 16rem;
+    max-width: 1170rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.profile-page-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16rem 0;
+    max-width: calc(100% - 356rem);
+    width: 100%;
+}
+
+.profile-page-block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 24rem 0;
+    width: 100%;
+    padding: 32rem;
+    background: var(--background-transparent01);
+    border-radius: 8rem;
+}
+
+.profile-page-block-title {
+    font-weight: normal;
+    font-size: 32rem;
+    line-height: 1.15;
+}
+
+.profile-page-aside {
+    width: 340rem;
+}
+
+.profile-page-aside-menu-block {
+    position: sticky;
+    top: 96rem;
+    display: flex;
+    flex-direction: column;
+    gap: 24rem 0;
+    width: 100%;
+    max-height: calc(100vh - 96rem);
+    padding: 24rem;
+    background: var(--background-transparent01);
+    border-radius: 8rem;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.profile-page-aside-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-page-aside-menu-link {
+    padding: 24rem 0;
+    border-bottom: 1rem solid var(--background-color);
+    font-size: 18rem;
+    line-height: 1.15;
+    color: var(--text-color);
+}
+
+.profile-page-aside-menu-link:first-child {
+    padding-top: 0;
+}
+
+.profile-page-aside-menu-link:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.profile-page-aside-menu-link.active,
+.profile-page-aside-menu-link:hover {
+    color: var(--text-color-transparent);
+}
 /*end main styles*/
 
 /*adaptive styles*/
@@ -6757,6 +6850,53 @@ a.ticket-element-link:hover {
 
     .history-element-text {
         font-size: 14rem;
+    }
+
+    .section-profile-page {
+        padding: 40rem 0;
+    }
+
+    .profile-page-wrapper {
+        flex-direction: column;
+        gap: 8rem 0;
+    }
+
+    .profile-page-content {
+        gap: 0;
+        max-width: 100%;
+        padding: 24rem 16rem;
+        background: var(--background-transparent01);
+        border-radius: 8rem;
+    }
+
+    .profile-page-block {
+        padding: 24rem 0;
+        background: none;
+        border-bottom: 1rem solid var(--background-color);
+    }
+
+    .profile-page-block:first-child {
+        padding-top: 0;
+    }
+
+    .profile-page-block:last-child {
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
+
+    .profile-page-block-title {
+        font-size: 24rem;
+    }
+
+    .profile-page-content .btn {
+        width: 100%;
+        border-radius: 8rem;
+        font-size: 16rem;
+    }
+
+    .profile-page-aside {
+        width: 100%;
+        order: -1;
     }
 }
 
