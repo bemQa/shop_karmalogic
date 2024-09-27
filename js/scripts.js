@@ -138,6 +138,21 @@ $(document).ready(function () {
         $('#modal_review_text').html(text);
     });
 
+    // history-element scroll
+    if($('.history-element').length) {
+        $(window).on('scroll load', function () {
+            let top = $(window).scrollTop();
+            $('.history-element').each(function() {
+                let destination = $(this).offset().top-400;
+                if(top >= destination) {
+                    $(this).addClass('scrolled');
+                } else {
+                    $(this).removeClass('scrolled');
+                }
+            });
+        }).trigger('scroll');
+    }
+
     // sliders
     const courses_cards = new Swiper('.courses-cards', {
         slidesPerView: 'auto',
