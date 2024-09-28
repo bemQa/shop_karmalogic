@@ -4935,6 +4935,92 @@ a.ticket-element-link:hover {
 .profile-page-aside-menu-link:hover {
     color: var(--text-color-transparent);
 }
+
+.profile-order-element {
+    display: flex;
+    flex-direction: column;
+    gap: 24rem 0;
+}
+
+.profile-order-element-header {
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    gap: 0 16rem;
+}
+
+.profile-order-number {
+    font-size: 32rem;
+    line-height: 1.15;
+}
+
+.profile-order-date {
+    font-size: 18rem;
+    line-height: 1;
+    color: var(--text-color-transparent);
+}
+
+.profile-order-price {
+    margin-left: auto;
+    font-family: var(--title-font);
+    font-size: 32rem;
+    line-height: 1.15;
+    white-space: nowrap;
+}
+
+.profile-order-element-products {
+    display: flex;
+    flex-direction: column;
+    gap: 24rem 0;
+}
+
+.profile-order-element-product {
+    display: flex;
+    gap: 0 24rem;
+}
+
+.profile-order-element-product-img {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70rem;
+    height: 70rem;
+    background: #fff;
+    border-radius: 8rem;
+    overflow: hidden;
+}
+
+.profile-order-element-product-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-order-element-product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12rem 0;
+    max-width: calc(100% - 94rem);
+    width: 100%;
+}
+
+.profile-order-element-product-name {
+    font-size: 18rem;
+    line-height: 1.15;
+}
+
+.profile-order-element-product-price {
+    font-weight: 300;
+    font-size: 16rem;
+    line-height: 1;
+}
 /*end main styles*/
 
 /*adaptive styles*/
@@ -6923,6 +7009,55 @@ a.ticket-element-link:hover {
     .profile-page-aside-menu-link:last-child {
         padding-right: 0;
         border-right: 0;
+    }
+
+    .profile-order-element-header {
+        flex-direction: column;
+        gap: 8rem 0;
+    }
+
+    .profile-order-number {
+        width: 100%;
+        padding-right: 116rem;
+        font-size: 20rem;
+    }
+
+    .profile-order-date {
+        font-size: 12rem;
+    }
+
+    .profile-order-price {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 20rem;
+    }
+
+    .profile-order-element-products {
+        gap: 16rem 0;
+    }
+
+    .profile-order-element-product {
+        gap: 0 16rem;
+    }
+
+    .profile-order-element-product-img {
+        width: 50rem;
+        height: 50rem;
+        border-radius: 4rem;
+    }
+
+    .profile-order-element-product-info {
+        gap: 8rem;
+        max-width: calc(100% - 66rem);
+    }
+
+    .profile-order-element-product-name {
+        font-size: 14rem;
+    }
+
+    .profile-order-element-product-price {
+        font-size: 12rem;
     }
 }
 
