@@ -5106,7 +5106,7 @@ a.ticket-element-link:hover {
     color: var(--text-color-transparent);
 }
 
-.form-horizontal {
+.cart-page-aside-block .form-horizontal {
     margin-top: 16rem;
 }
 
@@ -5539,6 +5539,11 @@ a.ticket-element-link:hover {
         font-size: 14rem;
     }
 
+    .btn-small {
+        width: 40rem;
+        height: 40rem;
+    }
+
     .btn-round {
         width: 48rem;
         height: 48rem;
@@ -5712,6 +5717,10 @@ a.ticket-element-link:hover {
         font-size: 14rem;
         height: 38rem;
         padding: 14rem;
+    }
+
+    .input-text-small {
+        height: 48rem;
     }
 
     .ch + label, 
@@ -7527,6 +7536,14 @@ a.ticket-element-link:hover {
         height: 90rem;
     }
 
+    .order-element-product-info {
+        max-width: calc(100% - 192rem);
+    }
+
+    .order-element-product-name {
+        font-size: 14rem;
+    }
+
     .order-element-product-price {
         flex-wrap: wrap;
         gap: 8rem;
@@ -7534,6 +7551,7 @@ a.ticket-element-link:hover {
     }
 
     .order-element-product-oldprice {
+        font-size: 16rem;
         order: -2;
     }
 
@@ -7541,10 +7559,95 @@ a.ticket-element-link:hover {
         order: -1;
     }
 
+    .input-count-group {
+        width: 88rem;
+        padding: 2rem;
+    }
 
+    .input-count-group .btn-number {
+        width: 28rem;
+        height: 28rem;
+        font-size: 12rem;
+    }
+
+    .input-count-group .input-number {
+        width: 28rem;
+        height: 28rem;
+        font-size: 12rem;
+    }
+
+    .remove-product {
+        width: 32rem;
+        height: 32rem;
+        background-size: 12rem;
+    }
+
+    .separate {
+        margin: 0;
+    }
+
+    .delivery-list {
+        gap: 16rem 0;
+    }
+
+    .delivery-list .ch + label, 
+    .delivery-list .rd + label {
+        font-size: 14rem;
+    }
+
+    .delivery-price {
+        margin-left: 8rem;
+    }
 
     .payment-ch + .payment-label {
         flex-direction: column;
+        padding: 4rem;
+        font-size: 14rem;
+    }
+
+    .payment-label img {
+        width: 100%;
+    }
+
+    .payment-label-info {
+        gap: 4rem 0;
+    }
+
+    .payment-ch-text {
+        font-size: 12rem;
+    }
+
+    .cart-page-aside-block-title {
+        font-size: 20rem;
+    }
+
+    .cart-page-aside-block .form-horizontal {
+        margin-top: 8rem;
+    }
+
+    .order-info-element-title {
+        font-size: 14rem;
+    }
+
+    .order-info-element-text {
+        font-size: 16rem;
+    }
+
+    .order-info-total {
+        margin-top: 4rem;
+    }
+
+    .order-info-total-title,
+    .order-info-total-text {
+        font-size: 20rem;
+    }
+
+    .order-info-text {
+        font-size: 12rem;
+    }
+
+    .btn-order {
+        font-size: 16rem;
     }
 }
 
