@@ -44,13 +44,13 @@
                         <!-- <a href="#id" class="menu-link anchor">Ссылка</a> -->
                     </div>
                     <div class="menu-links">
-                        <a href="" class="menu-link">Личный кабинет</a>
-                        <a href="" class="menu-link cart-link">Корзина <span class="cart-notice">1</span></a>
+                        <a href="/profile.html" class="menu-link">Личный кабинет</a>
+                        <a href="/cart.html" class="menu-link cart-link">Корзина <span class="cart-notice">1</span></a>
                     </div>
                 </div>
                 <div class="menu-links-mobile">
                     <div class="menu-links">
-                        <a href="" class="menu-link cart-link">Корзина <span class="cart-notice">1</span></a>
+                        <a href="/cart.html" class="menu-link cart-link">Корзина <span class="cart-notice">1</span></a>
                     </div>
                 </div>
 				<div class="menu-button">
@@ -72,7 +72,7 @@
                     <!-- <a href="#id" class="menu-link anchor">Ссылка</a> -->
 				</div>
 				<div class="header-buttons mobile-visible">
-					<a href="" class="btn btn-lk">Личный кабинет</a>
+					<a href="/profile.html" class="btn btn-lk">Личный кабинет</a>
 				</div>
 			</div>
 		</header>
@@ -90,7 +90,20 @@
                                     </div>
                                     <div class="order-element-product-info">
                                         <div class="order-element-product-name">Книга «Karmalogic»</div>
-                                        <div class="order-element-product-price">2 200 ₽ </div>
+                                        <div class="order-element-product-price">
+                                            <span data-price="2350">2 350 ₽</span>
+                                            <span class="order-element-product-oldprice" data-oldprice="3350">3 550 ₽</span>
+                                            <span class="order-element-product-price-discount">-20%</span>
+                                        </div>
+                                    </div>
+                                    <div class="order-element-product-count-info">
+                                        <div class="input-count-group">
+                                            <button type="button" class="btn-number btn-minus" data-type="minus" data-field="count" disabled="">−</button>
+                                            <input type="text" name="count" class="input-number number bilet_qty" value="0" min="0" max="5" readonly="" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                                            <button type="button" class="btn-number btn-plus" data-type="plus" data-field="count">+</button>
+                                        </div>
+                                        <button class="remove-product"></button>
+                                        <div class="tooltip-input-count"></div>
                                     </div>
                                 </div>
                                 <div class="order-element-product">
@@ -99,7 +112,20 @@
                                     </div>
                                     <div class="order-element-product-info">
                                         <div class="order-element-product-name">Книга «Karmalogic»</div>
-                                        <div class="order-element-product-price">2 200 ₽ </div>
+                                        <div class="order-element-product-price">
+                                            <span data-price="2350">2 350 ₽</span>
+                                            <span class="order-element-product-oldprice" data-oldprice="3350">3 550 ₽</span>
+                                            <span class="order-element-product-price-discount">-20%</span>
+                                        </div>
+                                    </div>
+                                    <div class="order-element-product-count-info">
+                                        <div class="input-count-group">
+                                            <button type="button" class="btn-number btn-minus" data-type="minus" data-field="count" disabled="">−</button>
+                                            <input type="text" name="count" class="input-number number bilet_qty" value="0" min="0" max="5" readonly="" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                                            <button type="button" class="btn-number btn-plus" data-type="plus" data-field="count">+</button>
+                                        </div>
+                                        <button class="remove-product"></button>
+                                        <div class="tooltip-input-count"></div>
                                     </div>
                                 </div>
                                 <div class="order-element-product">
@@ -108,7 +134,20 @@
                                     </div>
                                     <div class="order-element-product-info">
                                         <div class="order-element-product-name">Книга «Karmalogic»</div>
-                                        <div class="order-element-product-price">2 200 ₽ </div>
+                                        <div class="order-element-product-price">
+                                            <span data-price="2350">2 350 ₽</span>
+                                            <span class="order-element-product-oldprice" data-oldprice="3350">3 550 ₽</span>
+                                            <span class="order-element-product-price-discount">-20%</span>
+                                        </div>
+                                    </div>
+                                    <div class="order-element-product-count-info">
+                                        <div class="input-count-group">
+                                            <button type="button" class="btn-number btn-minus" data-type="minus" data-field="count" disabled="">−</button>
+                                            <input type="text" name="count" class="input-number number bilet_qty" value="0" min="0" max="5" readonly="" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                                            <button type="button" class="btn-number btn-plus" data-type="plus" data-field="count">+</button>
+                                        </div>
+                                        <button class="remove-product"></button>
+                                        <div class="tooltip-input-count"></div>
                                     </div>
                                 </div>
                             </div>
@@ -133,7 +172,7 @@
                                     <div class="help-block">Укажите Электронная почта</div>
                                 </div>
                             </div>
-                            <!--  -->
+                            <div class="separate"></div>
                             <div class="title profile-page-block-title">Адрес доставки</div>
                             <div class="form">
                                 <div class="ip-cell w50">
@@ -152,8 +191,22 @@
                                     <div class="help-block">Укажите Город</div>
                                 </div>
                             </div>
-                            <!--  -->
+                            <div class="separate"></div>
                             <div class="title profile-page-block-title">Способ доставки</div>
+                            <div class="delivery-list">
+                                <div class="ip-cell">
+                                    <input type="radio" id="cdek1" name="cdek" class="rd" />
+                                    <label for="cdek1">СДЭК курьером до двери <span class="delivery-price">520 ₽</span></label>
+                                </div>
+                                <div class="ip-cell">
+                                    <input type="radio" id="cdek2" name="cdek" class="rd" />
+                                    <label for="cdek2">СДЭК курьером до двери (Экспресс) <span class="delivery-price">1 035 ₽</span></label>
+                                </div>
+                                <div class="ip-cell">
+                                    <input type="radio" id="cdek3" name="cdek" class="rd" />
+                                    <label for="cdek3">СДЭК курьером до склада <span class="delivery-price">520 ₽</span></label>
+                                </div>
+                            </div>
                             <div class="form">
                                 <div class="ip-cell w50">
                                     <input type="text" class="input-text" name="street" placeholder="Улица" required="">
@@ -180,13 +233,91 @@
                                     <div class="help-block">Укажите Комментарий</div>
                                 </div>
                             </div>
-                            <!--  -->
+                            <div class="separate"></div>
                             <div class="title profile-page-block-title">Способ оплаты</div>
+                            <div class="payment-list">
+                                <div class="ip-cell w50">
+                                    <input type="radio" id="payment1" name="payment" class="ch payment-ch" />
+                                    <label for="payment1" class="payment-label">
+                                        <img src="img/sbp.png" alt="">
+                                        <div class="payment-label-info">
+                                            Система быстрых платежей
+                                            <span class="payment-ch-text">Примечание</span>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="ip-cell w50">
+                                    <input type="radio" id="payment2" name="payment" class="ch payment-ch" />
+                                    <label for="payment2" class="payment-label">
+                                        <img src="img/mir.png" alt="">
+                                        <div class="payment-label-info">
+                                            Банковская карта
+                                            <span class="payment-ch-text">Примечание</span>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="ip-cell w50">
+                                    <input type="radio" id="payment3" name="payment" class="ch payment-ch" />
+                                    <label for="payment3" class="payment-label">
+                                        <img src="img/dolyami.png" alt="">
+                                        <div class="payment-label-info">
+                                            Оплата Долями
+                                            <span class="payment-ch-text">Примечание</span>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="ip-cell w50">
+                                    <input type="radio" id="payment4" name="payment" class="ch payment-ch" />
+                                    <label for="payment4" class="payment-label">
+                                        <img src="img/prodamus.png" alt="">
+                                        <div class="payment-label-info">
+                                            Prodamus
+                                            <span class="payment-ch-text">Примечание</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
                         </div>
                     </form>
                     <aside class="cart-page-aside">
-                        <div class="cart-page-aside-menu-block">
-                            
+                        <div class="cart-page-aside-block-wrapper">
+                            <div class="cart-page-aside-block">
+                                <div class="title cart-page-aside-block-title">У меня есть промокод</div>
+                                <div class="cart-page-aside-block-text">Активируйте свой промокод или код подарочного сертификата</div>
+                                <div class="form form-horizontal">
+                                    <div class="ip-cell">
+                                        <input type="text" class="input-text input-text-small" name="promocode" placeholder="Введите промокод">
+                                    </div>
+                                    <button class="btn btn-small"></button>
+                                </div>
+                            </div>
+                            <div class="cart-page-aside-block">
+                                <div class="title cart-page-aside-block-title">Ваш заказ</div>
+                                <div class="order-info-list">
+                                    <div class="order-info-element">
+                                        <div class="order-info-element-title">Товары (3)</div>
+                                        <div class="order-info-element-text">1 006 950 ₽</div>
+                                    </div>
+                                    <div class="order-info-element">
+                                        <div class="order-info-element-title">Скидка</div>
+                                        <div class="order-info-element-text">550 ₽</div>
+                                    </div>
+                                    <div class="order-info-element">
+                                        <div class="order-info-element-title">Промокод</div>
+                                        <div class="order-info-element-text">0 ₽</div>
+                                    </div>
+                                    <div class="order-info-element">
+                                        <div class="order-info-element-title">Стоимость доставки</div>
+                                        <div class="order-info-element-text">0 ₽</div>
+                                    </div>
+                                    <div class="order-info-total">
+                                        <div class="order-info-total-title">Итого</div>
+                                        <div class="order-info-total-text">1 006 950 ₽</div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-order">Перейти к оплате</button>
+                                <div class="order-info-text">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных</div>
+                            </div>
                         </div>
                     </aside>
                 </div>

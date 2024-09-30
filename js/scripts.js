@@ -433,4 +433,66 @@ $(document).ready(function () {
     }
     photo_gallery_slider();
     window.addEventListener("resize", photo_gallery_slider);
+
+    // кнопки +-
+    $('.btn-number').parents('.order-element-product-count-info').append('<div class="tooltip-input-count"></div>');
+    $('body').on('click', '.btn-number', function(e) {
+        var type = $(this).attr('data-type');
+        var field = $(this).attr('data-field');
+        var input = $(this).parent().find('input[name ='+field+']');
+        var min = input.attr('min');
+        var min_count = input.attr('min-count');
+        var max = input.attr('max');
+        min = parseInt(min);
+        min_count = parseInt(min_count);
+        max = parseInt(max);
+        var currentVal;
+        var value = input.val();
+        if (type == 'minus') {
+            if (value > min) {
+                if (value <= min_count) {
+                    currentVal = parseInt(value) - min_count;
+                    input.val(currentVal).change();
+                } else {
+                    currentVal = parseInt(value) - 1;
+                    input.val(currentVal).change();
+                }
+            }
+        }
+        if (type == 'plus') {
+            if (value < max) {
+                if (value < min_count) {
+                    currentVal = parseInt(value) + min_count;
+                    input.val(currentVal).change();
+                } else {
+                    currentVal = parseInt(value) + 1;
+                    input.val(currentVal).change();
+                }
+            }
+        }
+
+        let tooltip = $(this).parents('.order-element-product-count-info').find('.tooltip-input-count');
+        if ($(this).hasClass('btn-plus disabled-btn')) {
+            tooltip.addClass('show').text('Нельзя добавить больше товаров в заказ');
+            setTimeout(function() {
+                tooltip.removeClass('show');
+            }, 2000);
+        }
+    });
+    $('body').on('change keyup', '.input-number', function() {
+        window.updateCartButtons(this);
+    });
+
+    window.updateCartButtons = function(item) {
+        var min = $(item).attr('min');
+        var max = $(item).attr('max');
+        var val = $(item).val();
+        var name = $(item).parent().find('.input-number').attr('name');
+        if (val == min) {
+            $(item).parent().find(".btn-number[data-type='minus'][data-field='" + name + "']").attr('disabled', 'true');
+        } else $(item).parent().find(".btn-number[data-type='minus'][data-field='" + name + "']").removeAttr('disabled');
+        if (val == max) {
+            $(item).parent().find(".btn-number[data-type='plus'][data-field='" + name + "']").addClass('disabled-btn');
+        } else $(item).parent().find(".btn-number[data-type='plus'][data-field='" + name + "']").removeClass('disabled-btn');
+    }
 });
