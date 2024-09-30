@@ -5021,6 +5021,53 @@ a.ticket-element-link:hover {
     font-size: 16rem;
     line-height: 1;
 }
+
+.cart-page-wrapper {
+    display: flex;
+    gap: 0 16rem;
+    max-width: 1170rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.cart-page-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16rem 0;
+    max-width: calc(100% - 356rem);
+    width: 100%;
+}
+
+.cart-page-block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 24rem 0;
+    width: 100%;
+    padding: 32rem;
+    background: var(--background-transparent01);
+    border-radius: 8rem;
+}
+
+.cart-page-aside {
+    width: 340rem;
+}
+
+.cart-page-aside-menu-block {
+    position: sticky;
+    top: 96rem;
+    display: flex;
+    flex-direction: column;
+    gap: 24rem 0;
+    width: 100%;
+    max-height: calc(100vh - 96rem);
+    padding: 24rem;
+    background: var(--background-transparent01);
+    border-radius: 8rem;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
 /*end main styles*/
 
 /*adaptive styles*/
