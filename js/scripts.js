@@ -495,4 +495,15 @@ $(document).ready(function () {
             $(item).parent().find(".btn-number[data-type='plus'][data-field='" + name + "']").addClass('disabled-btn');
         } else $(item).parent().find(".btn-number[data-type='plus'][data-field='" + name + "']").removeClass('disabled-btn');
     }
+
+    // parallax
+    let parallax = document.querySelectorAll('.parallax');
+    if(parallax.length) {
+        new SimpleParallax(parallax, {
+            delay: 0.5,
+            orientation: 'down',
+            scale: 1.2,
+            // transition: 'linear'
+        });
+    }
 });
