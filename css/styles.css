@@ -2729,7 +2729,7 @@ textarea.input-text {
 
 .images-square {
     position: sticky;
-    top: 96rem;
+    top: 80rem;
 }
 
 .image-square {
@@ -5470,6 +5470,107 @@ a.ticket-element-link:hover {
 .payment-label::after {
     display: none;
 }
+
+/* mousemove parallax */
+.mouse-parallax-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.mouse-parallax-element {
+    position: absolute;
+    width: 184rem;
+    height: 184rem;
+    border-radius: 100%;
+    overflow: hidden;
+    transition: all .2s linear;
+}
+
+.mouse-parallax-element img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mouse-parallax-element:nth-child(1) {
+    top: 370rem;
+    left: 688rem;
+    width: 410rem;
+    height: 410rem;
+}
+
+.mouse-parallax-element:nth-child(2) {
+    top: 160rem;
+    left: 1220rem;
+    width: 266rem;
+    height: 266rem;
+}
+
+.mouse-parallax-element:nth-child(3) {
+    top: 600rem;
+    left: 110rem;
+    width: 266rem;
+    height: 266rem;
+}
+
+.mouse-parallax-element:nth-child(4) {
+    top: 200rem;
+    left: 70rem;
+}
+
+.mouse-parallax-element:nth-child(5) {
+    top: 480rem;
+    left: 360rem;
+}
+
+.mouse-parallax-element:nth-child(6) {
+    top: 560rem;
+    left: 1234rem;
+}
+
+.mouse-parallax-element:nth-child(7) {
+    top: 266rem;
+    left: 1030rem;
+}
+
+.mouse-parallax-element:nth-child(8) {
+    top: 425rem;
+    left: 0;
+}
+
+.mouse-parallax-element:nth-child(9) {
+    top: 740rem;
+    left: 520rem;
+}
+
+.mouse-parallax-element:nth-child(10) {
+    top: 830rem;
+    left: 1170rem;
+}
+
+.mouse-parallax-element:nth-child(n+7) {
+    width: 88rem;
+    height: 88rem;
+    filter: blur(10rem);
+}
+
+.mouse-parallax-element:nth-child(n+11) {
+    display: none;
+}
+/* end mousemove parallax */
 /*end main styles*/
 
 /*adaptive styles*/
@@ -7663,6 +7764,10 @@ a.ticket-element-link:hover {
 
     .btn-order {
         font-size: 16rem;
+    }
+
+    .mouse-parallax-wrapper {
+        display: none;
     }
 }
 
