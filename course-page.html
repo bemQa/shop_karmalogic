@@ -44,7 +44,7 @@
                         <!-- <a href="#id" class="menu-link anchor">Ссылка</a> -->
                     </div>
                     <div class="menu-links">
-                        <a href="/profile.html" class="menu-link">Личный кабинет</a>
+                        <a href="#auth-modal" class="menu-link" data-fancybox="">Личный кабинет</a>
                         <a href="/cart.html" class="menu-link cart-link">Корзина <span class="cart-notice">1</span></a>
                     </div>
                 </div>
@@ -72,7 +72,7 @@
                     <!-- <a href="#id" class="menu-link anchor">Ссылка</a> -->
 				</div>
 				<div class="header-buttons mobile-visible">
-					<a href="/profile.html" class="btn btn-lk">Личный кабинет</a>
+					<a href="#auth-modal" class="btn btn-lk" data-fancybox="">Личный кабинет</a>
 				</div>
 			</div>
 		</header>
@@ -651,11 +651,63 @@
                 </div>
             </div>
         </div>
+        <!-- модалка авторизации -->
+        <div id="auth-modal" class="modal">
+            <div class="modal_content">
+                <div class="title modal-title">Вход и регистрация</div>
+                <div class="modal-text">Введите электронную почту — мы отправим на нее письмо с кодом подтверждения:</div>
+                <div class="form-wrapper">
+                    <form class="form">
+                        <div class="ip-cell-and-button">
+                            <div class="ip-cell">
+                                <input type="text" class="input-text" name="email" placeholder="Ваша электронная почта" required="">
+                                <div class="help-block">Укажите Email</div>
+                            </div>
+                            <button class="btn">Получить код</button>
+                        </div>
+                        <!-- <div class="ip-cell">
+                            <input type="text" class="input-text" name="code" placeholder="Введите полученный код" required="">
+                            <div class="help-block">Укажите Код</div>
+                        </div> -->
+                    </form>
+                    <div class="ip-cell-text">Нажимая «Получить код», вы принимаете условия <a href="" class="link">Пользовательского соглашения</a> и даете согласие на обработку персональных данных в соответствии с <a href="" class="link">Политикой об обработке персональных данных</a>.</div>
+                    <!-- <div class="ip-cell-text">
+                        <div class="countdown-text">
+                            Получить новый код можно через: <span class="countdown-timer">00:35</span>
+                        </div>
+                    </div> -->
+                </div>
+			</div>
+        </div>
+        <!-- как должна выглядеть после нажатия на Получить код -->
+        <div id="auth-modal2" class="modal">
+            <div class="modal_content">
+                <div class="title modal-title">Вход и регистрация</div>
+                <div class="modal-text">Введите электронную почту — мы отправим на нее письмо с кодом подтверждения:</div>
+                <div class="form-wrapper">
+                    <form class="form">
+                        <div class="ip-cell-and-button">
+                            <div class="ip-cell">
+                                <input type="text" class="input-text" name="email" placeholder="Ваша электронная почта" required="" value="mariamaria@mail.ru" disabled>
+                                <div class="help-block">Укажите Email</div>
+                            </div>
+                            <button class="btn">Изменить</button>
+                        </div>
+                        <div class="ip-cell">
+                            <input type="text" class="input-text" name="code" placeholder="Введите полученный код" required="">
+                            <div class="help-block">Укажите Код</div>
+                        </div>
+                    </form>
+                    <div class="ip-cell-text">
+                        <div class="countdown-text">
+                            Получить новый код можно через: <span class="countdown-timer">00:35</span>
+                        </div>
+                    </div>
+                </div>
+			</div>
+        </div>
 		<div class="modal" id="form-modal-success">
             <div class="modal_content">
-				<button type="button" data-fancybox-close="" class="fancybox-button fancybox-close-small" title="Close">
-					<svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24"><path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path></svg>
-				</button>
 				<div class="modal-success">
 					<div class="modal-title">Ваша заявка принята!</div>
 					<div class="modal-text">
