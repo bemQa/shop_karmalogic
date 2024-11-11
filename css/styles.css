@@ -495,6 +495,10 @@ h5,
     justify-content: center;
 }
 
+.buttons-mt {
+    margin-top: 40rem;
+}
+
 .btn {
     position: relative;
     display: flex;
@@ -2750,10 +2754,6 @@ textarea.input-text {
     font-size: 14rem;
     line-height: 1;
     color: var(--text-color-transparent);
-}
-
-.services-list + .buttons {
-    margin-top: 40rem;
 }
 
 .two-column-block {
@@ -6557,7 +6557,7 @@ a.ticket-element-link:hover {
         right: 24rem;
     }
 
-    .services-list + .buttons {
+    .buttons-mt {
         margin-top: 20rem;
     }
 
