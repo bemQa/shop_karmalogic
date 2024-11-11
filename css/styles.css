@@ -5814,6 +5814,7 @@ a.ticket-element-link:hover {
     }
 
     .btn-subscribe {
+        top: 2rem;
         width: 44rem;
         height: 44rem;
         padding: 10rem;
