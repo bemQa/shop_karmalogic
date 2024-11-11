@@ -21,7 +21,7 @@ $(document).ready(function () {
     });
 
     // якоря для ссылок
-    $('.anchor[href^="#"]').click(function () {
+    $('body').on('click', '.anchor[href^="#"]', function () {
         $('.header').removeClass('active');
         $('.menu').removeClass('active');
 
