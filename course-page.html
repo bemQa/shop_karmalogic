@@ -658,64 +658,47 @@
                 <div class="modal-text">Введите электронную почту — мы отправим на нее письмо с кодом подтверждения:</div>
                 <div class="form-wrapper">
                     <form class="form">
-                        <div class="ip-cell-and-button">
-                            <div class="ip-cell">
-                                <input type="text" class="input-text" name="email" placeholder="Ваша электронная почта" required="">
-                                <div class="help-block">Укажите Email</div>
-                            </div>
-                            <button class="btn">Получить код</button>
+                        <div class="ip-cell">
+                            <input type="text" class="input-text" name="email" placeholder="Ваша электронная почта" required="">
+                            <div class="help-block">Укажите Email</div>
                         </div>
-                        <!-- <div class="ip-cell">
-                            <input type="text" class="input-text" name="code" placeholder="Введите полученный код" required="">
-                            <div class="help-block">Укажите Код</div>
-                        </div> -->
+                        <button class="btn btn-modal js-auth-send-code">Получить код</button>
                     </form>
                     <div class="ip-cell-text">Нажимая «Получить код», вы принимаете условия <a href="" class="link">Пользовательского соглашения</a> и даете согласие на обработку персональных данных в соответствии с <a href="" class="link">Политикой об обработке персональных данных</a>.</div>
-                    <!-- <div class="ip-cell-text">
-                        <div class="countdown-text">
-                            Получить новый код можно через: <span class="countdown-timer">00:35</span>
-                        </div>
-                    </div> -->
                 </div>
 			</div>
         </div>
-        <!-- как должна выглядеть после нажатия на Получить код -->
         <div id="auth-modal2" class="modal">
             <div class="modal_content">
-                <div class="title modal-title">Вход и регистрация</div>
-                <div class="modal-text">Введите электронную почту — мы отправим на нее письмо с кодом подтверждения:</div>
+                <div class="title modal-title">Введите код</div>
+                <div class="modal-text">Отправили письмо с кодом подтверждения на адрес <span class="">mariamaria@mail.ru</span>. <a href="">Изменить</a></div>
                 <div class="form-wrapper">
                     <form class="form">
-                        <div class="ip-cell-and-button">
-                            <div class="ip-cell">
-                                <input type="text" class="input-text" name="email" placeholder="Ваша электронная почта" required="" value="mariamaria@mail.ru" disabled>
-                                <div class="help-block">Укажите Email</div>
-                            </div>
-                            <button class="btn">Изменить</button>
-                        </div>
                         <div class="ip-cell">
                             <input type="text" class="input-text" name="code" placeholder="Введите полученный код" required="">
                             <div class="help-block">Укажите Код</div>
                         </div>
-                    </form>
-                    <div class="ip-cell-text">
-                        <div class="countdown-text">
-                            Получить новый код можно через: <span class="countdown-timer">00:35</span>
+                        <div class="ip-cell-text countdown-text">
+                            <span class="clock-text" style="display: none;">Получить новый код можно через: <span class="clock countdown"></span></span>
+                            <a href="" class="reset_resend" style="display: none;">Получить новый код</a>
                         </div>
-                    </div>
+                        <div class="ip-cell">
+                            <input type="checkbox" id="chk1" class="ch">
+                            <label for="chk1">Принимаю условия <a href="">Политики конфиденциальности</a>, даю свое согласие на сбор и обработку моих персональных данных, принимаю условия <a href="">Публичной оферты</a>.</label>
+                        </div>
+                        <button class="btn btn-modal">Продолжить</button>
+                    </form>
                 </div>
 			</div>
         </div>
 		<div class="modal" id="form-modal-success">
-            <div class="modal_content">
-				<div class="modal-success">
-					<div class="modal-title">Ваша заявка принята!</div>
-					<div class="modal-text">
-						Мы свяжемся с вами в ближайшее время. <br>
-						Режим работы: <br>
-						пн — пт: с 10:00 до 18:00
-					</div>
-				</div>
+            <div class="modal_content modal-success">
+                <div class="title modal-title">Ваша заявка принята!</div>
+                <div class="modal-text">
+                    Мы свяжемся с вами в ближайшее время. <br>
+                    Режим работы: <br>
+                    пн — пт: с 10:00 до 18:00
+                </div>
 			</div>
         </div>
     </div>
@@ -808,7 +791,55 @@
 <script src="libs/jquery.inputmask.min.js"></script>
 <script src="libs/jquery.validate.min.js"></script>
 <script src="libs/select2/select2.min.js"></script>
+<script src="libs/jquery.countdown.min.js"></script>
 <script src="js/scripts.js"></script>
+<!-- глобальная переменная для счетчика -->
+<script>
+	// передавать значение в секундах
+	// если переменная resetTime пустая, то на странице будет отображаться кнопка "Получить новый код"
+	// let resetTime = 60;
+    let resetTime;
+</script>
+<!-- функция таймера -->
+<script>
+	function reSendCode(date) {
+        $('.clock-text').show();
+        $('.reset_resend').hide();
+        let finalDate = new Date();
+        finalDate = finalDate.setTime(finalDate.getTime() + (date*1000));
+        $('.clock').parent().show();
+        $('.clock').countdown(finalDate)
+        .on('update.countdown', function(event) {
+            $(this).html(event.strftime('%M:%S'));
+        })
+        .on('finish.countdown', function(event) {
+            $(this).parent().hide();
+            $('.reset_resend').show();
+        });
+    }
+    // если переменная resetTime пустая, то на странице будет отображаться кнопка "Получить новый код"
+    // иначе выполнится функция
+    if(resetTime) {
+        reSendCode(resetTime);
+    } else {
+    	$('.reset_resend').show();
+    }
+    // по клику производим необходимые манипуляции для обновления счетчика
+    $('body').on('click', '.reset_resend', function(e) {
+    	e.preventDefault();
+    	// что-то происходит
+    	// выполняем функцию и передаем значение либо из глобальной переменной resetTime, либо сразу необходимое значение, например 900 секунд (15 минут)
+    	reSendCode(10);
+    });
+</script>
+
+<script>
+    $('body').on('click', '.js-auth-send-code', function(e) {
+        Fancybox.close();
+        Fancybox.show([{ src: "#auth-modal2", type: "inline" }]);
+        reSendCode(10);
+    });
+</script>
 
 <!-- <div class="swiper">
     <div class="swiper-wrapper">
@@ -826,11 +857,7 @@
 
 <!-- пример вызова модалки об успешной отправке формы -->
 <!-- <script>
-    $.fancybox.open({
-		src: '#form-modal-success',
-		type: 'inline',
-		touch: false
-	});
+    Fancybox.show([{ src: "#form-modal-success", type: "inline", touch: false }]);
 </script> -->
     
 </body>
