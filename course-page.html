@@ -659,7 +659,7 @@
                 <div class="form-wrapper">
                     <form class="form">
                         <div class="ip-cell">
-                            <input type="text" class="input-text" name="email" placeholder="Ваша электронная почта" required="">
+                            <input type="text" class="input-text js-auth-email" name="email" placeholder="Ваша электронная почта" required="">
                             <div class="help-block">Укажите Email</div>
                         </div>
                         <button class="btn btn-modal js-auth-send-code">Получить код</button>
@@ -671,7 +671,7 @@
         <div id="auth-modal2" class="modal">
             <div class="modal_content">
                 <div class="title modal-title">Введите код</div>
-                <div class="modal-text">Отправили письмо с кодом подтверждения на адрес <span class="">mariamaria@mail.ru</span>. <a href="">Изменить</a></div>
+                <div class="modal-text">Отправили письмо с кодом подтверждения на адрес <span class="js-auth-email-put">mariamaria@mail.ru</span>. <a href="#auth-modal" class="js-auth-step1">Изменить</a></div>
                 <div class="form-wrapper">
                     <form class="form">
                         <div class="ip-cell">
@@ -831,10 +831,19 @@
     	// выполняем функцию и передаем значение либо из глобальной переменной resetTime, либо сразу необходимое значение, например 900 секунд (15 минут)
     	reSendCode(10);
     });
-</script>
 
-<script>
+    $('body').on('click', '.js-auth-step1', function(e) {
+        // e.preventDefault(); убрать если нужно браузерное событие submit
+        e.preventDefault();
+        Fancybox.close();
+        Fancybox.show([{ src: "#auth-modal", type: "inline" }]);
+    });
+
     $('body').on('click', '.js-auth-send-code', function(e) {
+        // e.preventDefault(); убрать если нужно браузерное событие submit
+        e.preventDefault();
+        let auth_email = $('.js-auth-email').val();
+        $('.js-auth-email-put').text(auth_email);
         Fancybox.close();
         Fancybox.show([{ src: "#auth-modal2", type: "inline" }]);
         reSendCode(10);
