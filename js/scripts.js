@@ -496,6 +496,27 @@ $(document).ready(function () {
         } else $(item).parent().find(".btn-number[data-type='plus'][data-field='" + name + "']").removeClass('disabled-btn');
     }
 
+    // скрытие полей сдэк
+    if ($('.js-cdek-ch').length) {
+        $('.js-cdek-ch').each(function() {
+            if ($(this).is(':checked') && $(this).data('value') == 1) {
+                if($('.js-cdek-field').is(':visible')) {
+                    $('.js-cdek-field').hide();
+                }
+                if($('.js-cdek-field').is(':hidden')) {
+                    $('.js-cdek-field').show();
+                }
+            }
+        })
+        $('body').on('change', '.js-cdek-ch', function(e) {
+            if ($(this).is(':checked') && $(this).data('value') == 1) {
+                $('.js-cdek-field').hide();
+            } else {
+                $('.js-cdek-field').show();
+            }
+        });
+    }
+
     // parallax
     let parallax = document.querySelectorAll('.parallax');
     if(parallax.length) {
