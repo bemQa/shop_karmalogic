@@ -61,10 +61,15 @@ $(document).ready(function () {
     $('body').on('click','.js-open-modal', function(e){
         e.preventDefault();
         let id = $(this).attr('href');
-        $.fancybox.open({
-            src: id,
-            type: 'inline'
-        });
+        Fancybox.show(
+            [{src: id}],
+            {
+                defaultType: "inline", 
+                // dragToClose: false,
+                // touchMove: false,
+                // backdropClick: false
+            }
+        );
     });
 
     // маски
@@ -104,7 +109,10 @@ $(document).ready(function () {
 
     // fancybox
     Fancybox.bind("[data-fancybox]", {
-        // Your custom options
+        defaultType: "inline",
+        // dragToClose: false,
+        // touchMove: false,
+        // backdropClick: false
     });
 
     // навигационное меню на текстовых страницах

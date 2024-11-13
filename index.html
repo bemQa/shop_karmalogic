@@ -43,7 +43,7 @@
                         <!-- <a href="#id" class="menu-link anchor">Ссылка</a> -->
                     </div>
                     <div class="menu-links">
-                        <a href="#auth-modal" class="menu-link" data-fancybox="">Личный кабинет</a>
+                        <a href="#auth-modal" class="menu-link js-open-modal">Личный кабинет</a>
                         <a href="/cart.html" class="menu-link cart-link">Корзина <span class="cart-notice">1</span></a>
                     </div>
                 </div>
@@ -71,7 +71,7 @@
                     <!-- <a href="#id" class="menu-link anchor">Ссылка</a> -->
 				</div>
 				<div class="header-buttons mobile-visible">
-					<a href="#auth-modal" class="btn btn-lk" data-fancybox="">Личный кабинет</a>
+					<a href="#auth-modal" class="btn btn-lk js-open-modal">Личный кабинет</a>
 				</div>
 			</div>
 		</header>
@@ -635,7 +635,15 @@
 
 <!-- пример вызова модалки об успешной отправке формы -->
 <!-- <script>
-    Fancybox.show([{ src: "#form-modal-success", type: "inline", touch: false }]);
+    Fancybox.show(
+        [{src: "#form-modal-success"}],
+        {
+            defaultType: "inline", 
+            dragToClose: false,
+            touchMove: false,
+            backdropClick: false
+        }
+    );
 </script> -->
     
 </body>
