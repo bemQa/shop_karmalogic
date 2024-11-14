@@ -159,7 +159,45 @@
                                     <span class="product-page-oldprice">3 550 ₽</span>
                                     <span class="product-page-price-discount">-20%</span>
                                 </div>
-                                <button class="btn">Добавить в корзину</button>
+                                <div class="product-page-variants">
+                                    <div class="product-page-variants-name">Выберите размер</div>
+                                    <div class="ip-cell">
+                                        <input type="radio" id="variant1" name="variant" class="rd js-variant-ch" data-variant="1" checked />
+                                        <label for="variant1">104-110 см (3-4 года)</label>
+                                    </div>
+                                    <div class="ip-cell">
+                                        <input type="radio" id="variant2" name="variant" class="rd js-variant-ch" data-variant="2" />
+                                        <label for="variant2">110-116 см (5-6 лет)</label>
+                                    </div>
+                                    <div class="ip-cell">
+                                        <input type="radio" id="variant3" name="variant" class="rd js-variant-ch" data-variant="3" />
+                                        <label for="variant3">116-122 см (6-7 лет)</label>
+                                    </div>
+                                </div>
+                                <div class="product-page-count-info active" data-variant="1">
+                                    <button class="btn js-add-to-cart">Добавить в корзину</button>
+                                    <div class="input-count-group">
+                                        <button type="button" class="btn-number btn-minus js-product-count-btn" data-type="minus" data-field="count" disabled="">−</button>
+                                        <input type="text" name="count" class="input-number number bilet_qty js-product-count" value="0" min="0" max="5" readonly="" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                                        <button type="button" class="btn-number btn-plus js-product-count-btn" data-type="plus" data-field="count">+</button>
+                                    </div>
+                                </div>
+                                <div class="product-page-count-info" data-variant="2">
+                                    <button class="btn js-add-to-cart">Добавить в корзину</button>
+                                    <div class="input-count-group">
+                                        <button type="button" class="btn-number btn-minus js-product-count-btn" data-type="minus" data-field="count" disabled="">−</button>
+                                        <input type="text" name="count" class="input-number number bilet_qty js-product-count" value="0" min="0" max="5" readonly="" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                                        <button type="button" class="btn-number btn-plus js-product-count-btn" data-type="plus" data-field="count">+</button>
+                                    </div>
+                                </div>
+                                <div class="product-page-count-info" data-variant="3">
+                                    <button class="btn js-add-to-cart">Добавить в корзину</button>
+                                    <div class="input-count-group">
+                                        <button type="button" class="btn-number btn-minus js-product-count-btn" data-type="minus" data-field="count" disabled="">−</button>
+                                        <input type="text" name="count" class="input-number number bilet_qty js-product-count" value="0" min="0" max="5" readonly="" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                                        <button type="button" class="btn-number btn-plus js-product-count-btn" data-type="plus" data-field="count">+</button>
+                                    </div>
+                                </div>
                             </div>
                             <div class="product-page-info">
                                 <div class="product-page-info-row">
@@ -386,18 +424,35 @@
 
 		<!-- модалки -->
 		<div class="modal" id="form-modal-success">
+            <div class="modal_content modal-success">
+                <div class="title modal-title">Ваша заявка принята!</div>
+                <div class="modal-text">
+                    Мы свяжемся с вами в ближайшее время. <br>
+                    Режим работы: <br>
+                    пн — пт: с 10:00 до 18:00
+                </div>
+			</div>
+        </div>
+        <!-- модалка вариантов -->
+        <div class="modal" id="modal-variants">
             <div class="modal_content">
-				<button type="button" data-fancybox-close="" class="fancybox-button fancybox-close-small" title="Close">
-					<svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24"><path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path></svg>
-				</button>
-				<div class="modal-success">
-					<div class="modal-title">Ваша заявка принята!</div>
-					<div class="modal-text">
-						Мы свяжемся с вами в ближайшее время. <br>
-						Режим работы: <br>
-						пн — пт: с 10:00 до 18:00
-					</div>
-				</div>
+				<div class="modal-title">Заголовок</div>
+                <div class="modal-text">Текст для выбора вариантов</div>
+                <div class="variants">
+                    <div class="ip-cell">
+                        <input type="radio" id="modal-variant1" name="modal-variant" class="rd" />
+                        <label for="modal-variant1">Вариант 1</label>
+                    </div>
+                    <div class="ip-cell">
+                        <input type="radio" id="modal-variant2" name="modal-variant" class="rd" />
+                        <label for="modal-variant2">Вариант 2</label>
+                    </div>
+                    <div class="ip-cell">
+                        <input type="radio" id="modal-variant3" name="modal-variant" class="rd" />
+                        <label for="modal-variant3">Вариант 3</label>
+                    </div>
+                </div>
+                <button class="btn btn-modal">Применить</button>
 			</div>
         </div>
     </div>
@@ -490,6 +545,48 @@
 <script src="libs/jquery.inputmask.min.js"></script>
 <script src="libs/jquery.validate.min.js"></script>
 <script src="js/scripts.js"></script>
+
+<script>
+    // при добавление в корзину в кнопке меняется текст
+    $('body').on('click', '.js-add-to-cart', function(e) {
+        e.preventDefault();
+        // П.С. текст "Перейти" в кнопке намекает, что после добавления товара в корзину кнопка также должна вместо добавления нового товара совершать переход в корзину, если нужно такое поведение, то помимо класса выполняем ифку ниже, если такое поведение не нужно, то всю ифку можно снести
+        if($(this).hasClass('added')) {
+            window.location='cart.html';
+            return false;
+        }
+        $(this).addClass('added');
+        $(this).text('В корзине');
+    });
+
+    // переключение радио-батонов повторяет табы, проверяется дата-атрибут который скрывает/раскрывает нужные кнопки
+    $('body').on('change', '.js-variant-ch', function(e) {
+        let variant = $(this).data('variant');
+        $(this).parents('.product-page-price-info').find('.product-page-count-info').removeClass('active');
+        $(this).parents('.product-page-price-info').find('.product-page-count-info[data-variant="'+ variant +'"]').addClass('active');
+    });
+
+    $('body').on('change', '.js-product-count', function(e) {
+        // при нулевом кол-ве товара возвращать кнопку в исходное состояние
+        if($(this).val() == 0) {
+            $(this).parents('.product-page-count-info').find('.js-add-to-cart').removeClass('added');
+            $(this).parents('.product-page-count-info').find('.js-add-to-cart').text('Добавить в корзину');
+        }
+    });
+</script>
+
+<!-- вызов модалки выбора вариантов -->
+<!-- <script>
+    Fancybox.show(
+        [{src: "#modal-variants"}],
+        {
+            defaultType: "inline", 
+            // dragToClose: false,
+            // touchMove: false,
+            // backdropClick: false
+        }
+    );
+</script> -->
 
 <!-- <div class="swiper">
     <div class="swiper-wrapper">

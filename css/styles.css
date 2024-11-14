@@ -3623,6 +3623,48 @@ span.breadcrumb {
     color: var(--text-color);
 }
 
+.product-page-variants,
+.variants {
+    display: flex;
+    flex-direction: column;
+    gap: 16rem 0;
+}
+
+.product-page-variants-name {
+    margin-bottom: 8rem;
+    font-weight: 300;
+    font-size: 16rem;
+    line-height: 1.5;
+}
+
+.product-page-count-info {
+    display: none;
+    align-items: center;
+    gap: 0 8rem;
+}
+
+.product-page-count-info.active {
+    display: flex;
+}
+
+.product-page-count-info .btn {
+    width: 222rem;
+    height: 56rem;
+    padding: 16rem 32rem;
+}
+
+.btn.added {
+    flex-direction: column;
+    gap: 4rem 0;
+}
+
+.btn.added::after {
+    content: 'Перейти';
+    font-size: 12rem;
+    line-height: 1;
+    color: rgba(47, 57, 86, 0.75);
+}
+
 .section-slider-title {
     font-weight: normal;
     font-size: 36rem;
@@ -5350,6 +5392,10 @@ a.ticket-element-link:hover {
     border-radius: 50rem;
 }
 
+.product-page-count-info .input-count-group {
+    width: 152rem;
+}
+
 .input-count-group .input-number {
     width: 32rem;
     height: 32rem;
@@ -5361,6 +5407,12 @@ a.ticket-element-link:hover {
     line-height: 1;
     text-align: center;
     color: var(--text-color);
+}
+
+.product-page-count-info .input-count-group .input-number {
+    width: 48rem;
+    height: 48rem;
+    font-size: 16rem;
 }
 
 .input-count-group .btn-number {
@@ -5383,6 +5435,12 @@ a.ticket-element-link:hover {
     user-select: none;
     transition: all .3s ease;
     z-index: 1;
+}
+
+.product-page-count-info .input-count-group .btn-number {
+    width: 48rem;
+    height: 48rem;
+    font-size: 16rem;
 }
 
 .input-count-group .btn-number:hover,
@@ -5931,6 +5989,7 @@ a.ticket-element-link:hover {
     .ch + label, 
     .rd + label {
         padding-left: 20rem;
+        font-size: 14rem;
     }
 
     .ch + label::before,
@@ -7025,6 +7084,21 @@ a.ticket-element-link:hover {
         font-size: 14rem;
     }
 
+    .product-page-variants {
+        gap: 8rem 0;
+    }
+
+    .product-page-variants-name {
+        margin-bottom: 0;
+        font-size: 14rem;
+    }
+
+    .product-page-count-info .btn {
+        width: 194rem;
+        height: 52rem;
+        padding: 12rem 30rem;
+    }
+
     .shop-inner-slider {
         margin-top: 24rem;
     }
@@ -7769,16 +7843,32 @@ a.ticket-element-link:hover {
         padding: 2rem;
     }
 
+    .product-page-count-info .input-count-group {
+        width: 140rem;
+        padding: 4rem;
+    }
+
     .input-count-group .btn-number {
         width: 28rem;
         height: 28rem;
         font-size: 12rem;
     }
 
+    .product-page-count-info .input-count-group .btn-number {
+        width: 44rem;
+        height: 44rem;
+    }
+
     .input-count-group .input-number {
         width: 28rem;
         height: 28rem;
         font-size: 12rem;
+    }
+
+    .product-page-count-info .input-count-group .input-number {
+        width: 44rem;
+        height: 44rem;
+        font-size: 14rem;
     }
 
     .remove-product {
