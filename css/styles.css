@@ -242,6 +242,7 @@ input {
     --second-color: #B7CBEA;
     --text-color: #E8EEF7;
     --accent-color: #CC9F53;
+    --soldout-color: #893E2D;
     
     --btn-text-color: #2F3955;
     --background-transparent007: rgba(183, 203, 234, 0.07);
@@ -460,6 +461,7 @@ h5,
     height: 80rem;
     margin: auto;
     background: var(--background-color);
+    border-bottom: 1rem solid var(--background-transparent01);
     z-index: 10;
 }
 
@@ -530,6 +532,11 @@ h5,
 
 .btn-white {
     background-color: var(--text-color);
+}
+
+.btn-soldout {
+    background-color: var(--soldout-color);
+    color: var(--text-color);
 }
 
 .btn-modal {
@@ -2927,6 +2934,7 @@ textarea.input-text {
     top: -2rem;
     height: calc(100% + 4rem);
     background: var(--accent-color);
+    cursor: grab;
 }
 
 .news-slider {
@@ -3357,6 +3365,8 @@ a.expert-verified-status {
     align-items: center;
     flex-direction: column;
     gap: 16rem 0;
+    max-width: 190rem;
+    width: 100%;
 }
 
 .tarif-big .tarif-price-info::before {
@@ -4363,6 +4373,7 @@ span.breadcrumb {
 .review-person-img {
     position: relative;
     width: 60rem;
+    min-width: 60rem;
     height: 60rem;
     border-radius: 60rem;
     overflow: hidden;
@@ -4389,6 +4400,11 @@ span.breadcrumb {
 }
 
 .review-person-status {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
     font-size: 16rem;
     line-height: 1.5;
     color: var(--text-color-transparent);
@@ -4490,6 +4506,7 @@ span.breadcrumb {
 .how-going-element .text-page-slider {
     max-width: 696rem;
     width: 100%;
+    min-width: 696rem;
     margin: 0;
 }
 
@@ -4501,7 +4518,7 @@ span.breadcrumb {
     display: flex;
     flex-direction: column;
     gap: 16rem 0;
-    max-width: 308rem;
+    /* max-width: 308rem; */
     width: 100%;
 }
 
@@ -4645,6 +4662,7 @@ span.breadcrumb {
     display: flex;
     flex-direction: column;
     gap: 16rem 0;
+    height: 100%;
 }
 
 .ticket-element {
@@ -6974,6 +6992,7 @@ a.ticket-element-link:hover {
         flex-direction: row;
         justify-content: space-between;
         gap: 0 16rem;
+        max-width: 100%;
     }
 
     .tarif-price {
@@ -7304,6 +7323,7 @@ a.ticket-element-link:hover {
 
     .review-person-img {
         width: 48rem;
+        min-width: 48rem;
         height: 48rem;
     }
 
@@ -7390,6 +7410,11 @@ a.ticket-element-link:hover {
 
     .how-going-element:not(:first-child) {
         padding-top: 24rem;
+    }
+
+    .how-going-element .how-going-element-img,
+    .how-going-element .text-page-slider {
+        min-width: auto;
     }
 
     .how-going-element-info {

@@ -166,7 +166,7 @@ $(document).ready(function () {
         slidesPerView: 'auto',
         loop: true,
         freeMode: true,
-        // mousewheel: true,
+        
         // breakpoints: {
         //     480: {
         //         slidesPerView: 1,
@@ -192,10 +192,10 @@ $(document).ready(function () {
         slidesPerView: 'auto',
         loop: true,
         freeMode: false,
-        mousewheel: true,
         scrollbar: {
             el: ".swiper-scrollbar",
             hide: false,
+            draggable: true,
         },
         breakpoints: {
             480: {
@@ -221,10 +221,10 @@ $(document).ready(function () {
         slidesPerView: 'auto',
         loop: true,
         freeMode: false,
-        mousewheel: true,
         scrollbar: {
             el: ".swiper-scrollbar",
             hide: false,
+            draggable: true,
         },
         breakpoints: {
             480: {
@@ -244,10 +244,10 @@ $(document).ready(function () {
         slidesPerView: 'auto',
         loop: true,
         freeMode: false,
-        mousewheel: true,
         scrollbar: {
             el: ".swiper-scrollbar",
             hide: false,
+            draggable: true,
         },
         breakpoints: {
             480: {
@@ -267,10 +267,10 @@ $(document).ready(function () {
         slidesPerView: 'auto',
         loop: true,
         freeMode: false,
-        mousewheel: true,
         scrollbar: {
             el: ".swiper-scrollbar",
             hide: false,
+            draggable: true,
         },
         breakpoints: {
             480: {
@@ -290,10 +290,10 @@ $(document).ready(function () {
         slidesPerView: 'auto',
         loop: true,
         freeMode: false,
-        mousewheel: true,
         scrollbar: {
             el: ".swiper-scrollbar",
             hide: false,
+            draggable: true,
         },
         breakpoints: {
             480: {
@@ -348,10 +348,10 @@ $(document).ready(function () {
         slidesPerView: 'auto',
         loop: true,
         freeMode: false,
-        mousewheel: true,
         scrollbar: {
             el: ".swiper-scrollbar",
             hide: false,
+            draggable: true,
         },
         breakpoints: {
             480: {
