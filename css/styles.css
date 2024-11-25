@@ -1652,11 +1652,19 @@ textarea.input-text {
     color: var(--text-color);
 }
 
+.modal.modal-transparent {
+    background: transparent;
+}
+
 .modal_content {
     display: flex;
     flex-direction: column;
     gap: 24rem 0;
     padding: 32rem;
+}
+
+.modal.modal-transparent .modal_content {
+    padding: 32rem 0;
 }
 
 .modal>.f-button.is-close-btn {
@@ -5983,6 +5991,10 @@ a.ticket-element-link:hover {
 
     .modal_content {
         padding: 24rem;
+    }
+
+    .modal.modal-transparent .modal_content {
+        padding: 24rem 0;
     }
 
     .modal-title {
