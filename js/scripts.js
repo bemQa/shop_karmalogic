@@ -443,7 +443,7 @@ $(document).ready(function () {
     window.addEventListener("resize", photo_gallery_slider);
 
     // кнопки +-
-    $('.btn-number').parents('.order-element-product-count-info').append('<div class="tooltip-input-count"></div>');
+    $('.btn-number').parents('.input-count-group').append('<div class="tooltip-input-count"></div>');
     $('body').on('click', '.btn-number', function(e) {
         var type = $(this).attr('data-type');
         var field = $(this).attr('data-field');
@@ -456,31 +456,33 @@ $(document).ready(function () {
         max = parseInt(max);
         var currentVal;
         var value = input.val();
-        if (type == 'minus') {
-            if (value > min) {
-                if (value <= min_count) {
-                    currentVal = parseInt(value) - min_count;
-                    input.val(currentVal).change();
-                } else {
-                    currentVal = parseInt(value) - 1;
-                    input.val(currentVal).change();
+        if ($(this).parents('.product-have-offers').length == 0) {
+            if (type == 'minus') {
+                if (value > min) {
+                    if (value <= min_count) {
+                        currentVal = parseInt(value) - min_count;
+                        input.val(currentVal).change();
+                    } else {
+                        currentVal = parseInt(value) - 1;
+                        input.val(currentVal).change();
+                    }
                 }
             }
-        }
-        if (type == 'plus') {
-            if (value < max) {
-                if (value < min_count) {
-                    currentVal = parseInt(value) + min_count;
-                    input.val(currentVal).change();
-                } else {
-                    currentVal = parseInt(value) + 1;
-                    input.val(currentVal).change();
+            if (type == 'plus') {
+                if (value < max) {
+                    if (value < min_count) {
+                        currentVal = parseInt(value) + min_count;
+                        input.val(currentVal).change();
+                    } else {
+                        currentVal = parseInt(value) + 1;
+                        input.val(currentVal).change();
+                    }
                 }
             }
         }
 
-        let tooltip = $(this).parents('.order-element-product-count-info').find('.tooltip-input-count');
-        if ($(this).hasClass('btn-plus disabled-btn')) {
+        let tooltip = $(this).parents('.input-count-group').find('.tooltip-input-count');
+        if ($(this).hasClass('btn-plus') && $(this).hasClass('disabled-btn')) {
             tooltip.addClass('show').text('Нельзя добавить больше товаров в заказ');
             setTimeout(function() {
                 tooltip.removeClass('show');

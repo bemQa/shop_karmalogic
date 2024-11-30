@@ -339,7 +339,7 @@
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="product-card">
+                                <div class="product-card product-have-offers">
                                     <a href="" class="product-card-img">
                                         <img src="img/product-page-img.png" alt="альт">
                                         <span class="product-card-label">Снова в наличии</span>
@@ -350,8 +350,8 @@
                                             1 000 350 ₽
                                         </div>
                                     </div>
-                                    <button class="btn btn-add-cart js-add-to-cart-preview">Добавить в корзину</button>
-                                    <div class="input-count-group" style="display: none;">
+                                    <button class="btn btn-add-cart js-add-to-cart-preview" style="display: none;">Добавить в корзину</button>
+                                    <div class="input-count-group">
                                         <button type="button" class="btn-number btn-minus" data-type="minus" data-field="count" disabled="">−</button>
                                         <span class="input-number-text">В корзине:</span> <input type="text" name="count" class="input-number number bilet_qty" value="0" min="0" max="5" readonly="" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
                                         <button type="button" class="btn-number btn-plus" data-type="plus" data-field="count">+</button>
@@ -372,7 +372,12 @@
                                             <span class="product-card-price-discount">-20%</span>
                                         </div>
                                     </div>
-                                    <button class="btn btn-add-cart">Добавить в корзину</button>
+                                    <button class="btn btn-add-cart js-add-to-cart-preview">Добавить в корзину</button>
+                                    <div class="input-count-group" style="display: none;">
+                                        <button type="button" class="btn-number btn-minus" data-type="minus" data-field="count" disabled="">−</button>
+                                        <span class="input-number-text">В корзине:</span> <input type="text" name="count" class="input-number number bilet_qty" value="0" min="0" max="5" readonly="" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                                        <button type="button" class="btn-number btn-plus" data-type="plus" data-field="count">+</button>
+                                    </div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
@@ -447,20 +452,72 @@
         <!-- модалка вариантов -->
         <div class="modal" id="modal-variants">
             <div class="modal_content">
+                <div class="modal-title">Книга «Karmalogic» (полная версия)</div>
+                <div class="product-page-price-info">
+                    <div class="product-page-price">
+                        2 350 ₽
+                        <span class="product-page-oldprice">3 550 ₽</span>
+                        <span class="product-page-price-discount">-20%</span>
+                    </div>
+                    <div class="product-page-variants">
+                        <div class="product-page-variants-name">Выберите размер</div>
+                        <div class="ip-cell">
+                            <input type="radio" id="modal-variant1" name="modal-variant" class="rd js-variant-ch" data-variant="1" checked />
+                            <label for="modal-variant1">104-110 см (3-4 года)</label>
+                        </div>
+                        <div class="ip-cell">
+                            <input type="radio" id="modal-variant2" name="modal-variant" class="rd js-variant-ch" data-variant="2" />
+                            <label for="modal-variant2">110-116 см (5-6 лет)</label>
+                        </div>
+                        <div class="ip-cell">
+                            <input type="radio" id="modal-variant3" name="modal-variant" class="rd js-variant-ch" data-variant="3" />
+                            <label for="modal-variant3">116-122 см (6-7 лет)</label>
+                        </div>
+                    </div>
+                    <div class="product-page-count-info active" data-variant="1">
+                        <button class="btn js-add-to-cart">Добавить в корзину</button>
+                        <div class="input-count-group">
+                            <button type="button" class="btn-number btn-minus js-product-count-btn" data-type="minus" data-field="count" disabled="">−</button>
+                            <input type="text" name="count" class="input-number number bilet_qty js-product-count" value="0" min="0" max="5" readonly="" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                            <button type="button" class="btn-number btn-plus js-product-count-btn" data-type="plus" data-field="count">+</button>
+                        </div>
+                    </div>
+                    <div class="product-page-count-info" data-variant="2">
+                        <button class="btn js-add-to-cart">Добавить в корзину</button>
+                        <div class="input-count-group">
+                            <button type="button" class="btn-number btn-minus js-product-count-btn" data-type="minus" data-field="count" disabled="">−</button>
+                            <input type="text" name="count" class="input-number number bilet_qty js-product-count" value="0" min="0" max="5" readonly="" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                            <button type="button" class="btn-number btn-plus js-product-count-btn" data-type="plus" data-field="count">+</button>
+                        </div>
+                    </div>
+                    <div class="product-page-count-info" data-variant="3">
+                        <button class="btn js-add-to-cart">Добавить в корзину</button>
+                        <div class="input-count-group">
+                            <button type="button" class="btn-number btn-minus js-product-count-btn" data-type="minus" data-field="count" disabled="">−</button>
+                            <input type="text" name="count" class="input-number number bilet_qty js-product-count" value="0" min="0" max="5" readonly="" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                            <button type="button" class="btn-number btn-plus js-product-count-btn" data-type="plus" data-field="count">+</button>
+                        </div>
+                    </div>
+                </div>
+			</div>
+        </div>
+        <!-- модалка вариантов test -->
+        <div class="modal" id="modal-variants-test">
+            <div class="modal_content">
 				<div class="modal-title">Заголовок</div>
                 <div class="modal-text">Текст для выбора вариантов</div>
                 <div class="variants">
                     <div class="ip-cell">
-                        <input type="radio" id="modal-variant1" name="modal-variant" class="rd" />
-                        <label for="modal-variant1">Вариант 1</label>
+                        <input type="radio" id="modal-variant-test1" name="modal-variant-test" class="rd" />
+                        <label for="modal-variant-test1">Вариант 1</label>
                     </div>
                     <div class="ip-cell">
-                        <input type="radio" id="modal-variant2" name="modal-variant" class="rd" />
-                        <label for="modal-variant2">Вариант 2</label>
+                        <input type="radio" id="modal-variant-test2" name="modal-variant-test" class="rd" />
+                        <label for="modal-variant-test2">Вариант 2</label>
                     </div>
                     <div class="ip-cell">
-                        <input type="radio" id="modal-variant3" name="modal-variant" class="rd" />
-                        <label for="modal-variant3">Вариант 3</label>
+                        <input type="radio" id="modal-variant-test3" name="modal-variant-test" class="rd" />
+                        <label for="modal-variant-test3">Вариант 3</label>
                     </div>
                 </div>
                 <button class="btn btn-modal">Применить</button>
@@ -594,10 +651,7 @@
             Fancybox.show(
                 [{src: "#modal-variants"}],
                 {
-                    defaultType: "inline", 
-                    dragToClose: false,
-                    touchMove: false,
-                    backdropClick: false
+                    defaultType: "inline",
                 }
             );
             // по результатам вызова модалки и выбора варианта товара уже скрывать кнопку в товаре и показывать выбор кол-ва
@@ -609,6 +663,21 @@
         $(this).hide();
         $(this).siblings('.input-count-group').show();
         $(this).siblings('.input-count-group').find('.input-number').val(1);
+    });
+
+    $('body').on('click', '.product-card .btn-number', function(e) {
+        e.preventDefault();
+        // если есть торг. предложения, то у товара должен стоять класс product-have-offers, тогда при клике откроется модалка
+        if($(this).parents('.product-card').hasClass('product-have-offers')) {
+            // вызов модалки
+            Fancybox.show(
+                [{src: "#modal-variants"}],
+                {
+                    defaultType: "inline",
+                }
+            );
+            return false;
+        }
     });
 </script>
 

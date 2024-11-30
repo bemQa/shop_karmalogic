@@ -127,6 +127,24 @@
                                 <button type="button" class="btn-number btn-plus" data-type="plus" data-field="count">+</button>
                             </div>
                         </div>
+                        <div class="product-card product-have-offers">
+                            <a href="" class="product-card-img">
+                                <img src="img/product-slide-img.png" alt="альт">
+                                <span class="product-card-label">Новинка</span>
+                            </a>
+                            <div class="product-card-info">
+                                <div class="product-card-title">Книга «Karmamagic» (новое издание 2024 г.)</div>
+                                <div class="product-card-price">
+                                    2 350 ₽
+                                </div>
+                            </div>
+                            <button class="btn btn-add-cart js-add-to-cart-preview" style="display: none;">Добавить в корзину</button>
+                            <div class="input-count-group">
+                                <button type="button" class="btn-number btn-minus" data-type="minus" data-field="count" disabled="">−</button>
+                                <span class="input-number-text">В корзине:</span> <input type="text" name="count" class="input-number number bilet_qty" value="0" min="0" max="5" readonly="" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                                <button type="button" class="btn-number btn-plus" data-type="plus" data-field="count">+</button>
+                            </div>
+                        </div>
                         <div class="product-card">
                             <a href="" class="product-card-img">
                                 <img src="img/product-slide-img.png" alt="альт">
@@ -144,19 +162,6 @@
                                 <span class="input-number-text">В корзине:</span> <input type="text" name="count" class="input-number number bilet_qty" value="0" min="0" max="5" readonly="" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
                                 <button type="button" class="btn-number btn-plus" data-type="plus" data-field="count">+</button>
                             </div>
-                        </div>
-                        <div class="product-card">
-                            <a href="" class="product-card-img">
-                                <img src="img/product-slide-img.png" alt="альт">
-                                <span class="product-card-label">Новинка</span>
-                            </a>
-                            <div class="product-card-info">
-                                <div class="product-card-title">Книга «Karmamagic» (новое издание 2024 г.)</div>
-                                <div class="product-card-price">
-                                    2 350 ₽
-                                </div>
-                            </div>
-                            <button class="btn btn-add-cart">Добавить в корзину</button>
                         </div>
                         <div class="product-card">
                             <a href="" class="product-card-img">
@@ -247,23 +252,53 @@
         <!-- модалка вариантов -->
         <div class="modal" id="modal-variants">
             <div class="modal_content">
-				<div class="modal-title">Заголовок</div>
-                <div class="modal-text">Текст для выбора вариантов</div>
-                <div class="variants">
-                    <div class="ip-cell">
-                        <input type="radio" id="modal-variant1" name="modal-variant" class="rd" />
-                        <label for="modal-variant1">Вариант 1</label>
+                <div class="modal-title">Книга «Karmalogic» (полная версия)</div>
+                <div class="product-page-price-info">
+                    <div class="product-page-price">
+                        2 350 ₽
+                        <span class="product-page-oldprice">3 550 ₽</span>
+                        <span class="product-page-price-discount">-20%</span>
                     </div>
-                    <div class="ip-cell">
-                        <input type="radio" id="modal-variant2" name="modal-variant" class="rd" />
-                        <label for="modal-variant2">Вариант 2</label>
+                    <div class="product-page-variants">
+                        <div class="product-page-variants-name">Выберите размер</div>
+                        <div class="ip-cell">
+                            <input type="radio" id="modal-variant1" name="modal-variant" class="rd js-variant-ch" data-variant="1" checked />
+                            <label for="modal-variant1">104-110 см (3-4 года)</label>
+                        </div>
+                        <div class="ip-cell">
+                            <input type="radio" id="modal-variant2" name="modal-variant" class="rd js-variant-ch" data-variant="2" />
+                            <label for="modal-variant2">110-116 см (5-6 лет)</label>
+                        </div>
+                        <div class="ip-cell">
+                            <input type="radio" id="modal-variant3" name="modal-variant" class="rd js-variant-ch" data-variant="3" />
+                            <label for="modal-variant3">116-122 см (6-7 лет)</label>
+                        </div>
                     </div>
-                    <div class="ip-cell">
-                        <input type="radio" id="modal-variant3" name="modal-variant" class="rd" />
-                        <label for="modal-variant3">Вариант 3</label>
+                    <div class="product-page-count-info active" data-variant="1">
+                        <button class="btn js-add-to-cart">Добавить в корзину</button>
+                        <div class="input-count-group">
+                            <button type="button" class="btn-number btn-minus js-product-count-btn" data-type="minus" data-field="count" disabled="">−</button>
+                            <input type="text" name="count" class="input-number number bilet_qty js-product-count" value="0" min="0" max="5" readonly="" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                            <button type="button" class="btn-number btn-plus js-product-count-btn" data-type="plus" data-field="count">+</button>
+                        </div>
+                    </div>
+                    <div class="product-page-count-info" data-variant="2">
+                        <button class="btn js-add-to-cart">Добавить в корзину</button>
+                        <div class="input-count-group">
+                            <button type="button" class="btn-number btn-minus js-product-count-btn" data-type="minus" data-field="count" disabled="">−</button>
+                            <input type="text" name="count" class="input-number number bilet_qty js-product-count" value="0" min="0" max="5" readonly="" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                            <button type="button" class="btn-number btn-plus js-product-count-btn" data-type="plus" data-field="count">+</button>
+                        </div>
+                    </div>
+                    <div class="product-page-count-info" data-variant="3">
+                        <button class="btn js-add-to-cart">Добавить в корзину</button>
+                        <div class="input-count-group">
+                            <button type="button" class="btn-number btn-minus js-product-count-btn" data-type="minus" data-field="count" disabled="">−</button>
+                            <input type="text" name="count" class="input-number number bilet_qty js-product-count" value="0" min="0" max="5" readonly="" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                            <button type="button" class="btn-number btn-plus js-product-count-btn" data-type="plus" data-field="count">+</button>
+                        </div>
                     </div>
                 </div>
-                <button class="btn btn-modal">Применить</button>
 			</div>
         </div>
     </div>
@@ -358,6 +393,22 @@
 <script src="js/scripts.js"></script>
 
 <script>
+    // переключение радио-батонов повторяет табы, проверяется дата-атрибут который скрывает/раскрывает нужные кнопки
+    $('body').on('change', '.js-variant-ch', function(e) {
+        let variant = $(this).data('variant');
+        $(this).parents('.product-page-price-info').find('.product-page-count-info').removeClass('active');
+        $(this).parents('.product-page-price-info').find('.product-page-count-info[data-variant="'+ variant +'"]').addClass('active');
+    });
+
+    $('body').on('change', '.js-product-count', function(e) {
+        // при нулевом кол-ве товара возвращать кнопку в исходное состояние
+        if($(this).val() == 0) {
+            $(this).parents('.product-page-count-info').find('.js-add-to-cart').removeClass('added');
+            $(this).parents('.product-page-count-info').find('.js-add-to-cart').text('Добавить в корзину');
+        }
+    });
+
+    // добавление превью товара
     $('body').on('click', '.js-add-to-cart-preview', function(e) {
         e.preventDefault();
         // если есть торг. предложения, то у товара должен стоять класс product-have-offers, тогда при клике Добавить в корзину откроется модалка
@@ -366,10 +417,7 @@
             Fancybox.show(
                 [{src: "#modal-variants"}],
                 {
-                    defaultType: "inline", 
-                    dragToClose: false,
-                    touchMove: false,
-                    backdropClick: false
+                    defaultType: "inline",
                 }
             );
             // по результатам вызова модалки и выбора варианта товара уже скрывать кнопку в товаре и показывать выбор кол-ва
@@ -381,6 +429,21 @@
         $(this).hide();
         $(this).siblings('.input-count-group').show();
         $(this).siblings('.input-count-group').find('.input-number').val(1);
+    });
+
+    $('body').on('click', '.product-card .btn-number', function(e) {
+        e.preventDefault();
+        // если есть торг. предложения, то у товара должен стоять класс product-have-offers, тогда при клике откроется модалка
+        if($(this).parents('.product-card').hasClass('product-have-offers')) {
+            // вызов модалки
+            Fancybox.show(
+                [{src: "#modal-variants"}],
+                {
+                    defaultType: "inline",
+                }
+            );
+            return false;
+        }
     });
 </script>
 
