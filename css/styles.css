@@ -1672,6 +1672,10 @@ textarea.input-text {
     right: 32rem;
 }
 
+.modal.modal-transparent>.f-button.is-close-btn {
+    right: 0;
+}
+
 .modal-title {
     padding-right: 34rem;
     font-size: 32rem;
@@ -5492,6 +5496,13 @@ a.ticket-element-link:hover {
     width: 152rem;
 }
 
+.product-card .input-count-group {
+    width: 100%;
+    padding: 0;
+    background: transparent;
+    border-radius: 8rem;
+}
+
 .input-count-group .input-number {
     width: 32rem;
     height: 32rem;
@@ -5508,6 +5519,12 @@ a.ticket-element-link:hover {
 .product-page-count-info .input-count-group .input-number {
     width: 48rem;
     height: 48rem;
+    font-size: 16rem;
+}
+
+.product-card .input-count-group .input-number {
+    width: 56rem;
+    height: 56rem;
     font-size: 16rem;
 }
 
@@ -5539,6 +5556,13 @@ a.ticket-element-link:hover {
     font-size: 16rem;
 }
 
+.product-card .input-count-group .btn-number {
+    width: 56rem;
+    height: 56rem;
+    border-radius: 8rem;
+    font-size: 16rem;
+}
+
 .input-count-group .btn-number:hover,
 .input-count-group .btn-number:active {
     background-color: var(--background-transparent007);
@@ -5549,6 +5573,10 @@ a.ticket-element-link:hover {
     background: var(--background-transparent007);
     color: var(--text-color);
     cursor: not-allowed;
+}
+
+.input-number-text {
+    display: inline-block;
 }
 
 .order-element-product-count-info.disabled {
@@ -6125,7 +6153,7 @@ a.ticket-element-link:hover {
 
     .page-filters-list .select2-container--default .select2-selection--multiple {
         height: 30rem;
-        padding: 6rem 30rem 6rem 10rem;
+        padding: 8rem 30rem 8rem 10rem;
     }
 
     .select2-container--default .select2-selection--single .select2-selection__rendered, 
@@ -6604,8 +6632,9 @@ a.ticket-element-link:hover {
 
     .page-filters {
         flex-direction: column;
-        align-items: flex-start;
+        /* align-items: flex-start; */
         width: 100%;
+        margin: 0;
     }
 
     .page-filters-list-wrapper {
@@ -7986,6 +8015,10 @@ a.ticket-element-link:hover {
         padding: 4rem;
     }
 
+    .product-card .input-count-group {
+        
+    }
+
     .input-count-group .btn-number {
         width: 28rem;
         height: 28rem;
@@ -7997,6 +8030,16 @@ a.ticket-element-link:hover {
         height: 44rem;
     }
 
+    .product-card .input-count-group .btn-number {
+        width: 48rem;
+        height: 48rem;
+    }
+
+    .swiper .product-card .input-count-group .btn-number {
+        width: 52rem;
+        height: 52rem;
+    }
+
     .input-count-group .input-number {
         width: 28rem;
         height: 28rem;
@@ -8006,6 +8049,26 @@ a.ticket-element-link:hover {
     .product-page-count-info .input-count-group .input-number {
         width: 44rem;
         height: 44rem;
+        font-size: 14rem;
+    }
+
+    .product-card .input-count-group .input-number {
+        width: 48rem;
+        height: 48rem;
+        font-size: 14rem;
+    }
+
+    .swiper .product-card .input-count-group .input-number {
+        width: 52rem;
+        height: 52rem;
+    }
+
+    .input-number-text {
+        display: none;
+    }
+
+    .swiper .input-number-text {
+        display: inline-block;
         font-size: 14rem;
     }
 

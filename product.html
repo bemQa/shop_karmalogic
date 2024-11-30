@@ -316,7 +316,8 @@
                     <div class="shop-inner-slider swiper swiper-with-scrollbar">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <div class="product-card">
+                                <!-- если есть торговые предложения - добавить класс product-have-offers -->
+                                <div class="product-card product-have-offers">
                                     <a href="" class="product-card-img">
                                         <img src="img/product-slide-img.png" alt="альт">
                                         <span class="product-card-label">Новинка</span>
@@ -329,7 +330,12 @@
                                             <span class="product-card-price-discount">-20%</span>
                                         </div>
                                     </div>
-                                    <button class="btn btn-add-cart">Добавить в корзину</button>
+                                    <button class="btn btn-add-cart js-add-to-cart-preview">Добавить в корзину</button>
+                                    <div class="input-count-group" style="display: none;">
+                                        <button type="button" class="btn-number btn-minus" data-type="minus" data-field="count" disabled="">−</button>
+                                        <span class="input-number-text">В корзине:</span> <input type="text" name="count" class="input-number number bilet_qty" value="0" min="0" max="5" readonly="" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                                        <button type="button" class="btn-number btn-plus" data-type="plus" data-field="count">+</button>
+                                    </div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
@@ -344,7 +350,12 @@
                                             1 000 350 ₽
                                         </div>
                                     </div>
-                                    <button class="btn btn-add-cart">Добавить в корзину</button>
+                                    <button class="btn btn-add-cart js-add-to-cart-preview">Добавить в корзину</button>
+                                    <div class="input-count-group" style="display: none;">
+                                        <button type="button" class="btn-number btn-minus" data-type="minus" data-field="count" disabled="">−</button>
+                                        <span class="input-number-text">В корзине:</span> <input type="text" name="count" class="input-number number bilet_qty" value="0" min="0" max="5" readonly="" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                                        <button type="button" class="btn-number btn-plus" data-type="plus" data-field="count">+</button>
+                                    </div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
@@ -572,6 +583,32 @@
             $(this).parents('.product-page-count-info').find('.js-add-to-cart').removeClass('added');
             $(this).parents('.product-page-count-info').find('.js-add-to-cart').text('Добавить в корзину');
         }
+    });
+
+    // добавление превью товара
+    $('body').on('click', '.js-add-to-cart-preview', function(e) {
+        e.preventDefault();
+        // если есть торг. предложения, то у товара должен стоять класс product-have-offers, тогда при клике Добавить в корзину откроется модалка
+        if($(this).parents('.product-card').hasClass('product-have-offers')) {
+            // вызов модалки
+            Fancybox.show(
+                [{src: "#modal-variants"}],
+                {
+                    defaultType: "inline", 
+                    dragToClose: false,
+                    touchMove: false,
+                    backdropClick: false
+                }
+            );
+            // по результатам вызова модалки и выбора варианта товара уже скрывать кнопку в товаре и показывать выбор кол-ва
+            // $(this).hide();
+            // $(this).siblings('.input-count-group').show();
+            return false;
+        }
+        // если product-have-offers класса нет, тогда добавляем товар в корзину, скрываем кнопку, показываем выбор кол-ва товара
+        $(this).hide();
+        $(this).siblings('.input-count-group').show();
+        $(this).siblings('.input-count-group').find('.input-number').val(1);
     });
 </script>
 
