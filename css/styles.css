@@ -2565,7 +2565,8 @@ textarea.input-text {
 }
 
 .page-filter-link:hover,
-.page-filter-link.active {
+.page-filter-link.active,
+.page-filter-link.mixitup-control-active {
     background: var(--background-transparent01);
 }
 

@@ -90,21 +90,23 @@
         </section>
         <section class="section">
             <div class="container">
-                <div class="block-bg">
+                <div class="block-bg mixiup-filter-block">
                     <div class="title-wrapper">
                         <div class="title h1">Магазин Karmalogic®</div>
                         <div class="page-filters">
-                            <div class="page-filters-list">
-                                <a href="" class="page-filter-link active">Все товары</a>
-                                <a href="" class="page-filter-link">Книги</a>
-                                <a href="" class="page-filter-link">Метафорические карты</a>
-                                <a href="" class="page-filter-link">Аксессуары</a>
+                            <!-- дата-атрибут data-filter-group включает фильтр, фильтр работает по классу заданному в дата-атрибуте data-filter, префикс prog-* задается дабы избежать пересечений со стилями -->
+                            <div class="page-filters-list" data-filter-group>
+                                <a href="#all" class="page-filter-link" data-filter="all">Все товары</a>
+                                <a href="#prog-books" class="page-filter-link" data-filter=".prog-books">Книги</a>
+                                <a href="#prog-cards" class="page-filter-link" data-filter=".prog-cards">Метафорические карты</a>
+                                <a href="#prog-axs" class="page-filter-link" data-filter=".prog-axs">Аксессуары</a>
                             </div>
                         </div>
                     </div>
                     <div class="products-list">
                         <!-- если есть торговые предложения - добавить класс product-have-offers -->
-                        <div class="product-card product-have-offers">
+                        <!-- добавить всем товарам класс mix, и в зависимости от типа товара в элементах задаются классы из фильтра выше, как пример prog-books -->
+                        <div class="product-card product-have-offers mix prog-books">
                             <a href="" class="product-card-img">
                                 <img src="img/product-slide-img.png" alt="альт">
                                 <div class="product-card-labels">
@@ -127,7 +129,7 @@
                                 <button type="button" class="btn-number btn-plus" data-type="plus" data-field="count">+</button>
                             </div>
                         </div>
-                        <div class="product-card product-have-offers">
+                        <div class="product-card product-have-offers mix prog-books">
                             <a href="" class="product-card-img">
                                 <img src="img/product-slide-img.png" alt="альт">
                                 <span class="product-card-label">Новинка</span>
@@ -145,7 +147,7 @@
                                 <button type="button" class="btn-number btn-plus" data-type="plus" data-field="count">+</button>
                             </div>
                         </div>
-                        <div class="product-card">
+                        <div class="product-card mix prog-cards">
                             <a href="" class="product-card-img">
                                 <img src="img/product-slide-img.png" alt="альт">
                                 <span class="product-card-label">Новинка</span>
@@ -163,7 +165,7 @@
                                 <button type="button" class="btn-number btn-plus" data-type="plus" data-field="count">+</button>
                             </div>
                         </div>
-                        <div class="product-card">
+                        <div class="product-card mix">
                             <a href="" class="product-card-img">
                                 <img src="img/product-slide-img.png" alt="альт">
                                 <span class="product-card-label">Новинка</span>
@@ -176,7 +178,7 @@
                             </div>
                             <button class="btn btn-add-cart">Добавить в корзину</button>
                         </div>
-                        <div class="product-card">
+                        <div class="product-card mix">
                             <a href="" class="product-card-img">
                                 <img src="img/product-slide-img.png" alt="альт">
                                 <span class="product-card-label">Новинка</span>
@@ -189,7 +191,7 @@
                             </div>
                             <button class="btn btn-add-cart">Добавить в корзину</button>
                         </div>
-                        <div class="product-card">
+                        <div class="product-card mix">
                             <a href="" class="product-card-img">
                                 <img src="img/product-slide-img.png" alt="альт">
                                 <span class="product-card-label">Новинка</span>
@@ -202,7 +204,7 @@
                             </div>
                             <button class="btn btn-add-cart">Добавить в корзину</button>
                         </div>
-                        <div class="product-card">
+                        <div class="product-card mix">
                             <a href="" class="product-card-img">
                                 <img src="img/product-slide-img.png" alt="альт">
                                 <span class="product-card-label">Новинка</span>
@@ -215,7 +217,7 @@
                             </div>
                             <button class="btn btn-add-cart">Добавить в корзину</button>
                         </div>
-                        <div class="product-card">
+                        <div class="product-card mix">
                             <a href="" class="product-card-img">
                                 <img src="img/product-slide-img.png" alt="альт">
                                 <span class="product-card-label">Новинка</span>
@@ -390,7 +392,37 @@
 <script src="libs/simplebar/simplebar.min.js"></script>
 <script src="libs/jquery.inputmask.min.js"></script>
 <script src="libs/jquery.validate.min.js"></script>
+<script src="libs/mixitup.min.js"></script>
+<!-- <script src="libs/mixitup-multifilter.min.js"></script> -->
 <script src="js/scripts.js"></script>
+
+<script>
+    let mixer = mixitup('.mixiup-filter-block');
+    if ($('.mixiup-filter-block')) {
+        let containerEl = $('.mixiup-filter-block')
+        let mixer = mixitup(containerEl, {
+            callbacks: {
+                onMixStart: function(state, futureState) {},
+                onMixEnd: function() {
+                    containerEl
+                        .find('.product-card:visible:first')
+                        .focus();
+                }
+            },
+            controls: {
+                scope: 'local'
+            }
+        });
+        if (location.hash) {
+            let hash = location.hash.replace('#', '.')
+            let oldBtn = $('.page-filter-link.mixitup-control-active');
+            let newBtn = $(".page-filter-link").find("[data-filter='" + hash + "']");
+            mixer.filter(hash)
+            oldBtn.removeClass('mixitup-control-active');
+            newBtn.addClass('mixitup-control-active');
+        }
+    }
+</script>
 
 <script>
     // переключение радио-батонов повторяет табы, проверяется дата-атрибут который скрывает/раскрывает нужные кнопки
