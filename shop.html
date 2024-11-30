@@ -413,7 +413,7 @@
                 scope: 'local'
             }
         });
-        if (location.hash) {
+        if (location.hash && location.hash != '#all') {
             let hash = location.hash.replace('#', '.')
             let oldBtn = $('.page-filter-link.mixitup-control-active');
             let newBtn = $(".page-filter-link").find("[data-filter='" + hash + "']");
