@@ -3588,6 +3588,7 @@ a.expert-verified-status {
     left: 24rem;
     width: 140rem;
     height: 140rem;
+    z-index: 1;
 }
 
 .breadcrumbs {
@@ -7201,8 +7202,7 @@ a.ticket-element-link:hover {
 
     .product-page-badge {
         top: 16rem;
-        left: auto;
-        right: 16rem;
+        left: 208rem;
         width: 96rem;
         height: 96rem;
     }
