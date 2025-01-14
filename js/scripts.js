@@ -162,16 +162,25 @@ $(document).ready(function () {
     }
 
     // sliders
-    const courses_cards = new Swiper('.courses-cards', {
+    const cards_slider = new Swiper('.cards-swiper-slider', {
         slidesPerView: 'auto',
-        loop: true,
-        freeMode: true,
-        
-        // breakpoints: {
-        //     480: {
-        //         slidesPerView: 1,
-        //     },
-        // },
+        loop: false,
+        freeMode: false,
+        spaceBetween: 8,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        scrollbar: {
+            el: ".swiper-scrollbar",
+            hide: false,
+            draggable: true,
+        },
+        breakpoints: {
+            1024: {
+                spaceBetween: 16,
+            },
+        },
     });
 
     const trainings_slider = new Swiper('.trainings-slider', {
@@ -180,132 +189,38 @@ $(document).ready(function () {
             el: ".swiper-pagination",
             clickable: true,
         },
-    });
-
-    const shop_slider = new Swiper('.shop-slider', {
-        slidesPerView: 'auto',
-        loop: true,
-        freeMode: true,
-    });
-
-    const shop_inner_slider = new Swiper('.shop-inner-slider', {
-        slidesPerView: 'auto',
-        loop: true,
-        freeMode: false,
-        scrollbar: {
-            el: ".swiper-scrollbar",
-            hide: false,
-            draggable: true,
-        },
-        breakpoints: {
-            480: {
-                slidesPerView: 'auto',
-                loop: true,
-                freeMode: false,
-            },
-            481: {
-                slidesPerView: 5,
-                loop: false,
-                freeMode: true,
-            }
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
         },
     });
 
     const travel_slider = new Swiper('.travel-slider', {
         slidesPerView: 'auto',
-        loop: true,
-        freeMode: true,
+        loop: false,
+        freeMode: false,
+        spaceBetween: 8,     
+        breakpoints: {
+            1024: {
+                spaceBetween: 16,
+            },
+        },
     });
 
     const travel_inner_slider = new Swiper('.travel-inner-slider', {
         slidesPerView: 'auto',
-        loop: true,
+        loop: false,
         freeMode: false,
+        spaceBetween: 8,  
         scrollbar: {
             el: ".swiper-scrollbar",
             hide: false,
             draggable: true,
-        },
+        },     
         breakpoints: {
-            480: {
-                slidesPerView: 'auto',
-                loop: true,
-                freeMode: false,
+            1024: {
+                spaceBetween: 16,
             },
-            481: {
-                slidesPerView: 2,
-                loop: false,
-                freeMode: true,
-            }
-        },
-    });
-
-    const news_slider = new Swiper('.news-slider', {
-        slidesPerView: 'auto',
-        loop: true,
-        freeMode: false,
-        scrollbar: {
-            el: ".swiper-scrollbar",
-            hide: false,
-            draggable: true,
-        },
-        breakpoints: {
-            480: {
-                slidesPerView: 'auto',
-                loop: true,
-                freeMode: false,
-            },
-            481: {
-                slidesPerView: 3,
-                loop: false,
-                freeMode: true,
-            }
-        },
-    });
-
-    const experts_slider = new Swiper('.experts-slider', {
-        slidesPerView: 'auto',
-        loop: true,
-        freeMode: false,
-        scrollbar: {
-            el: ".swiper-scrollbar",
-            hide: false,
-            draggable: true,
-        },
-        breakpoints: {
-            480: {
-                slidesPerView: 'auto',
-                loop: true,
-                freeMode: false,
-            },
-            481: {
-                slidesPerView: 4,
-                loop: false,
-                freeMode: true,
-            }
-        },
-    });
-
-    const services_slider = new Swiper('.services-slider', {
-        slidesPerView: 'auto',
-        loop: true,
-        freeMode: false,
-        scrollbar: {
-            el: ".swiper-scrollbar",
-            hide: false,
-            draggable: true,
-        },
-        breakpoints: {
-            480: {
-                slidesPerView: 'auto',
-                loop: true,
-                freeMode: false,
-            },
-            481: {
-                slidesPerView: 2,
-                loop: false,
-                freeMode: true,
-            }
         },
     });
 
@@ -318,15 +233,18 @@ $(document).ready(function () {
         grabCursor: true,
     });
     const product_slider = new Swiper(".product-slider", {
-        // slidesPerView: 1,
+        slidesPerView: 'auto',
         loop: true,
-        // direction: "vertical",
+        direction: "horizontal",
+        // effect: "fade",
+        spaceBetween: 8,
         thumbs: {
             swiper: product_slider_navs,
         },
         breakpoints: {
-            480: {
-                slidesPerView: 'auto',
+            481: {
+                direction: "vertical",
+                spaceBetween: 16,
             },
         },
     });
@@ -344,67 +262,27 @@ $(document).ready(function () {
         },
     });
 
-    const review_slider = new Swiper('.reviews-slider', {
-        slidesPerView: 'auto',
-        loop: true,
-        freeMode: false,
-        scrollbar: {
-            el: ".swiper-scrollbar",
-            hide: false,
-            draggable: true,
-        },
-        breakpoints: {
-            480: {
-                slidesPerView: 'auto',
-                loop: true,
-                freeMode: false,
-            },
-            481: {
-                slidesPerView: 3,
-                loop: false,
-                freeMode: true,
-            }
-        },
-    });
-
     // only mobile sliders
     let init = false;
     let swiper;
-    function travel_page_slider() {
+    function mobile_slider() {
         if (window.innerWidth <= 480) {
-            if (!init && $('.travel-page-slider').length) {
+            if (!init && $('.mobile-swiper-slider').length) {
                 init = true;
-                swiper = new Swiper(".travel-page-slider", {
+                swiper = new Swiper(".mobile-swiper-slider", {
                     slidesPerView: 'auto',
                     loop: true,
-                    freeMode: true,
+                    freeMode: false,
+                    spaceBetween: 8,
                 });
             }
-        } else if (init && $('.travel-page-slider').length) {
+        } else if (init && $('.mobile-swiper-slider').length) {
             swiper.destroy();
             init = false;
         }
     }
-    travel_page_slider();
-    window.addEventListener("resize", travel_page_slider);
-    
-    function courses_page_cards() {
-        if (window.innerWidth <= 480) {
-            if (!init && $('.courses-page-cards').length) {
-                init = true;
-                swiper = new Swiper(".courses-page-cards", {
-                    slidesPerView: 'auto',
-                    loop: true,
-                    freeMode: true,
-                });
-            }
-        } else if (init && $('.courses-page-cards').length) {
-            swiper.destroy();
-            init = false;
-        }
-    }
-    courses_page_cards();
-    window.addEventListener("resize", courses_page_cards);
+    mobile_slider();
+    window.addEventListener("resize", mobile_slider);
 
     function services_list_slider() {
         if (window.innerWidth <= 480) {
@@ -412,8 +290,9 @@ $(document).ready(function () {
                 init = true;
                 swiper = new Swiper(".services-list-slider-mobile", {
                     slidesPerView: 'auto',
-                    loop: true,
+                    loop: false,
                     freeMode: false,
+                    spaceBetween: 8,
                 });
             }
         } else if (init && $('.services-list-slider-mobile').length) {
@@ -423,24 +302,6 @@ $(document).ready(function () {
     }
     services_list_slider();
     window.addEventListener("resize", services_list_slider);
-
-    function photo_gallery_slider() {
-        if (window.innerWidth <= 480) {
-            if (!init && $('.photo-gallery-slider').length) {
-                init = true;
-                swiper = new Swiper(".photo-gallery-slider", {
-                    slidesPerView: 'auto',
-                    loop: true,
-                    freeMode: false,
-                });
-            }
-        } else if (init && $('.photo-gallery-slider').length) {
-            swiper.destroy();
-            init = false;
-        }
-    }
-    photo_gallery_slider();
-    window.addEventListener("resize", photo_gallery_slider);
 
     // кнопки +-
     $('.btn-number').parents('.input-count-group').append('<div class="tooltip-input-count"></div>');
