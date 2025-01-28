@@ -4153,8 +4153,6 @@ span.breadcrumb {
     display: flex;
     flex-direction: column;
     gap: 24rem 0;
-    padding-bottom: 24rem;
-    border-bottom: 1rem solid var(--background-color);
 }
 
 .special-page-aside-menu-link {
@@ -4169,6 +4167,8 @@ span.breadcrumb {
     align-items: center;
     justify-content: center;
     gap: 24rem 0;
+    padding-top: 24rem;
+    border-top: 1rem solid var(--background-color);
 }
 
 .special-page-aside-menu-button-block .btn {
@@ -5014,14 +5014,26 @@ a.ticket-element-link:hover {
 }
 
 .special-page-block-two-column-img {
-    width: 50%;
+    width: 100%;
+}
+
+.special-page-block-two-column-img img {
+    border-radius: 8rem;
 }
 
 .special-page-block-two-column-info {
     display: flex;
     flex-direction: column;
     gap: 24rem 0;
-    width: 50%;
+    width: 100%;
+}
+
+.special-page-block-img {
+    width: 100%;
+}
+
+.special-page-block-img img {
+    border-radius: 8rem;
 }
 
 .numbered-list {
