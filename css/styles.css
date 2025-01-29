@@ -5179,7 +5179,8 @@ a.ticket-element-link:hover {
     display: flex;
     flex-direction: column;
     gap: 16rem 0;
-    max-width: 648rem;
+    /* max-width: 648rem; */
+    max-width: calc(50% - 56rem);
     width: 100%;
 }
 
@@ -8032,6 +8033,7 @@ a.ticket-element-link:hover {
 
     .history-element {
         gap: 12rem 0;
+        max-width: 100%;
         padding-left: 16rem;
     }
 
