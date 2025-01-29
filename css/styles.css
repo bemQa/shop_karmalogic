@@ -2125,6 +2125,11 @@ textarea.input-text {
     max-width: 340rem;
     width: 100%;
     border-radius: 8rem;
+    grid-column-end: span 3;
+}
+
+.products-list .swiper-slide .product-card {
+    grid-column-end: span 12;
 }
 
 .product-card-img {
@@ -2564,6 +2569,11 @@ textarea.input-text {
     flex-wrap: wrap;
     gap: 60rem 16rem;
     margin-top: 32rem;
+}
+
+.products-list:not(.swiper) {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
 }
 
 .title-wrapper {
@@ -6819,6 +6829,11 @@ a.ticket-element-link:hover {
     .products-list .product-card {
         position: relative;
         max-width: calc(50% - 8rem);
+    }
+
+    .products-list:not(.swiper) .product-card {
+        max-width: 100%;
+        grid-column-end: span 6;
     }
 
     .products-list .product-card-img {
