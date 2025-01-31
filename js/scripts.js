@@ -5,6 +5,15 @@ $(window).scroll(function (evt) {
 });
 
 $(document).ready(function () {
+    // фикс меню при скролле
+    $(window).scroll(function() {
+        if ((scrollTop > 80)) {
+            $('.header').addClass('scrolled');
+        } else {
+            $('.header').removeClass('scrolled');
+        }
+    });
+
     // анимация меню
     $('.menu').click(function (e) {
         e.preventDefault();
