@@ -8138,6 +8138,7 @@ a.ticket-element-link:hover {
     }
 
     .profile-page-aside-menu-block {
+        position: static;
         gap: 0;
         padding: 16rem;
     }
@@ -8227,6 +8228,7 @@ a.ticket-element-link:hover {
     }
 
     .cart-page-aside-block-wrapper {
+        position: static;
         gap: 8rem 0;
     }
 
