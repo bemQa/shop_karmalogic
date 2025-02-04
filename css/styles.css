@@ -1693,6 +1693,11 @@ textarea.input-text {
 
 .modal.modal-transparent .modal_content {
     padding: 32rem 0;
+    height: calc(100dvh - 64rem) !important;
+}
+
+.modal.modal-transparent .modal_content iframe {
+    height: 100% !important;
 }
 
 .modal>.f-button.is-close-btn {
@@ -6268,6 +6273,7 @@ a.ticket-element-link:hover {
 
     .modal.modal-transparent .modal_content {
         padding: 24rem 0;
+        height: calc(100dvh - 48rem) !important;
     }
 
     .modal-title {
