@@ -7241,7 +7241,8 @@ a.ticket-element-link:hover {
         font-size: 24rem;
     }
 
-    .expert-verified-status {
+    .expert-verified-status,
+    a.expert-verified-status {
         gap: 6rem 0;
         padding: 0 0 0 28rem;
         background: none;
