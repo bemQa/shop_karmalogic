@@ -1681,6 +1681,7 @@ textarea.input-text {
 }
 
 .modal.modal-transparent {
+    max-width: 540rem;
     background: transparent;
 }
 
@@ -1692,13 +1693,12 @@ textarea.input-text {
 }
 
 .modal.modal-transparent .modal_content {
-    padding: 32rem 0;
-    height: calc(100dvh - 64rem) !important;
+    padding: 0;
 }
 
-.modal.modal-transparent .modal_content iframe {
+/* .modal.modal-transparent .modal_content iframe {
     height: 100% !important;
-}
+} */
 
 .modal>.f-button.is-close-btn {
     top: 32rem;
@@ -1706,6 +1706,7 @@ textarea.input-text {
 }
 
 .modal.modal-transparent>.f-button.is-close-btn {
+    top: 0;
     right: 0;
 }
 
@@ -6273,7 +6274,6 @@ a.ticket-element-link:hover {
 
     .modal.modal-transparent .modal_content {
         padding: 24rem 0;
-        height: calc(100dvh - 48rem) !important;
     }
 
     .modal-title {
