@@ -2273,6 +2273,10 @@ textarea.input-text {
     background: url(../img/icons/shop-dark.svg) center/contain no-repeat;
 }
 
+.btn-add-cart.icon-none::before {
+    content: none;
+}
+
 .product-card-info ~ .btn-add-cart,
 .product-card .input-count-group {
     margin-top: 12rem;
