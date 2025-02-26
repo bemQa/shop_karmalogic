@@ -4073,6 +4073,7 @@ span.breadcrumb {
 }
 
 .banner-page-special .banner-page-title {
+    -webkit-line-clamp: 3;
     font-size: 64rem;
 }
 
@@ -7552,6 +7553,7 @@ a.ticket-element-link:hover {
     }
 
     .banner-page-special .banner-page-title {
+        -webkit-line-clamp: 5;
         font-size: 28rem;
     }
 
